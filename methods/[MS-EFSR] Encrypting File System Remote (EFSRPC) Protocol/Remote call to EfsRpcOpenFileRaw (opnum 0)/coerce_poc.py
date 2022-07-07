@@ -32,8 +32,8 @@ class DCERPCSessionError(DCERPCException):
 class EfsRpcOpenFileRaw(NDRCALL):
     opnum = 0
     structure = (
-        ('FileName', WSTR), # Type: wchar_t *
-        ('Flags', LONG), # Type: long
+        ('FileName', WSTR),  # Type: wchar_t *
+        ('Flags', LONG),     # Type: long
     )
 
 
@@ -115,7 +115,7 @@ class MS_EFSR(RPCProtocol):
             try:
                 request = EfsRpcOpenFileRaw()
                 request['FileName'] = '\\\\%s\\share\\file.txt\x00' % listener
-                request['Flags'] = None
+                request['Flags'] = 0
                 # request.dump()
                 resp = self.dce.request(request)
             except Exception as e:

