@@ -8,7 +8,7 @@
 
  - **Protocol version**: 1.0
 
- - **SMB Named pipe**: `\pipe\efsrpc`
+ - **SMB Named pipes**: `\pipe\lsarpc`, `\pipe\efsrpc`
 
  - **Function name**: [`EfsRpcFileKeyInfoEx`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/d0da10ab-3139-4d67-a66c-ea6eb497118d)
 
