@@ -5,7 +5,7 @@
 <p align="center">
   This repository contains a list of many methods to coerce a windows machine to authenticate to an attacker-controlled machine.
   <br>
-  <img alt="GitHub repo size" src="https://img.shields.io/badge/coerce%20methods-12-brightgreen">
+  <img alt="GitHub repo size" src="https://img.shields.io/badge/coerce%20methods-15-brightgreen">
   <a href="https://twitter.com/intent/follow?screen_name=podalirius_" title="Follow"><img src="https://img.shields.io/twitter/follow/podalirius_?label=Podalirius&style=social"></a>
   <a href="https://www.youtube.com/c/Podalirius_?sub_confirmation=1" title="Subscribe"><img alt="YouTube Channel Subscribers" src="https://img.shields.io/youtube/channel/subscribers/UCF_x5O7CSfr82AfNVTKOv_A?style=social"></a>
   <br>
