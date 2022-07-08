@@ -18,6 +18,10 @@ There is currently **15** known methods in **5** protocols.
 
 ---
 
+> 🎉 A lot of new methods are yet to be tested, if you want to try them: [possible-working-calls](./possible-working-calls/)
+
+---
+
 ## Protocols & Methods
 
  + **[MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol**
