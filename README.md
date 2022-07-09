@@ -51,9 +51,7 @@ There is currently **15** known methods in **5** protocols.
 
 
  + **[MS-RPRN]: Print System Remote Protocol** 
-    - [Remote call to RpcOpenPrinter (opnum 1)](./methods/%5BMS-RPRN%5D%20Print%20System%20Remote%20Protocol/Remote%20call%20to%20RpcOpenPrinter%20(opnum%201)/README.md)
-    - [Remote call to RpcOpenPrinterEx (opnum 69)](./methods/%5BMS-RPRN%5D%20Print%20System%20Remote%20Protocol/Remote%20call%20to%20RpcOpenPrinterEx%20(opnum%2069)/README.md)
-
+    - [Remote call to RpcRemoteFindFirstPrinterChangeNotificationEx (opnum 65)](./methods/%5BMS-RPRN%5D%20Print%20System%20Remote%20Protocol/Remote%20call%20to%20RpcRemoteFindFirstPrinterChangeNotificationEx%20(opnum%2065)/README.md)
 
 ## Contributing
 
