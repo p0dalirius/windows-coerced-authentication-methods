@@ -61,7 +61,7 @@ long EfsRpcDecryptFileSrv(
 
 ---
 
-## Working path types
+## Accepted path types
 
  + :heavy_check_mark: UNC ressource: `\\192.168.2.51\share\file.txt` authenticates to target.
  + :x: UNC ressource: `\??\UNC\192.168.2.51\share\file.txt` does not work, returns a `rpc_s_access_denied` error.
