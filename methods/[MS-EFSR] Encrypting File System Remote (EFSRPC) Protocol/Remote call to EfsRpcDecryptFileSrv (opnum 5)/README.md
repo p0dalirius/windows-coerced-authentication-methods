@@ -59,6 +59,16 @@ long EfsRpcDecryptFileSrv(
 
  - **OpenFlag**: This parameter is unused and MUST be ignored by the server. It MUST be set to zero by the client.
 
+---
+
+## Working path types
+
+ + :heavy_check_mark: UNC ressource: `\\192.168.2.51\share\file.txt` authenticates to target.
+ + :x: UNC ressource: `\??\UNC\192.168.2.51\share\file.txt` does not work, returns a `rpc_s_access_denied` error.
+ + :heavy_check_mark: WebDAV ressource: `\\MACHINENAME@80/raj\share\file.txt` authenticates to target.
+
+---
+
 ## References
 
  - Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31
