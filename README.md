@@ -53,6 +53,16 @@ There is currently **15** known methods in **5** protocols.
  + **[MS-RPRN]: Print System Remote Protocol** 
     - [Remote call to RpcRemoteFindFirstPrinterChangeNotificationEx (opnum 65)](./methods/%5BMS-RPRN%5D%20Print%20System%20Remote%20Protocol/Remote%20call%20to%20RpcRemoteFindFirstPrinterChangeNotificationEx%20(opnum%2065)/README.md)
 
+## Protecting against coerced authentications
+
+Microsoft does not consider coerced authentications as security vulnerability. In their point of view, only the relaying of authentications issued from coerced authentication consitute a security vulnerability. To prevent NTLM Relay Attacks on networks with NTLM enabled, domain administrators must ensure that services that permit NTLM authentication make use of protections such as [Extended Protection for Authentication (EPA)](https://msrc-blog.microsoft.com/2009/12/08/extended-protection-for-authentication/) or signing features such as SMB signing. PetitPotam takes advantage of servers where Active Directory Certificate Services (AD CS) is not configured with protections for NTLM Relay Attacks. The mitigations against NTLM relays are outlined in these bulletins:
+
+ - **July 24, 2021** [KB5005413: Mitigating NTLM Relay Attacks on Active Directory Certificate Services (AD CS)](https://support.microsoft.com/en-us/topic/kb5005413-mitigating-ntlm-relay-attacks-on-active-directory-certificate-services-ad-cs-3612b773-4043-4aa9-b23d-b87910cd3429)
+ - **December 08, 2009** [MSA974926: Credential Relaying Attacks on Integrated Windows Authentication](https://docs.microsoft.com/en-us/security-updates/SecurityAdvisories/2009/974926)
+ - **August 12, 2009** [Extended Protection for Authentication](https://msrc-blog.microsoft.com/2009/12/08/extended-protection-for-authentication/)
+ - **August 11, 2009** [MSA973811: Extended Protection for Authentication](https://docs.microsoft.com/en-us/security-updates/securityadvisories/2009/973811)
+
+ 
 ## Contributing
 
 Feel free to open a pull request to add new methods.
