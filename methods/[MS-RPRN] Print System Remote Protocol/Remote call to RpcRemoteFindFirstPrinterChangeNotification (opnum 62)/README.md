@@ -1,4 +1,4 @@
-# MS-RPRN - Remote call to RpcRemoteFindFirstPrinterChangeNotification (opnum 62)
+# MS-RPRN - Remote call to RpcRemoteFindFirstPrinterChangeNotificationEx (opnum 65)
 
 ## Summary
 
@@ -8,9 +8,9 @@
 
  - **Protocol version**: 1.0
 
- - **Function name**: [`RpcRemoteFindFirstPrinterChangeNotification`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/eb66b221-1c1f-4249-b8bc-c5befec2314d)
+ - **Function name**: [`RpcRemoteFindFirstPrinterChangeNotificationEx`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/eb66b221-1c1f-4249-b8bc-c5befec2314d)
 
- - **Function operation number**: `62`
+ - **Function operation number**: `65`
 
  - **Authenticated**: Yes
 
@@ -21,10 +21,10 @@ In order to call a remote procedure to trigger an authentication from the remote
 
 Then we need to connect to the remote SMB pipe `\PIPE\spoolss` and bind to (uuid `12345678-1234-abcd-ef00-0123456789ab`, version `1.0`) in order to perform calls to RPC functions of the `MS-RPRN` protocol.
 
-The IP 192.168.2.51 being my attacking machine where I listen with Responder, and 192.168.2.1 being the IP of my Windows Server. When starting this script, it will authenticate and connect to the remote pipe named `\PIPE\spoolss`. This pipe is connected to the protocol [[MS-RPRN]: Print System Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/d42db7d5-f141-4466-8f47-0a4be14e2fc1) and allows to call RPC functions of this protocol. It will then call the remote [`RpcRemoteFindFirstPrinterChangeNotification`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/eb66b221-1c1f-4249-b8bc-c5befec2314d) function on the Windows Server (192.168.2.1) with the following parameters:
+The IP 192.168.2.51 being my attacking machine where I listen with Responder, and 192.168.2.1 being the IP of my Windows Server. When starting this script, it will authenticate and connect to the remote pipe named `\PIPE\spoolss`. This pipe is connected to the protocol [[MS-RPRN]: Print System Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/d42db7d5-f141-4466-8f47-0a4be14e2fc1) and allows to call RPC functions of this protocol. It will then call the remote [`RpcRemoteFindFirstPrinterChangeNotificationEx`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/eb66b221-1c1f-4249-b8bc-c5befec2314d) function on the Windows Server (192.168.2.1) with the following parameters:
 
 ```cpp
-RpcRemoteFindFirstPrinterChangeNotification(...)
+RpcRemoteFindFirstPrinterChangeNotificationEx(...)
 ```
 
 We can try this with this proof of concept code ([coerce_poc.py](./coerce_poc.py)):
@@ -46,14 +46,12 @@ After this step, we relay the authentication to ohter services in order to eleva
 ## Function technical detail
 
 ```cpp
-DWORD RpcRemoteFindFirstPrinterChangeNotification(
-    [in] PRINTER_HANDLE hPrinter,
-    [in] DWORD fdwFlags,
-    [in] DWORD fdwOptions,
-    [in, string, unique] wchar_t* pszLocalMachine,
-    [in] DWORD dwPrinterLocal,
-    [in, range(0,512)] DWORD cbBuffer,
-    [in, out, unique, size_is(cbBuffer), disable_consistency_check] BYTE* pBuffer
+DWORD RpcRemoteFindFirstPrinterChangeNotificationEx(
+    [in, string, unique] STRING_HANDLE pPrinterName,
+    [out] PRINTER_HANDLE* pHandle,
+    [in, string, unique] wchar_t* pDatatype,
+    [in] DEVMODE_CONTAINER* pDevModeContainer,
+    [in] DWORD AccessRequired
 );
 ```
 
@@ -85,4 +83,4 @@ DWORD RpcRemoteFindFirstPrinterChangeNotification(
  - Documentation of protocol [MS-RPRN]: Print System Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/d42db7d5-f141-4466-8f47-0a4be14e2fc1
 
 
- - Documentation of function `RpcRemoteFindFirstPrinterChangeNotification`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/eb66b221-1c1f-4249-b8bc-c5befec2314d
+ - Documentation of function `RpcRemoteFindFirstPrinterChangeNotificationEx`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/eb66b221-1c1f-4249-b8bc-c5befec2314d
