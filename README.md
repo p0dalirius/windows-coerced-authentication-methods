@@ -42,8 +42,8 @@ There is currently **15** known methods in **5** protocols.
 
 
  + **[MS-FSRVP]: File Server Remote VSS Protocol**
-    - [Remote call to IsPathSupported (opnum 8)](./methods/%5BMS-FSRVP%5D%20File%20Server%20Remote%20VSS%20Protocol/Remote%20call%20to%20IsPathSupported%20(opnum%208)/Remote%20call%20to%20IsPathShadowCopied%20(opnum%209)/README.md)
-    - [Remote call to IsPathShadowCopied (opnum 9)](./methods/%5BMS-FSRVP%5D%20File%20Server%20Remote%20VSS%20Protocol/Remote%20call%20to%20IsPathShadowCopied%20(opnum%209)/Remote%20call%20to%20IsPathSupported%20(opnum%208)/README.md) 
+    - [Remote call to IsPathSupported (opnum 8)](./methods/%5BMS-FSRVP%5D%20File%20Server%20Remote%20VSS%20Protocol/Remote%20call%20to%20IsPathSupported%20(opnum%208)/README.md)
+    - [Remote call to IsPathShadowCopied (opnum 9)](./methods/%5BMS-FSRVP%5D%20File%20Server%20Remote%20VSS%20Protocol/Remote%20call%20to%20IsPathShadowCopied%20(opnum%209)/README.md) 
     
 
  + **[MS-PAR]: Print System Asynchronous Remote Protocol** 
