@@ -4,17 +4,16 @@
 
  - **Protocol**: [[MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979)
 
- - **Protocol UUID**: 4fc742e0-4a10-11cf-8273-00aa004ae673
-
- - **Protocol version**: 3.0
-
- - **SMB Named pipe**: `\PIPE\netdfs`
-
  - **Function name**: [`NetrDfsRemoveStdRoot`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/e9da023d-554a-49bc-837a-69f22d59fd18)
 
  - **Function operation number**: `13`
 
- - **Authenticated**: Yes
+ - **RPC Interfaces**:
+   + Interface 1:
+     - uuid=`4fc742e0-4a10-11cf-8273-00aa004ae673`
+     - version=`3.0`
+     - Accessible from:
+       + SMB Named pipe: `\PIPE\netdfs`
 
 
 ## Description

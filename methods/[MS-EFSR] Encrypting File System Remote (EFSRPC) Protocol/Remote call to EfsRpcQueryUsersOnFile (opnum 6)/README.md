@@ -4,17 +4,24 @@
 
  - **Protocol**: [[MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31)
 
- - **Protocol UUID**: c681d488-d850-11d0-8c52-00c04fd90f7e
-
- - **Protocol version**: 1.0
-
- - **SMB Named pipes**: `\pipe\lsarpc`, `\pipe\efsrpc`
-
  - **Function name**: [`EfsRpcQueryUsersOnFile`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/a058dc6c-bb7e-491c-9143-a5cb1f7e7cea)
 
  - **Function operation number**: `6`
 
- - **Authenticated**: Yes
+ - **RPC Interfaces**:
+   + Interface 1:
+     - uuid=`c681d488-d850-11d0-8c52-00c04fd90f7e`
+     - version=`1.0`
+     - Accessible from:
+       + SMB named pipe: `\PIPE\lsarpc`
+       + SMB named pipe: `\PIPE\lsass`
+       + SMB named pipe: `\PIPE\netlogon`
+       + SMB named pipe: `\PIPE\samr`
+   + Interface 2:
+     - uuid=`df1941c5-fe89-4e79-bf10-463657acf44d`
+     - version=`1.0`
+     - Accessible from:
+       + SMB named pipe: `\PIPE\efsrpc`
 
 
 ## Description
