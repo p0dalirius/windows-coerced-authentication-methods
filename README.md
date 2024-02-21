@@ -32,22 +32,22 @@ There are currently **15** working functions in **5** protocols.
 
 
 + **[MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol**
-  + [Remote call to EfsRpcOpenFileRaw (opnum 0)](./methods/MS-EFSR%20-%20Encrypting%20File%20System%20Remote%20%28EFSRPC%29%20Protocol/0.%20Remote%20call%20to%20EfsRpcOpenFileRaw%20(opnum%200)/README.md)
-  + [Remote call to EfsRpcEncryptFileSrv (opnum 4)](./methods/MS-EFSR%20-%20Encrypting%20File%20System%20Remote%20%28EFSRPC%29%20Protocol/4.%20Remote%20call%20to%20EfsRpcEncryptFileSrv%20(opnum%204)/README.md)
-  + [Remote call to EfsRpcDecryptFileSrv (opnum 5)](./methods/MS-EFSR%20-%20Encrypting%20File%20System%20Remote%20%28EFSRPC%29%20Protocol/5.%20Remote%20call%20to%20EfsRpcDecryptFileSrv%20(opnum%205)/README.md)
-  + [Remote call to EfsRpcQueryUsersOnFile (opnum 6)](./methods/MS-EFSR%20-%20Encrypting%20File%20System%20Remote%20%28EFSRPC%29%20Protocol/6.%20Remote%20call%20to%20EfsRpcQueryUsersOnFile%20(opnum%206)/README.md)
-  + [Remote call to EfsRpcQueryRecoveryAgents (opnum 7)](./methods/MS-EFSR%20-%20Encrypting%20File%20System%20Remote%20%28EFSRPC%29%20Protocol/7.%20Remote%20call%20to%20EfsRpcQueryRecoveryAgents%20(opnum%207)/README.md)
+  + [Remote call to EfsRpcOpenFileRaw (opnum 0)](./methods/MS-EFSR%20-%20Encrypting%20File%20System%20Remote%20%28EFSRPC%29%20Protocol/00.%20Remote%20call%20to%20EfsRpcOpenFileRaw%20(opnum%200)/README.md)
+  + [Remote call to EfsRpcEncryptFileSrv (opnum 4)](./methods/MS-EFSR%20-%20Encrypting%20File%20System%20Remote%20%28EFSRPC%29%20Protocol/04.%20Remote%20call%20to%20EfsRpcEncryptFileSrv%20(opnum%204)/README.md)
+  + [Remote call to EfsRpcDecryptFileSrv (opnum 5)](./methods/MS-EFSR%20-%20Encrypting%20File%20System%20Remote%20%28EFSRPC%29%20Protocol/05.%20Remote%20call%20to%20EfsRpcDecryptFileSrv%20(opnum%205)/README.md)
+  + [Remote call to EfsRpcQueryUsersOnFile (opnum 6)](./methods/MS-EFSR%20-%20Encrypting%20File%20System%20Remote%20%28EFSRPC%29%20Protocol/06.%20Remote%20call%20to%20EfsRpcQueryUsersOnFile%20(opnum%206)/README.md)
+  + [Remote call to EfsRpcQueryRecoveryAgents (opnum 7)](./methods/MS-EFSR%20-%20Encrypting%20File%20System%20Remote%20%28EFSRPC%29%20Protocol/07.%20Remote%20call%20to%20EfsRpcQueryRecoveryAgents%20(opnum%207)/README.md)
   + [Remote call to EfsRpcFileKeyInfo (opnum 12)](./methods/MS-EFSR%20-%20Encrypting%20File%20System%20Remote%20%28EFSRPC%29%20Protocol/12.%20Remote%20call%20to%20EfsRpcFileKeyInfo%20(opnum%2012)/README.md)
   + [Remote call to EfsRpcDuplicateEncryptionInfoFile (opnum 13)](./methods/MS-EFSR%20-%20Encrypting%20File%20System%20Remote%20%28EFSRPC%29%20Protocol/13.%20Remote%20call%20to%20EfsRpcDuplicateEncryptionInfoFile%20(opnum%2013)/README.md)
   + [Remote call to EfsRpcAddUsersToFileEx (opnum 15)](./methods/MS-EFSR%20-%20Encrypting%20File%20System%20Remote%20%28EFSRPC%29%20Protocol/15.%20Remote%20call%20to%20EfsRpcAddUsersToFileEx%20(opnum%2015)/README.md)
 
 
 + **[MS-FSRVP]: File Server Remote VSS Protocol**
-  + [Remote call to IsPathSupported (opnum 8)](./methods/MS-FSRVP%20-%20File%20Server%20Remote%20VSS%20Protocol/8.%20Remote%20call%20to%20IsPathSupported%20(opnum%208)/README.md)
-  + [Remote call to IsPathShadowCopied (opnum 9)](./methods/MS-FSRVP%20-%20File%20Server%20Remote%20VSS%20Protocol/9.%20Remote%20call%20to%20IsPathShadowCopied%20(opnum%209)/README.md) 
+  + [Remote call to IsPathSupported (opnum 8)](./methods/MS-FSRVP%20-%20File%20Server%20Remote%20VSS%20Protocol/08.%20Remote%20call%20to%20IsPathSupported%20(opnum%208)/README.md)
+  + [Remote call to IsPathShadowCopied (opnum 9)](./methods/MS-FSRVP%20-%20File%20Server%20Remote%20VSS%20Protocol/09.%20Remote%20call%20to%20IsPathShadowCopied%20(opnum%209)/README.md) 
 
 + **[MS-PAR]: Print System Asynchronous Remote Protocol** 
-  + [Remote call to RpcAsyncOpenPrinter (opnum 0)](./methods/MS-PAR%20-%20Print%20System%20Asynchronous%20Remote%20Protocol/0.%20Remote%20call%20to%20RpcAsyncOpenPrinter%20(opnum%200)/README.md)
+  + [Remote call to RpcAsyncOpenPrinter (opnum 0)](./methods/MS-PAR%20-%20Print%20System%20Asynchronous%20Remote%20Protocol/00.%20Remote%20call%20to%20RpcAsyncOpenPrinter%20(opnum%200)/README.md)
 
 
 + **[MS-RPRN]: Print System Remote Protocol** 
