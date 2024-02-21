@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-UAMG]: Update Agent Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-uamg/aa15d914-ca63-450c-904e-6b3ebd17b441)
++ **Protocol**: [[MS-UAMG]: Update Agent Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-uamg/aa15d914-ca63-450c-904e-6b3ebd17b441)
 
- - **Protocol UUID**: None
++ **Protocol UUID**: None
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`IUpdateServiceManager2::AddService2`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-uamg/e2d037e7-b25e-40f0-bb90-3f6071085d1d)
++ **Function name**: [`IUpdateServiceManager2::AddService2`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-uamg/e2d037e7-b25e-40f0-bb90-3f6071085d1d)
 
- - **Function operation number**: `18`
++ **Function operation number**: `18`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -55,6 +55,6 @@ HRESULT AddService2(
 
 ## References
 
- - Documentation of protocol [MS-UAMG]: Update Agent Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-uamg/aa15d914-ca63-450c-904e-6b3ebd17b441
++ Documentation of protocol [MS-UAMG]: Update Agent Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-uamg/aa15d914-ca63-450c-904e-6b3ebd17b441
 
- - Documentation of function `IUpdateServiceManager2::AddService2`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-uamg/e2d037e7-b25e-40f0-bb90-3f6071085d1d
++ Documentation of function `IUpdateServiceManager2::AddService2`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-uamg/e2d037e7-b25e-40f0-bb90-3f6071085d1d

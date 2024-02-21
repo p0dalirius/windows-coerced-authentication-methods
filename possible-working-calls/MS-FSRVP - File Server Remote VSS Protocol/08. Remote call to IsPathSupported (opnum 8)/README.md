@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-FSRVP]: File Server Remote VSS Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/dae107ec-8198-4778-a950-faa7edad125b)
++ **Protocol**: [[MS-FSRVP]: File Server Remote VSS Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/dae107ec-8198-4778-a950-faa7edad125b)
 
- - **Protocol UUID**: a8e0653c-2744-4389-a61d-7373df8b2292
++ **Protocol UUID**: a8e0653c-2744-4389-a61d-7373df8b2292
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: `\\pipe\FssagentRpc`
++ **SMB Named pipe**: `\\pipe\FssagentRpc`
 
- - **Function name**: [`IsPathSupported`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/f0f0166f-0795-4b2f-8567-ff6a6cfb71cb)
++ **Function name**: [`IsPathSupported`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/f0f0166f-0795-4b2f-8567-ff6a6cfb71cb)
 
- - **Function operation number**: `8`
++ **Function operation number**: `8`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,6 +54,6 @@ DWORD IsPathSupported(
 
 ## References
 
- - Documentation of protocol [MS-FSRVP]: File Server Remote VSS Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/dae107ec-8198-4778-a950-faa7edad125b
++ Documentation of protocol [MS-FSRVP]: File Server Remote VSS Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/dae107ec-8198-4778-a950-faa7edad125b
 
- - Documentation of function `IsPathSupported`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/f0f0166f-0795-4b2f-8567-ff6a6cfb71cb
++ Documentation of function `IsPathSupported`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/f0f0166f-0795-4b2f-8567-ff6a6cfb71cb

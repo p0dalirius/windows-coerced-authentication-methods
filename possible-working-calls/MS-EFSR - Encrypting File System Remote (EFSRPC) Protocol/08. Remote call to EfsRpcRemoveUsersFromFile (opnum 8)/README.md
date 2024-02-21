@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31)
++ **Protocol**: [[MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31)
 
- - **Protocol UUID**: c681d488-d850-11d0-8c52-00c04fd90f7e
++ **Protocol UUID**: c681d488-d850-11d0-8c52-00c04fd90f7e
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: `\pipe\efsrpc`
++ **SMB Named pipe**: `\pipe\efsrpc`
 
- - **Function name**: [`EfsRpcRemoveUsersFromFile`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/28609dad-5fa5-4af9-9382-18d40e3e9dec)
++ **Function name**: [`EfsRpcRemoveUsersFromFile`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/28609dad-5fa5-4af9-9382-18d40e3e9dec)
 
- - **Function operation number**: `8`
++ **Function operation number**: `8`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,6 +54,6 @@ DWORD EfsRpcRemoveUsersFromFile(
 
 ## References
 
- - Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31
++ Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31
 
- - Documentation of function `EfsRpcRemoveUsersFromFile`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/28609dad-5fa5-4af9-9382-18d40e3e9dec
++ Documentation of function `EfsRpcRemoveUsersFromFile`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/28609dad-5fa5-4af9-9382-18d40e3e9dec

@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-DFSRH]: DFS Replication Helper Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsrh/c3170e6b-e195-4aef-a286-8e6f4923a8ae)
++ **Protocol**: [[MS-DFSRH]: DFS Replication Helper Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsrh/c3170e6b-e195-4aef-a286-8e6f4923a8ae)
 
- - **Protocol UUID**: 9009d654-250b-4e0d-9ab0-acb63134f69f
++ **Protocol UUID**: 9009d654-250b-4e0d-9ab0-acb63134f69f
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`GetReport`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsrh/ea839292-129c-4fbf-ac38-de4bb1ba4220)
++ **Function name**: [`GetReport`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsrh/ea839292-129c-4fbf-ac38-de4bb1ba4220)
 
- - **Function operation number**: `9`
++ **Function operation number**: `9`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -58,6 +58,6 @@ HRESULT GetReport(
 
 ## References
 
- - Documentation of protocol [MS-DFSRH]: DFS Replication Helper Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsrh/c3170e6b-e195-4aef-a286-8e6f4923a8ae
++ Documentation of protocol [MS-DFSRH]: DFS Replication Helper Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsrh/c3170e6b-e195-4aef-a286-8e6f4923a8ae
 
- - Documentation of function `GetReport`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsrh/ea839292-129c-4fbf-ac38-de4bb1ba4220
++ Documentation of function `GetReport`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsrh/ea839292-129c-4fbf-ac38-de4bb1ba4220

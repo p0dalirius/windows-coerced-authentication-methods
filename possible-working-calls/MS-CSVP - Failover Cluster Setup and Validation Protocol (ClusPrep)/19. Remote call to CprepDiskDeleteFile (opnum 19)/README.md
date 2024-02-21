@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-CSVP]: Failover Cluster: Setup and Validation Protocol (ClusPrep)](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/600931f0-739b-4c09-8ddf-05555438c279)
++ **Protocol**: [[MS-CSVP]: Failover Cluster: Setup and Validation Protocol (ClusPrep)](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/600931f0-739b-4c09-8ddf-05555438c279)
 
- - **Protocol UUID**: 12108a88-6858-4467-b92f-e6cf4568dfb6
++ **Protocol UUID**: 12108a88-6858-4467-b92f-e6cf4568dfb6
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`CprepDiskDeleteFile`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/d8032240-4b93-42bf-8bb4-32611b611fbd)
++ **Function name**: [`CprepDiskDeleteFile`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/d8032240-4b93-42bf-8bb4-32611b611fbd)
 
- - **Function operation number**: `19`
++ **Function operation number**: `19`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,6 +54,6 @@ HRESULT CprepDiskDeleteFile(
 
 ## References
 
- - Documentation of protocol [MS-CSVP]: Failover Cluster: Setup and Validation Protocol (ClusPrep): https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/600931f0-739b-4c09-8ddf-05555438c279
++ Documentation of protocol [MS-CSVP]: Failover Cluster: Setup and Validation Protocol (ClusPrep): https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/600931f0-739b-4c09-8ddf-05555438c279
 
- - Documentation of function `CprepDiskDeleteFile`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/d8032240-4b93-42bf-8bb4-32611b611fbd
++ Documentation of function `CprepDiskDeleteFile`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/d8032240-4b93-42bf-8bb4-32611b611fbd

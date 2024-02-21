@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-NRPC]: Netlogon Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)
++ **Protocol**: [[MS-NRPC]: Netlogon Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)
 
- - **Protocol UUID**: 12345678-1234-abcd-ef00-01234567cffb
++ **Protocol UUID**: 12345678-1234-abcd-ef00-01234567cffb
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: `\PIPE\NETLOGON`
++ **SMB Named pipe**: `\PIPE\NETLOGON`
 
- - **Function name**: [`DsrDeregisterDnsHostRecords`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/db6c9aad-5736-40c5-af86-538dd439134c)
++ **Function name**: [`DsrDeregisterDnsHostRecords`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/db6c9aad-5736-40c5-af86-538dd439134c)
 
- - **Function operation number**: `41`
++ **Function operation number**: `41`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -56,6 +56,6 @@ NET_API_STATUS DsrDeregisterDnsHostRecords(
 
 ## References
 
- - Documentation of protocol [MS-NRPC]: Netlogon Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f
++ Documentation of protocol [MS-NRPC]: Netlogon Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f
 
- - Documentation of function `DsrDeregisterDnsHostRecords`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/db6c9aad-5736-40c5-af86-538dd439134c
++ Documentation of function `DsrDeregisterDnsHostRecords`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/db6c9aad-5736-40c5-af86-538dd439134c

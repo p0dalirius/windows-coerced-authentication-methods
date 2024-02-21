@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-PAR]: Print System Asynchronous Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-par/695e3f9a-f83f-479a-82d9-ba260497c2d0)
++ **Protocol**: [[MS-PAR]: Print System Asynchronous Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-par/695e3f9a-f83f-479a-82d9-ba260497c2d0)
 
- - **Protocol UUID**: 76f03f96-cdfd-44fc-a22c-64950a001209
++ **Protocol UUID**: 76f03f96-cdfd-44fc-a22c-64950a001209
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`RpcAsyncUploadPrinterDriverPackage`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-par/cdb3054e-db6e-4d08-ab8c-2282375b1f8c)
++ **Function name**: [`RpcAsyncUploadPrinterDriverPackage`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-par/cdb3054e-db6e-4d08-ab8c-2282375b1f8c)
 
- - **Function operation number**: `63`
++ **Function operation number**: `63`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -59,6 +59,6 @@ HRESULT RpcAsyncUploadPrinterDriverPackage(
 
 ## References
 
- - Documentation of protocol [MS-PAR]: Print System Asynchronous Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-par/695e3f9a-f83f-479a-82d9-ba260497c2d0
++ Documentation of protocol [MS-PAR]: Print System Asynchronous Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-par/695e3f9a-f83f-479a-82d9-ba260497c2d0
 
- - Documentation of function `RpcAsyncUploadPrinterDriverPackage`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-par/cdb3054e-db6e-4d08-ab8c-2282375b1f8c
++ Documentation of function `RpcAsyncUploadPrinterDriverPackage`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-par/cdb3054e-db6e-4d08-ab8c-2282375b1f8c

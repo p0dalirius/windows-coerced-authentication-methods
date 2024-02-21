@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-IMSA]: Internet Information Services (IIS) IMSAdminBaseW Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/9cd07fff-2cb6-44fb-be98-6f292ae2a457)
++ **Protocol**: [[MS-IMSA]: Internet Information Services (IIS) IMSAdminBaseW Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/9cd07fff-2cb6-44fb-be98-6f292ae2a457)
 
- - **Protocol UUID**: 70b51430-b6ca-11d0-b9b9-00a0c922e750
++ **Protocol UUID**: 70b51430-b6ca-11d0-b9b9-00a0c922e750
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`R_EnumData`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/98dea7b4-ca6c-4a22-8754-ded604a04a1b)
++ **Function name**: [`R_EnumData`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/98dea7b4-ca6c-4a22-8754-ded604a04a1b)
 
- - **Function operation number**: `12`
++ **Function operation number**: `12`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -57,6 +57,6 @@ HRESULT R_EnumData(
 
 ## References
 
- - Documentation of protocol [MS-IMSA]: Internet Information Services (IIS) IMSAdminBaseW Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/9cd07fff-2cb6-44fb-be98-6f292ae2a457
++ Documentation of protocol [MS-IMSA]: Internet Information Services (IIS) IMSAdminBaseW Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/9cd07fff-2cb6-44fb-be98-6f292ae2a457
 
- - Documentation of function `R_EnumData`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/98dea7b4-ca6c-4a22-8754-ded604a04a1b
++ Documentation of function `R_EnumData`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/98dea7b4-ca6c-4a22-8754-ded604a04a1b

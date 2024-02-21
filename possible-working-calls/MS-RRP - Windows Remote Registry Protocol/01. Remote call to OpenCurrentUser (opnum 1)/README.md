@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-RRP]: Windows Remote Registry Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/0fa3191d-bb79-490a-81bd-54c2601b7a78)
++ **Protocol**: [[MS-RRP]: Windows Remote Registry Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/0fa3191d-bb79-490a-81bd-54c2601b7a78)
 
- - **Protocol UUID**: 338cd001-2244-31f1-aaaa-900038001003
++ **Protocol UUID**: 338cd001-2244-31f1-aaaa-900038001003
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: `\PIPE\winreg`
++ **SMB Named pipe**: `\PIPE\winreg`
 
- - **Function name**: [`OpenCurrentUser`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/ec140ed9-4d00-4c03-a15c-c7245a497ed5)
++ **Function name**: [`OpenCurrentUser`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/ec140ed9-4d00-4c03-a15c-c7245a497ed5)
 
- - **Function operation number**: `1`
++ **Function operation number**: `1`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,6 +54,6 @@ error_status_t OpenCurrentUser(
 
 ## References
 
- - Documentation of protocol [MS-RRP]: Windows Remote Registry Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/0fa3191d-bb79-490a-81bd-54c2601b7a78
++ Documentation of protocol [MS-RRP]: Windows Remote Registry Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/0fa3191d-bb79-490a-81bd-54c2601b7a78
 
- - Documentation of function `OpenCurrentUser`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/ec140ed9-4d00-4c03-a15c-c7245a497ed5
++ Documentation of function `OpenCurrentUser`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/ec140ed9-4d00-4c03-a15c-c7245a497ed5

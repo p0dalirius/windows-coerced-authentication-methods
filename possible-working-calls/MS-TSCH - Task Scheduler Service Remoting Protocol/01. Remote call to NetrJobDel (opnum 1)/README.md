@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-TSCH]: Task Scheduler Service Remoting Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-tsch/d1058a28-7e02-4948-8b8d-4a347fa64931)
++ **Protocol**: [[MS-TSCH]: Task Scheduler Service Remoting Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-tsch/d1058a28-7e02-4948-8b8d-4a347fa64931)
 
- - **Protocol UUID**: None
++ **Protocol UUID**: None
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`NetrJobDel`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-tsch/eaf77b14-cdeb-4fbb-8f52-3f9d0d0ffbf1)
++ **Function name**: [`NetrJobDel`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-tsch/eaf77b14-cdeb-4fbb-8f52-3f9d0d0ffbf1)
 
- - **Function operation number**: `1`
++ **Function operation number**: `1`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,6 +54,6 @@ NET_API_STATUS NetrJobDel(
 
 ## References
 
- - Documentation of protocol [MS-TSCH]: Task Scheduler Service Remoting Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-tsch/d1058a28-7e02-4948-8b8d-4a347fa64931
++ Documentation of protocol [MS-TSCH]: Task Scheduler Service Remoting Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-tsch/d1058a28-7e02-4948-8b8d-4a347fa64931
 
- - Documentation of function `NetrJobDel`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-tsch/eaf77b14-cdeb-4fbb-8f52-3f9d0d0ffbf1
++ Documentation of function `NetrJobDel`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-tsch/eaf77b14-cdeb-4fbb-8f52-3f9d0d0ffbf1

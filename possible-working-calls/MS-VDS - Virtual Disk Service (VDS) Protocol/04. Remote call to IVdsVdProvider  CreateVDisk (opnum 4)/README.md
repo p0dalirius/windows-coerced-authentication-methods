@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-VDS]: Virtual Disk Service (VDS) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-vds/90977af2-515e-4fbd-809c-fdb280ab48db)
++ **Protocol**: [[MS-VDS]: Virtual Disk Service (VDS) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-vds/90977af2-515e-4fbd-809c-fdb280ab48db)
 
- - **Protocol UUID**: 118610b7-8d94-4030-b5b8-500889788e4e
++ **Protocol UUID**: 118610b7-8d94-4030-b5b8-500889788e4e
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`IVdsVdProvider::CreateVDisk`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-vds/f4902b82-754f-4d5c-9c02-9bd91e149200)
++ **Function name**: [`IVdsVdProvider::CreateVDisk`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-vds/f4902b82-754f-4d5c-9c02-9bd91e149200)
 
- - **Function operation number**: `4`
++ **Function operation number**: `4`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -59,6 +59,6 @@ HRESULT CreateVDisk(
 
 ## References
 
- - Documentation of protocol [MS-VDS]: Virtual Disk Service (VDS) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-vds/90977af2-515e-4fbd-809c-fdb280ab48db
++ Documentation of protocol [MS-VDS]: Virtual Disk Service (VDS) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-vds/90977af2-515e-4fbd-809c-fdb280ab48db
 
- - Documentation of function `IVdsVdProvider::CreateVDisk`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-vds/f4902b82-754f-4d5c-9c02-9bd91e149200
++ Documentation of function `IVdsVdProvider::CreateVDisk`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-vds/f4902b82-754f-4d5c-9c02-9bd91e149200

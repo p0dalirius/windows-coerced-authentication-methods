@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-DMRP]: Disk Management Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dmrp/19a16e20-072f-4d74-a245-ce4df2f1ecdd)
++ **Protocol**: [[MS-DMRP]: Disk Management Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dmrp/19a16e20-072f-4d74-a245-ce4df2f1ecdd)
 
- - **Protocol UUID**: d2d79df5-3400-11d0-b40b-00aa005ff586
++ **Protocol UUID**: d2d79df5-3400-11d0-b40b-00aa005ff586
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`IVolumeClient3::CreateVolumeAssignAndFormatEx`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dmrp/8eaaddda-c7dd-4d21-9163-dc4505299f17)
++ **Function name**: [`IVolumeClient3::CreateVolumeAssignAndFormatEx`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dmrp/8eaaddda-c7dd-4d21-9163-dc4505299f17)
 
- - **Function operation number**: `31`
++ **Function operation number**: `31`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -62,6 +62,6 @@ HRESULT CreateVolumeAssignAndFormatEx(
 
 ## References
 
- - Documentation of protocol [MS-DMRP]: Disk Management Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dmrp/19a16e20-072f-4d74-a245-ce4df2f1ecdd
++ Documentation of protocol [MS-DMRP]: Disk Management Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dmrp/19a16e20-072f-4d74-a245-ce4df2f1ecdd
 
- - Documentation of function `IVolumeClient3::CreateVolumeAssignAndFormatEx`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dmrp/8eaaddda-c7dd-4d21-9163-dc4505299f17
++ Documentation of function `IVolumeClient3::CreateVolumeAssignAndFormatEx`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dmrp/8eaaddda-c7dd-4d21-9163-dc4505299f17

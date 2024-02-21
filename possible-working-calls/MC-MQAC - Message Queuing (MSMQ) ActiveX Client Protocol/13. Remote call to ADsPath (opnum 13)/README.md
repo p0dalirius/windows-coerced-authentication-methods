@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MC-MQAC]: Message Queuing (MSMQ): ActiveX Client Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-mqac/5ed096a9-b641-4a5a-b749-7e6937d20f4d)
++ **Protocol**: [[MC-MQAC]: Message Queuing (MSMQ): ActiveX Client Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-mqac/5ed096a9-b641-4a5a-b749-7e6937d20f4d)
 
- - **Protocol UUID**: 0fb15084-af41-11ce-bd2b-204c4f4f5020
++ **Protocol UUID**: 0fb15084-af41-11ce-bd2b-204c4f4f5020
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`ADsPath`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-mqac/32e6675a-c988-45e9-909d-466e1781d809)
++ **Function name**: [`ADsPath`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-mqac/32e6675a-c988-45e9-909d-466e1781d809)
 
- - **Function operation number**: `13`
++ **Function operation number**: `13`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -52,6 +52,6 @@ After this step, we relay the authentication to other services in order to eleva
 
 ## References
 
- - Documentation of protocol [MC-MQAC]: Message Queuing (MSMQ): ActiveX Client Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-mqac/5ed096a9-b641-4a5a-b749-7e6937d20f4d
++ Documentation of protocol [MC-MQAC]: Message Queuing (MSMQ): ActiveX Client Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-mqac/5ed096a9-b641-4a5a-b749-7e6937d20f4d
 
- - Documentation of function `ADsPath`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-mqac/32e6675a-c988-45e9-909d-466e1781d809
++ Documentation of function `ADsPath`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-mqac/32e6675a-c988-45e9-909d-466e1781d809

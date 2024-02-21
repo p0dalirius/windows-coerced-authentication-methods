@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-MQMP]: Message Queuing (MSMQ): Queue Manager Client Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqmp/8e379aa2-802d-4fcc-b6a6-6203e4606fa9)
++ **Protocol**: [[MS-MQMP]: Message Queuing (MSMQ): Queue Manager Client Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqmp/8e379aa2-802d-4fcc-b6a6-6203e4606fa9)
 
- - **Protocol UUID**: fdb3a030-065f-11d1-bb9b-00a024ea5525
++ **Protocol UUID**: fdb3a030-065f-11d1-bb9b-00a024ea5525
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`rpc_QMOpenQueueInternal`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqmp/de086803-3f83-44ec-9bd3-417216c171c8)
++ **Function name**: [`rpc_QMOpenQueueInternal`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqmp/de086803-3f83-44ec-9bd3-417216c171c8)
 
- - **Function operation number**: `19`
++ **Function operation number**: `19`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -64,6 +64,6 @@ HRESULT rpc_QMOpenQueueInternal(
 
 ## References
 
- - Documentation of protocol [MS-MQMP]: Message Queuing (MSMQ): Queue Manager Client Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqmp/8e379aa2-802d-4fcc-b6a6-6203e4606fa9
++ Documentation of protocol [MS-MQMP]: Message Queuing (MSMQ): Queue Manager Client Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqmp/8e379aa2-802d-4fcc-b6a6-6203e4606fa9
 
- - Documentation of function `rpc_QMOpenQueueInternal`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqmp/de086803-3f83-44ec-9bd3-417216c171c8
++ Documentation of function `rpc_QMOpenQueueInternal`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqmp/de086803-3f83-44ec-9bd3-417216c171c8

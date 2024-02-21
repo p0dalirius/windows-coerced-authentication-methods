@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-DNSP]: Domain Name Service (DNS) Server Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dnsp/f97756c9-3783-428b-9451-b376f877319a)
++ **Protocol**: [[MS-DNSP]: Domain Name Service (DNS) Server Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dnsp/f97756c9-3783-428b-9451-b376f877319a)
 
- - **Protocol UUID**: 50abc2a4-574d-40b3-9d66-ee4fd5fba076
++ **Protocol UUID**: 50abc2a4-574d-40b3-9d66-ee4fd5fba076
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: `\PIPE\DNSSERVER`
++ **SMB Named pipe**: `\PIPE\DNSSERVER`
 
- - **Function name**: [`R_DnssrvOperation2`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dnsp/8c0522b1-97fb-4fa7-b4e2-2c55c0afb0e7)
++ **Function name**: [`R_DnssrvOperation2`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dnsp/8c0522b1-97fb-4fa7-b4e2-2c55c0afb0e7)
 
- - **Function operation number**: `5`
++ **Function operation number**: `5`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -60,6 +60,6 @@ LONG R_DnssrvOperation2(
 
 ## References
 
- - Documentation of protocol [MS-DNSP]: Domain Name Service (DNS) Server Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dnsp/f97756c9-3783-428b-9451-b376f877319a
++ Documentation of protocol [MS-DNSP]: Domain Name Service (DNS) Server Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dnsp/f97756c9-3783-428b-9451-b376f877319a
 
- - Documentation of function `R_DnssrvOperation2`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dnsp/8c0522b1-97fb-4fa7-b4e2-2c55c0afb0e7
++ Documentation of function `R_DnssrvOperation2`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dnsp/8c0522b1-97fb-4fa7-b4e2-2c55c0afb0e7

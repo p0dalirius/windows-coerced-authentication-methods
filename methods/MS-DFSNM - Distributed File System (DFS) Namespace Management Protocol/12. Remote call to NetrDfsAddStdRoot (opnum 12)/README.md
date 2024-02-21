@@ -2,17 +2,17 @@
 
 ## Summary
 
- - **Protocol**: [[MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979)
++ **Protocol**: [[MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979)
 
- - **Function name**: [`NetrDfsAddStdRoot`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/b18ef17a-7a9c-4e22-b1bf-6a4d07e87b2d)
++ **Function name**: [`NetrDfsAddStdRoot`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/b18ef17a-7a9c-4e22-b1bf-6a4d07e87b2d)
 
- - **Function operation number**: `12`
++ **Function operation number**: `12`
 
- - **RPC Interfaces**:
++ **RPC Interfaces**:
    + Interface 1:
      - uuid=`4fc742e0-4a10-11cf-8273-00aa004ae673`
      - version=`3.0`
-     - Accessible from:
+     - Accessible through:
        + SMB Named pipe: `\PIPE\netdfs`
 
 ## Description
@@ -53,20 +53,20 @@ NET_API_STATUS NetrDfsAddStdRoot(
 ```
 
 
- - **ServerName**: The pointer to a null-terminated Unicode string. This is the host name of the new DFS root target.
++ **ServerName**: The pointer to a null-terminated Unicode string. This is the host name of the new DFS root target.
 
 
- - **RootShare**: The pointer to a null-terminated Unicode string. This is the new DFS root target share name as well as the DFS namespace name. The share MUST already exist.
++ **RootShare**: The pointer to a null-terminated Unicode string. This is the new DFS root target share name as well as the DFS namespace name. The share MUST already exist.
 
 
- - **Comment**: The pointer to a null-terminated Unicode string that contains a comment associated with the DFS namespace. Used for informational purposes, this string has no protocol-specified restrictions on length or content. The comment is meant for human consumption and does not affect server functionality. This parameter MAY be a NULL pointer.
++ **Comment**: The pointer to a null-terminated Unicode string that contains a comment associated with the DFS namespace. Used for informational purposes, this string has no protocol-specified restrictions on length or content. The comment is meant for human consumption and does not affect server functionality. This parameter MAY be a NULL pointer.
 
 
- - **ApiFlags**: This parameter is reserved for future use and is ignored by the server.
++ **ApiFlags**: This parameter is reserved for future use and is ignored by the server.
 
 
 ## References
 
- - Documentation of protocol [MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979
++ Documentation of protocol [MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979
 
- - Documentation of function `NetrDfsAddStdRoot`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/b18ef17a-7a9c-4e22-b1bf-6a4d07e87b2d
++ Documentation of function `NetrDfsAddStdRoot`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/b18ef17a-7a9c-4e22-b1bf-6a4d07e87b2d

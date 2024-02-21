@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-EVEN]: EventLog Remoting Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-even/55b13664-f739-4e4e-bd8d-04eeda59d09f)
++ **Protocol**: [[MS-EVEN]: EventLog Remoting Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-even/55b13664-f739-4e4e-bd8d-04eeda59d09f)
 
- - **Protocol UUID**: 82273fdc-e32a-18c3-3f78-827929dc23ea
++ **Protocol UUID**: 82273fdc-e32a-18c3-3f78-827929dc23ea
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: `\PIPE\eventlog`
++ **SMB Named pipe**: `\PIPE\eventlog`
 
- - **Function name**: [`ElfrBackupELFW`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-even/58e4c3bb-26b3-48a8-8e29-3cc56a23fc2b)
++ **Function name**: [`ElfrBackupELFW`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-even/58e4c3bb-26b3-48a8-8e29-3cc56a23fc2b)
 
- - **Function operation number**: `1`
++ **Function operation number**: `1`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -53,6 +53,6 @@ NTSTATUS ElfrBackupELFW(
 
 ## References
 
- - Documentation of protocol [MS-EVEN]: EventLog Remoting Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-even/55b13664-f739-4e4e-bd8d-04eeda59d09f
++ Documentation of protocol [MS-EVEN]: EventLog Remoting Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-even/55b13664-f739-4e4e-bd8d-04eeda59d09f
 
- - Documentation of function `ElfrBackupELFW`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-even/58e4c3bb-26b3-48a8-8e29-3cc56a23fc2b
++ Documentation of function `ElfrBackupELFW`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-even/58e4c3bb-26b3-48a8-8e29-3cc56a23fc2b

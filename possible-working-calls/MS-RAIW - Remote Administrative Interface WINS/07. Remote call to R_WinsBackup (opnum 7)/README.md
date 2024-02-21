@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-RAIW]: Remote Administrative Interface: WINS](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-raiw/830a759d-3157-4bfa-901a-d7dcd860c3b9)
++ **Protocol**: [[MS-RAIW]: Remote Administrative Interface: WINS](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-raiw/830a759d-3157-4bfa-901a-d7dcd860c3b9)
 
- - **Protocol UUID**: 45f52c28-7f9f-101a-b52b-08002b2efabe
++ **Protocol UUID**: 45f52c28-7f9f-101a-b52b-08002b2efabe
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: `"\pipe\WinsPipe"`
++ **SMB Named pipe**: `"\pipe\WinsPipe"`
 
- - **Function name**: [`R_WinsBackup`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-raiw/304d718f-5d5c-4ceb-b7e7-68deac3dc703)
++ **Function name**: [`R_WinsBackup`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-raiw/304d718f-5d5c-4ceb-b7e7-68deac3dc703)
 
- - **Function operation number**: `7`
++ **Function operation number**: `7`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,6 +54,6 @@ DWORD R_WinsBackup(
 
 ## References
 
- - Documentation of protocol [MS-RAIW]: Remote Administrative Interface: WINS: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-raiw/830a759d-3157-4bfa-901a-d7dcd860c3b9
++ Documentation of protocol [MS-RAIW]: Remote Administrative Interface: WINS: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-raiw/830a759d-3157-4bfa-901a-d7dcd860c3b9
 
- - Documentation of function `R_WinsBackup`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-raiw/304d718f-5d5c-4ceb-b7e7-68deac3dc703
++ Documentation of function `R_WinsBackup`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-raiw/304d718f-5d5c-4ceb-b7e7-68deac3dc703

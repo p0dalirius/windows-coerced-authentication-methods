@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979)
++ **Protocol**: [[MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979)
 
- - **Protocol UUID**: 4fc742e0-4a10-11cf-8273-00aa004ae673
++ **Protocol UUID**: 4fc742e0-4a10-11cf-8273-00aa004ae673
 
- - **Protocol version**: 3.0
++ **Protocol version**: 3.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`NetrDfsMove`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/9718bd46-7704-4359-b5a4-00e6466ce886)
++ **Function name**: [`NetrDfsMove`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/9718bd46-7704-4359-b5a4-00e6466ce886)
 
- - **Function operation number**: `6`
++ **Function operation number**: `6`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,6 +54,6 @@ NET_API_STATUS NetrDfsMove(
 
 ## References
 
- - Documentation of protocol [MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979
++ Documentation of protocol [MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979
 
- - Documentation of function `NetrDfsMove`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/9718bd46-7704-4359-b5a4-00e6466ce886
++ Documentation of function `NetrDfsMove`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/9718bd46-7704-4359-b5a4-00e6466ce886

@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-NRPC]: Netlogon Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)
++ **Protocol**: [[MS-NRPC]: Netlogon Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)
 
- - **Protocol UUID**: 12345678-1234-abcd-ef00-01234567cffb
++ **Protocol UUID**: 12345678-1234-abcd-ef00-01234567cffb
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: `\PIPE\NETLOGON`
++ **SMB Named pipe**: `\PIPE\NETLOGON`
 
- - **Function name**: [`DsrGetDcSiteCoverageW`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/6d26f254-b125-4f0f-8441-1ca66cc93b2f)
++ **Function name**: [`DsrGetDcSiteCoverageW`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/6d26f254-b125-4f0f-8441-1ca66cc93b2f)
 
- - **Function operation number**: `38`
++ **Function operation number**: `38`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -53,6 +53,6 @@ NET_API_STATUS DsrGetDcSiteCoverageW(
 
 ## References
 
- - Documentation of protocol [MS-NRPC]: Netlogon Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f
++ Documentation of protocol [MS-NRPC]: Netlogon Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f
 
- - Documentation of function `DsrGetDcSiteCoverageW`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/6d26f254-b125-4f0f-8441-1ca66cc93b2f
++ Documentation of function `DsrGetDcSiteCoverageW`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/6d26f254-b125-4f0f-8441-1ca66cc93b2f

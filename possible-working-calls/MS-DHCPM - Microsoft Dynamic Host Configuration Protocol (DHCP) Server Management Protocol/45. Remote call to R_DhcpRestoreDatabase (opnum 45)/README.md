@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-DHCPM]: Microsoft Dynamic Host Configuration Protocol (DHCP) Server Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dhcpm/d117857c-1491-46a2-a68e-c844be3627d4)
++ **Protocol**: [[MS-DHCPM]: Microsoft Dynamic Host Configuration Protocol (DHCP) Server Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dhcpm/d117857c-1491-46a2-a68e-c844be3627d4)
 
- - **Protocol UUID**: 6bffd098-a112-3610-9833-46c3f874532d
++ **Protocol UUID**: 6bffd098-a112-3610-9833-46c3f874532d
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: `\PIPE\DHCPSERVER`
++ **SMB Named pipe**: `\PIPE\DHCPSERVER`
 
- - **Function name**: [`R_DhcpRestoreDatabase`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dhcpm/ed387010-a226-4719-964b-c9ee8bc0f302)
++ **Function name**: [`R_DhcpRestoreDatabase`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dhcpm/ed387010-a226-4719-964b-c9ee8bc0f302)
 
- - **Function operation number**: `45`
++ **Function operation number**: `45`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -53,6 +53,6 @@ DWORD R_DhcpRestoreDatabase(
 
 ## References
 
- - Documentation of protocol [MS-DHCPM]: Microsoft Dynamic Host Configuration Protocol (DHCP) Server Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dhcpm/d117857c-1491-46a2-a68e-c844be3627d4
++ Documentation of protocol [MS-DHCPM]: Microsoft Dynamic Host Configuration Protocol (DHCP) Server Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dhcpm/d117857c-1491-46a2-a68e-c844be3627d4
 
- - Documentation of function `R_DhcpRestoreDatabase`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dhcpm/ed387010-a226-4719-964b-c9ee8bc0f302
++ Documentation of function `R_DhcpRestoreDatabase`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dhcpm/ed387010-a226-4719-964b-c9ee8bc0f302

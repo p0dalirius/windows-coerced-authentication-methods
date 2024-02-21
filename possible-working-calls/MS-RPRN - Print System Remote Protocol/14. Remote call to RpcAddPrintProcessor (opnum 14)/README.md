@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-RPRN]: Print System Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/d42db7d5-f141-4466-8f47-0a4be14e2fc1)
++ **Protocol**: [[MS-RPRN]: Print System Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/d42db7d5-f141-4466-8f47-0a4be14e2fc1)
 
- - **Protocol UUID**: 12345678-1234-abcd-ef00-0123456789ab
++ **Protocol UUID**: 12345678-1234-abcd-ef00-0123456789ab
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: `\pipe\spoolss`
++ **SMB Named pipe**: `\pipe\spoolss`
 
- - **Function name**: [`RpcAddPrintProcessor`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/d7e6fdb2-5256-4835-92c1-27aa6f76758a)
++ **Function name**: [`RpcAddPrintProcessor`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/d7e6fdb2-5256-4835-92c1-27aa6f76758a)
 
- - **Function operation number**: `14`
++ **Function operation number**: `14`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -55,6 +55,6 @@ DWORD RpcAddPrintProcessor(
 
 ## References
 
- - Documentation of protocol [MS-RPRN]: Print System Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/d42db7d5-f141-4466-8f47-0a4be14e2fc1
++ Documentation of protocol [MS-RPRN]: Print System Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/d42db7d5-f141-4466-8f47-0a4be14e2fc1
 
- - Documentation of function `RpcAddPrintProcessor`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/d7e6fdb2-5256-4835-92c1-27aa6f76758a
++ Documentation of function `RpcAddPrintProcessor`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/d7e6fdb2-5256-4835-92c1-27aa6f76758a

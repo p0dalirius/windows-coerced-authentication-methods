@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-WSRM]: Windows System Resource Manager (WSRM) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wsrm/4ace0c0e-acea-4f74-8b60-ec47be136e7f)
++ **Protocol**: [[MS-WSRM]: Windows System Resource Manager (WSRM) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wsrm/4ace0c0e-acea-4f74-8b60-ec47be136e7f)
 
- - **Protocol UUID**: e8bcffac-b864-4574-b2e8-f1fb21dfdc18
++ **Protocol UUID**: e8bcffac-b864-4574-b2e8-f1fb21dfdc18
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`CreateAccountingDb`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wsrm/f1c48f77-986e-49b7-bbd5-717a391d99fa)
++ **Function name**: [`CreateAccountingDb`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wsrm/f1c48f77-986e-49b7-bbd5-717a391d99fa)
 
- - **Function operation number**: `7`
++ **Function operation number**: `7`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -55,6 +55,6 @@ After this step, we relay the authentication to other services in order to eleva
 
 ## References
 
- - Documentation of protocol [MS-WSRM]: Windows System Resource Manager (WSRM) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wsrm/4ace0c0e-acea-4f74-8b60-ec47be136e7f
++ Documentation of protocol [MS-WSRM]: Windows System Resource Manager (WSRM) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wsrm/4ace0c0e-acea-4f74-8b60-ec47be136e7f
 
- - Documentation of function `CreateAccountingDb`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wsrm/f1c48f77-986e-49b7-bbd5-717a391d99fa
++ Documentation of function `CreateAccountingDb`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wsrm/f1c48f77-986e-49b7-bbd5-717a391d99fa

@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-NRPC]: Netlogon Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)
++ **Protocol**: [[MS-NRPC]: Netlogon Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)
 
- - **Protocol UUID**: 12345678-1234-abcd-ef00-01234567cffb
++ **Protocol UUID**: 12345678-1234-abcd-ef00-01234567cffb
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: `\PIPE\NETLOGON`
++ **SMB Named pipe**: `\PIPE\NETLOGON`
 
- - **Function name**: [`NetrLogonGetTrustRid`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/1d6fad9e-763d-495f-9bed-18c79304c3d7)
++ **Function name**: [`NetrLogonGetTrustRid`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/1d6fad9e-763d-495f-9bed-18c79304c3d7)
 
- - **Function operation number**: `23`
++ **Function operation number**: `23`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,6 +54,6 @@ NET_API_STATUS NetrLogonGetTrustRid(
 
 ## References
 
- - Documentation of protocol [MS-NRPC]: Netlogon Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f
++ Documentation of protocol [MS-NRPC]: Netlogon Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f
 
- - Documentation of function `NetrLogonGetTrustRid`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/1d6fad9e-763d-495f-9bed-18c79304c3d7
++ Documentation of function `NetrLogonGetTrustRid`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/1d6fad9e-763d-495f-9bed-18c79304c3d7

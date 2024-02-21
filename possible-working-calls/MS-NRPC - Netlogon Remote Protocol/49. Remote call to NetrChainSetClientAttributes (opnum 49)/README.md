@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-NRPC]: Netlogon Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)
++ **Protocol**: [[MS-NRPC]: Netlogon Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)
 
- - **Protocol UUID**: 12345678-1234-abcd-ef00-01234567cffb
++ **Protocol UUID**: 12345678-1234-abcd-ef00-01234567cffb
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: `\PIPE\NETLOGON`
++ **SMB Named pipe**: `\PIPE\NETLOGON`
 
- - **Function name**: [`NetrChainSetClientAttributes`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/3a416e82-0299-4ff0-a25d-223f972ba1d6)
++ **Function name**: [`NetrChainSetClientAttributes`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/3a416e82-0299-4ff0-a25d-223f972ba1d6)
 
- - **Function operation number**: `49`
++ **Function operation number**: `49`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -62,6 +62,6 @@ NTSTATUS NetrChainSetClientAttributes(
 
 ## References
 
- - Documentation of protocol [MS-NRPC]: Netlogon Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f
++ Documentation of protocol [MS-NRPC]: Netlogon Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f
 
- - Documentation of function `NetrChainSetClientAttributes`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/3a416e82-0299-4ff0-a25d-223f972ba1d6
++ Documentation of function `NetrChainSetClientAttributes`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/3a416e82-0299-4ff0-a25d-223f972ba1d6

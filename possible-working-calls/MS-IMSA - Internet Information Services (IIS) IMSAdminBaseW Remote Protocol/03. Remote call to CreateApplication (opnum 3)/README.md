@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-IMSA]: Internet Information Services (IIS) IMSAdminBaseW Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/9cd07fff-2cb6-44fb-be98-6f292ae2a457)
++ **Protocol**: [[MS-IMSA]: Internet Information Services (IIS) IMSAdminBaseW Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/9cd07fff-2cb6-44fb-be98-6f292ae2a457)
 
- - **Protocol UUID**: 70b51430-b6ca-11d0-b9b9-00a0c922e750
++ **Protocol UUID**: 70b51430-b6ca-11d0-b9b9-00a0c922e750
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`CreateApplication`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/20be5a58-6604-4a94-ab26-2809d7fb0d24)
++ **Function name**: [`CreateApplication`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/20be5a58-6604-4a94-ab26-2809d7fb0d24)
 
- - **Function operation number**: `3`
++ **Function operation number**: `3`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -55,6 +55,6 @@ HRESULT CreateApplication(
 
 ## References
 
- - Documentation of protocol [MS-IMSA]: Internet Information Services (IIS) IMSAdminBaseW Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/9cd07fff-2cb6-44fb-be98-6f292ae2a457
++ Documentation of protocol [MS-IMSA]: Internet Information Services (IIS) IMSAdminBaseW Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/9cd07fff-2cb6-44fb-be98-6f292ae2a457
 
- - Documentation of function `CreateApplication`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/20be5a58-6604-4a94-ab26-2809d7fb0d24
++ Documentation of function `CreateApplication`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/20be5a58-6604-4a94-ab26-2809d7fb0d24

@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-IMSA]: Internet Information Services (IIS) IMSAdminBaseW Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/9cd07fff-2cb6-44fb-be98-6f292ae2a457)
++ **Protocol**: [[MS-IMSA]: Internet Information Services (IIS) IMSAdminBaseW Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/9cd07fff-2cb6-44fb-be98-6f292ae2a457)
 
- - **Protocol UUID**: 70b51430-b6ca-11d0-b9b9-00a0c922e750
++ **Protocol UUID**: 70b51430-b6ca-11d0-b9b9-00a0c922e750
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`Export`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/61afee7a-a004-47de-a264-f8e39998b566)
++ **Function name**: [`Export`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/61afee7a-a004-47de-a264-f8e39998b566)
 
- - **Function operation number**: `36`
++ **Function operation number**: `36`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -55,6 +55,6 @@ HRESULT Export(
 
 ## References
 
- - Documentation of protocol [MS-IMSA]: Internet Information Services (IIS) IMSAdminBaseW Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/9cd07fff-2cb6-44fb-be98-6f292ae2a457
++ Documentation of protocol [MS-IMSA]: Internet Information Services (IIS) IMSAdminBaseW Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/9cd07fff-2cb6-44fb-be98-6f292ae2a457
 
- - Documentation of function `Export`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/61afee7a-a004-47de-a264-f8e39998b566
++ Documentation of function `Export`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/61afee7a-a004-47de-a264-f8e39998b566

@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-SAMR]: Security Account Manager (SAM) Remote Protocol (Client-to-Server)](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/4df07fab-1bbc-452f-8e92-7853a3c7e380)
++ **Protocol**: [[MS-SAMR]: Security Account Manager (SAM) Remote Protocol (Client-to-Server)](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/4df07fab-1bbc-452f-8e92-7853a3c7e380)
 
- - **Protocol UUID**: 12345778-1234-abcd-ef00-0123456789ac
++ **Protocol UUID**: 12345778-1234-abcd-ef00-0123456789ac
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`SamrUnicodeChangePasswordUser2`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/acb3204a-da8b-478e-9139-1ea589edb880)
++ **Function name**: [`SamrUnicodeChangePasswordUser2`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/acb3204a-da8b-478e-9139-1ea589edb880)
 
- - **Function operation number**: `55`
++ **Function operation number**: `55`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -59,6 +59,6 @@ long SamrUnicodeChangePasswordUser2(
 
 ## References
 
- - Documentation of protocol [MS-SAMR]: Security Account Manager (SAM) Remote Protocol (Client-to-Server): https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/4df07fab-1bbc-452f-8e92-7853a3c7e380
++ Documentation of protocol [MS-SAMR]: Security Account Manager (SAM) Remote Protocol (Client-to-Server): https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/4df07fab-1bbc-452f-8e92-7853a3c7e380
 
- - Documentation of function `SamrUnicodeChangePasswordUser2`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/acb3204a-da8b-478e-9139-1ea589edb880
++ Documentation of function `SamrUnicodeChangePasswordUser2`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/acb3204a-da8b-478e-9139-1ea589edb880

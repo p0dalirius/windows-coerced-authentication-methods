@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MC-MQAC]: Message Queuing (MSMQ): ActiveX Client Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-mqac/5ed096a9-b641-4a5a-b749-7e6937d20f4d)
++ **Protocol**: [[MC-MQAC]: Message Queuing (MSMQ): ActiveX Client Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-mqac/5ed096a9-b641-4a5a-b749-7e6937d20f4d)
 
- - **Protocol UUID**: 0fb15084-af41-11ce-bd2b-204c4f4f5020
++ **Protocol UUID**: 0fb15084-af41-11ce-bd2b-204c4f4f5020
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`Open`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-mqac/d1a87420-f35d-4ad3-9338-993b12431368)
++ **Function name**: [`Open`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-mqac/d1a87420-f35d-4ad3-9338-993b12431368)
 
- - **Function operation number**: `34`
++ **Function operation number**: `34`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,6 +54,6 @@ HRESULT Open(
 
 ## References
 
- - Documentation of protocol [MC-MQAC]: Message Queuing (MSMQ): ActiveX Client Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-mqac/5ed096a9-b641-4a5a-b749-7e6937d20f4d
++ Documentation of protocol [MC-MQAC]: Message Queuing (MSMQ): ActiveX Client Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-mqac/5ed096a9-b641-4a5a-b749-7e6937d20f4d
 
- - Documentation of function `Open`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-mqac/d1a87420-f35d-4ad3-9338-993b12431368
++ Documentation of function `Open`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-mqac/d1a87420-f35d-4ad3-9338-993b12431368

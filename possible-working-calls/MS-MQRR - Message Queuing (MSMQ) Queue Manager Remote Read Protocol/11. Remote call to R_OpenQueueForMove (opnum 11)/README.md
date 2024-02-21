@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-MQRR]: Message Queuing (MSMQ): Queue Manager Remote Read Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqrr/9edbc8fa-02ad-4c79-804f-6bb8f430aac1)
++ **Protocol**: [[MS-MQRR]: Message Queuing (MSMQ): Queue Manager Remote Read Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqrr/9edbc8fa-02ad-4c79-804f-6bb8f430aac1)
 
- - **Protocol UUID**: 1a9134dd-7b39-45ba-ad88-44d01ca47f28
++ **Protocol UUID**: 1a9134dd-7b39-45ba-ad88-44d01ca47f28
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`R_OpenQueueForMove`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqrr/960e383b-d0c9-482f-9617-2507d1dc0487)
++ **Function name**: [`R_OpenQueueForMove`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqrr/960e383b-d0c9-482f-9617-2507d1dc0487)
 
- - **Function operation number**: `11`
++ **Function operation number**: `11`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -63,6 +63,6 @@ void R_OpenQueueForMove(
 
 ## References
 
- - Documentation of protocol [MS-MQRR]: Message Queuing (MSMQ): Queue Manager Remote Read Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqrr/9edbc8fa-02ad-4c79-804f-6bb8f430aac1
++ Documentation of protocol [MS-MQRR]: Message Queuing (MSMQ): Queue Manager Remote Read Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqrr/9edbc8fa-02ad-4c79-804f-6bb8f430aac1
 
- - Documentation of function `R_OpenQueueForMove`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqrr/960e383b-d0c9-482f-9617-2507d1dc0487
++ Documentation of function `R_OpenQueueForMove`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqrr/960e383b-d0c9-482f-9617-2507d1dc0487

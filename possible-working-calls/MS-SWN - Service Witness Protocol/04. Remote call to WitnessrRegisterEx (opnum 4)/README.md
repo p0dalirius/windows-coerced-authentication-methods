@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-SWN]: Service Witness Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-swn/1c404bcb-4a19-4152-a465-ec9a27cb717d)
++ **Protocol**: [[MS-SWN]: Service Witness Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-swn/1c404bcb-4a19-4152-a465-ec9a27cb717d)
 
- - **Protocol UUID**: ccd8c074-d0e5-4a40-92b4-d074faa6ba28
++ **Protocol UUID**: ccd8c074-d0e5-4a40-92b4-d074faa6ba28
 
- - **Protocol version**: 1.1
++ **Protocol version**: 1.1
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`WitnessrRegisterEx`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-swn/a6028354-7f1c-43d7-97af-4999305193d2)
++ **Function name**: [`WitnessrRegisterEx`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-swn/a6028354-7f1c-43d7-97af-4999305193d2)
 
- - **Function operation number**: `4`
++ **Function operation number**: `4`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -59,6 +59,6 @@ DWORD WitnessrRegisterEx(
 
 ## References
 
- - Documentation of protocol [MS-SWN]: Service Witness Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-swn/1c404bcb-4a19-4152-a465-ec9a27cb717d
++ Documentation of protocol [MS-SWN]: Service Witness Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-swn/1c404bcb-4a19-4152-a465-ec9a27cb717d
 
- - Documentation of function `WitnessrRegisterEx`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-swn/a6028354-7f1c-43d7-97af-4999305193d2
++ Documentation of function `WitnessrRegisterEx`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-swn/a6028354-7f1c-43d7-97af-4999305193d2

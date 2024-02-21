@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-IMSA]: Internet Information Services (IIS) IMSAdminBaseW Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/9cd07fff-2cb6-44fb-be98-6f292ae2a457)
++ **Protocol**: [[MS-IMSA]: Internet Information Services (IIS) IMSAdminBaseW Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/9cd07fff-2cb6-44fb-be98-6f292ae2a457)
 
- - **Protocol UUID**: 70b51430-b6ca-11d0-b9b9-00a0c922e750
++ **Protocol UUID**: 70b51430-b6ca-11d0-b9b9-00a0c922e750
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`GetDataPaths`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/aea0f96d-b8ee-42ad-8cc9-2b64b693c64f)
++ **Function name**: [`GetDataPaths`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/aea0f96d-b8ee-42ad-8cc9-2b64b693c64f)
 
- - **Function operation number**: `16`
++ **Function operation number**: `16`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -58,6 +58,6 @@ HRESULT GetDataPaths(
 
 ## References
 
- - Documentation of protocol [MS-IMSA]: Internet Information Services (IIS) IMSAdminBaseW Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/9cd07fff-2cb6-44fb-be98-6f292ae2a457
++ Documentation of protocol [MS-IMSA]: Internet Information Services (IIS) IMSAdminBaseW Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/9cd07fff-2cb6-44fb-be98-6f292ae2a457
 
- - Documentation of function `GetDataPaths`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/aea0f96d-b8ee-42ad-8cc9-2b64b693c64f
++ Documentation of function `GetDataPaths`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/aea0f96d-b8ee-42ad-8cc9-2b64b693c64f

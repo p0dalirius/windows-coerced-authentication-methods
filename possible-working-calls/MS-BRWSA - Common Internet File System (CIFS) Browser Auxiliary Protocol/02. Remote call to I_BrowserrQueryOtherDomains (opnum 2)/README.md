@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-BRWSA]: Common Internet File System (CIFS) Browser Auxiliary Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-brwsa/5995d2f2-fff1-40af-9100-ca67794d50a5)
++ **Protocol**: [[MS-BRWSA]: Common Internet File System (CIFS) Browser Auxiliary Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-brwsa/5995d2f2-fff1-40af-9100-ca67794d50a5)
 
- - **Protocol UUID**: 6bffd098-a112-3610-9833-012892020162
++ **Protocol UUID**: 6bffd098-a112-3610-9833-012892020162
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: `"\pipe\browser"`
++ **SMB Named pipe**: `"\pipe\browser"`
 
- - **Function name**: [`I_BrowserrQueryOtherDomains`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-brwsa/3fdb5c28-c61b-49d0-bd0f-0a704f7dc507)
++ **Function name**: [`I_BrowserrQueryOtherDomains`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-brwsa/3fdb5c28-c61b-49d0-bd0f-0a704f7dc507)
 
- - **Function operation number**: `2`
++ **Function operation number**: `2`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,6 +54,6 @@ NET_API_STATUS I_BrowserrQueryOtherDomains(
 
 ## References
 
- - Documentation of protocol [MS-BRWSA]: Common Internet File System (CIFS) Browser Auxiliary Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-brwsa/5995d2f2-fff1-40af-9100-ca67794d50a5
++ Documentation of protocol [MS-BRWSA]: Common Internet File System (CIFS) Browser Auxiliary Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-brwsa/5995d2f2-fff1-40af-9100-ca67794d50a5
 
- - Documentation of function `I_BrowserrQueryOtherDomains`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-brwsa/3fdb5c28-c61b-49d0-bd0f-0a704f7dc507
++ Documentation of function `I_BrowserrQueryOtherDomains`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-brwsa/3fdb5c28-c61b-49d0-bd0f-0a704f7dc507

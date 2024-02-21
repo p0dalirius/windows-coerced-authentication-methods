@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979)
++ **Protocol**: [[MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979)
 
- - **Protocol UUID**: 4fc742e0-4a10-11cf-8273-00aa004ae673
++ **Protocol UUID**: 4fc742e0-4a10-11cf-8273-00aa004ae673
 
- - **Protocol version**: 3.0
++ **Protocol version**: 3.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`NetrDfsRemove2`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/5eefcdcb-411a-4bd0-995c-21b2c47a98fa)
++ **Function name**: [`NetrDfsRemove2`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/5eefcdcb-411a-4bd0-995c-21b2c47a98fa)
 
- - **Function operation number**: `20`
++ **Function operation number**: `20`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -56,6 +56,6 @@ NET_API_STATUS NetrDfsRemove2(
 
 ## References
 
- - Documentation of protocol [MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979
++ Documentation of protocol [MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979
 
- - Documentation of function `NetrDfsRemove2`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/5eefcdcb-411a-4bd0-995c-21b2c47a98fa
++ Documentation of function `NetrDfsRemove2`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/5eefcdcb-411a-4bd0-995c-21b2c47a98fa

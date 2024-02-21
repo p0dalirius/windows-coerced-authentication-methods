@@ -2,27 +2,26 @@
 
 ## Summary
 
- - **Protocol**: [[MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31)
++ **Protocol**: [[MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31)
 
- - **Function name**: [`EfsRpcOpenFileRaw`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/ccc4fb75-1c86-41d7-bbc4-b278ec13bfb8)
++ **Function name**: [`EfsRpcOpenFileRaw`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/ccc4fb75-1c86-41d7-bbc4-b278ec13bfb8)
 
- - **Function operation number**: `0`
++ **Function operation number**: `0`
 
- - **RPC Interfaces**:
-   + Interface 1:
-     - uuid=`c681d488-d850-11d0-8c52-00c04fd90f7e`
-     - version=`1.0`
-     - Accessible from:
-       + SMB named pipe: `\PIPE\lsarpc`
-       + SMB named pipe: `\PIPE\lsass`
-       + SMB named pipe: `\PIPE\netlogon`
-       + SMB named pipe: `\PIPE\samr`
-   + Interface 2:
-     - uuid=`df1941c5-fe89-4e79-bf10-463657acf44d`
-     - version=`1.0`
-     - Accessible from:
-       + SMB named pipe: `\PIPE\efsrpc`
-
++ **RPC Interfaces**:
+  + Interface 1:
+    + uuid=`c681d488-d850-11d0-8c52-00c04fd90f7e`
+    + version=`1.0`
+    + Accessible through:
+      + SMB named pipe: `\PIPE\lsarpc`
+      + SMB named pipe: `\PIPE\lsass`
+      + SMB named pipe: `\PIPE\netlogon`
+      + SMB named pipe: `\PIPE\samr`
+  + Interface 2:
+    + uuid=`df1941c5-fe89-4e79-bf10-463657acf44d`
+    + version=`1.0`
+    + Accessible through:
+      + SMB named pipe: `\PIPE\efsrpc`
 
 ## Description
 
@@ -61,16 +60,16 @@ long EfsRpcOpenFileRaw(
 );
 ```
 
- - **binding_h**: An explicit binding handle created by the client. This is an RPC binding handle parameter, as specified in [C706] and [MS-RPCE] section 2.
++ **binding_h**: An explicit binding handle created by the client. This is an RPC binding handle parameter, as specified in [C706] and [MS-RPCE] section 2.
 
 
- - **hContext**: An implementation-specific context handle that is used in subsequent calls by the client to the EfsRpcReadFileRaw method, EfsRpcWriteFileRaw method, or EfsRpcCloseRaw method.
++ **hContext**: An implementation-specific context handle that is used in subsequent calls by the client to the EfsRpcReadFileRaw method, EfsRpcWriteFileRaw method, or EfsRpcCloseRaw method.
 
 
- - **FileName**: An EFSRPC identifier, as specified in section 2.2.1.
++ **FileName**: An EFSRPC identifier, as specified in section 2.2.1.
 
 
- - **Flags**: This MUST be set to some combination of the following values. All servers and clients MUST support the CREATE_FOR_IMPORT flag. Servers that implement a hierarchical encrypted store, such as the NTFS file system, SHOULD also support the CREATE_FOR_DIR flag. Servers SHOULD support the OVERWRITE_HIDDEN flag, and MAY interpret it in implementation-specific ways. A client MUST ensure that all the flags it does not support are set to zero. A server MUST ignore all flags it does not support. Flag values are specified in the following table.
++ **Flags**: This MUST be set to some combination of the following values. All servers and clients MUST support the CREATE_FOR_IMPORT flag. Servers that implement a hierarchical encrypted store, such as the NTFS file system, SHOULD also support the CREATE_FOR_DIR flag. Servers SHOULD support the OVERWRITE_HIDDEN flag, and MAY interpret it in implementation-specific ways. A client MUST ensure that all the flags it does not support are set to zero. A server MUST ignore all flags it does not support. Flag values are specified in the following table.
  
 | Name | Value | Description |
 |---|---|---|
@@ -82,13 +81,13 @@ long EfsRpcOpenFileRaw(
 
 ## References
 
- - Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31
++ Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31
 
 
- - Documentation of function `EfsRpcOpenFileRaw`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/ccc4fb75-1c86-41d7-bbc4-b278ec13bfb8
++ Documentation of function `EfsRpcOpenFileRaw`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/ccc4fb75-1c86-41d7-bbc4-b278ec13bfb8
 
 
- - CVE-2021-36942 Windows LSA Spoofing Vulnerability: https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36942
++ CVE-2021-36942 Windows LSA Spoofing Vulnerability: https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36942
 
 
- - This call was pointed out by [@topotam77](https://twitter.com/topotam77/) on Jul 18, 2021: https://twitter.com/topotam77/status/1416833996923809793
++ This call was pointed out by [@topotam77](https://twitter.com/topotam77/) on Jul 18, 2021: https://twitter.com/topotam77/status/1416833996923809793

@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979)
++ **Protocol**: [[MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979)
 
- - **Protocol UUID**: 4fc742e0-4a10-11cf-8273-00aa004ae673
++ **Protocol UUID**: 4fc742e0-4a10-11cf-8273-00aa004ae673
 
- - **Protocol version**: 3.0
++ **Protocol version**: 3.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`NetrDfsAddRootTarget`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/f015b511-d56f-4e93-a106-879e93a5c200)
++ **Function name**: [`NetrDfsAddRootTarget`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/f015b511-d56f-4e93-a106-879e93a5c200)
 
- - **Function operation number**: `23`
++ **Function operation number**: `23`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -57,6 +57,6 @@ NET_API_STATUS NetrDfsAddRootTarget(
 
 ## References
 
- - Documentation of protocol [MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979
++ Documentation of protocol [MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979
 
- - Documentation of function `NetrDfsAddRootTarget`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/f015b511-d56f-4e93-a106-879e93a5c200
++ Documentation of function `NetrDfsAddRootTarget`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/f015b511-d56f-4e93-a106-879e93a5c200

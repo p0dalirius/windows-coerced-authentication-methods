@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-NRPC]: Netlogon Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)
++ **Protocol**: [[MS-NRPC]: Netlogon Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)
 
- - **Protocol UUID**: 12345678-1234-abcd-ef00-01234567cffb
++ **Protocol UUID**: 12345678-1234-abcd-ef00-01234567cffb
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: `\PIPE\NETLOGON`
++ **SMB Named pipe**: `\PIPE\NETLOGON`
 
- - **Function name**: [`NetrEnumerateTrustedDomainsEx`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/c3e9870a-0943-4d45-be94-edb9419a1c11)
++ **Function name**: [`NetrEnumerateTrustedDomainsEx`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/c3e9870a-0943-4d45-be94-edb9419a1c11)
 
- - **Function operation number**: `36`
++ **Function operation number**: `36`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -53,6 +53,6 @@ NET_API_STATUS NetrEnumerateTrustedDomainsEx(
 
 ## References
 
- - Documentation of protocol [MS-NRPC]: Netlogon Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f
++ Documentation of protocol [MS-NRPC]: Netlogon Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f
 
- - Documentation of function `NetrEnumerateTrustedDomainsEx`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/c3e9870a-0943-4d45-be94-edb9419a1c11
++ Documentation of function `NetrEnumerateTrustedDomainsEx`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/c3e9870a-0943-4d45-be94-edb9419a1c11

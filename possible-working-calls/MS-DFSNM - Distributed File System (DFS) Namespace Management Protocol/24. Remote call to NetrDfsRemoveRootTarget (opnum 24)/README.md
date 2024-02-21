@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979)
++ **Protocol**: [[MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979)
 
- - **Protocol UUID**: 4fc742e0-4a10-11cf-8273-00aa004ae673
++ **Protocol UUID**: 4fc742e0-4a10-11cf-8273-00aa004ae673
 
- - **Protocol version**: 3.0
++ **Protocol version**: 3.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`NetrDfsRemoveRootTarget`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/1f70f350-439a-4051-a427-eb939e3fce81)
++ **Function name**: [`NetrDfsRemoveRootTarget`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/1f70f350-439a-4051-a427-eb939e3fce81)
 
- - **Function operation number**: `24`
++ **Function operation number**: `24`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,6 +54,6 @@ NET_API_STATUS NetrDfsRemoveRootTarget(
 
 ## References
 
- - Documentation of protocol [MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979
++ Documentation of protocol [MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979
 
- - Documentation of function `NetrDfsRemoveRootTarget`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/1f70f350-439a-4051-a427-eb939e3fce81
++ Documentation of function `NetrDfsRemoveRootTarget`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/1f70f350-439a-4051-a427-eb939e3fce81

@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-RAIW]: Remote Administrative Interface: WINS](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-raiw/830a759d-3157-4bfa-901a-d7dcd860c3b9)
++ **Protocol**: [[MS-RAIW]: Remote Administrative Interface: WINS](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-raiw/830a759d-3157-4bfa-901a-d7dcd860c3b9)
 
- - **Protocol UUID**: 45f52c28-7f9f-101a-b52b-08002b2efabe
++ **Protocol UUID**: 45f52c28-7f9f-101a-b52b-08002b2efabe
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: `"\pipe\WinsPipe"`
++ **SMB Named pipe**: `"\pipe\WinsPipe"`
 
- - **Function name**: [`R_WinsDoStaticInit`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-raiw/e33043ac-715d-4476-9aad-f2827f9d9ec5)
++ **Function name**: [`R_WinsDoStaticInit`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-raiw/e33043ac-715d-4476-9aad-f2827f9d9ec5)
 
- - **Function operation number**: `3`
++ **Function operation number**: `3`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,6 +54,6 @@ DWORD R_WinsDoStaticInit(
 
 ## References
 
- - Documentation of protocol [MS-RAIW]: Remote Administrative Interface: WINS: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-raiw/830a759d-3157-4bfa-901a-d7dcd860c3b9
++ Documentation of protocol [MS-RAIW]: Remote Administrative Interface: WINS: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-raiw/830a759d-3157-4bfa-901a-d7dcd860c3b9
 
- - Documentation of function `R_WinsDoStaticInit`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-raiw/e33043ac-715d-4476-9aad-f2827f9d9ec5
++ Documentation of function `R_WinsDoStaticInit`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-raiw/e33043ac-715d-4476-9aad-f2827f9d9ec5

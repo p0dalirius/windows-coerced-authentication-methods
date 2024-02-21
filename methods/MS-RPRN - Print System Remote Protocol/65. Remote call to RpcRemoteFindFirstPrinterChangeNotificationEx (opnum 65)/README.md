@@ -2,17 +2,17 @@
 
 ## Summary
 
- - **Protocol**: [[MS-RPRN]: Print System Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/d42db7d5-f141-4466-8f47-0a4be14e2fc1)
++ **Protocol**: [[MS-RPRN]: Print System Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/d42db7d5-f141-4466-8f47-0a4be14e2fc1)
 
- - **Protocol UUID**: 12345678-1234-abcd-ef00-0123456789ab
++ **Protocol UUID**: 12345678-1234-abcd-ef00-0123456789ab
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **Function name**: [`RpcRemoteFindFirstPrinterChangeNotificationEx`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/eb66b221-1c1f-4249-b8bc-c5befec2314d)
++ **Function name**: [`RpcRemoteFindFirstPrinterChangeNotificationEx`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/eb66b221-1c1f-4249-b8bc-c5befec2314d)
 
- - **Function operation number**: `62`
++ **Function operation number**: `62`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -57,31 +57,31 @@ DWORD RpcRemoteFindFirstPrinterChangeNotificationEx(
 ```
 
 
- - **hPrinter**: A handle to a printer or server object that was opened by RpcAddPrinter (section 3.1.4.2.3), RpcAddPrinterEx (section 3.1.4.2.15), RpcOpenPrinter (section 3.1.4.2.2), or RpcOpenPrinterEx (section 3.1.4.2.14).
++ **hPrinter**: A handle to a printer or server object that was opened by RpcAddPrinter (section 3.1.4.2.3), RpcAddPrinterEx (section 3.1.4.2.15), RpcOpenPrinter (section 3.1.4.2.2), or RpcOpenPrinterEx (section 3.1.4.2.14).
 
 
- - **fdwFlags**: Flags that specify the conditions that are required for a change notification object to enter a signaled state. A change notification MUST occur when one or more of the specified conditions are met.
++ **fdwFlags**: Flags that specify the conditions that are required for a change notification object to enter a signaled state. A change notification MUST occur when one or more of the specified conditions are met.
 
     This parameter specifies a bitwise OR of zero or more Printer Change Values (section 2.2.4.13). The rules governing printer change values are specified in section 2.2.4.13.
 
 
- - **fdwOptions**: The category of printers for which change notifications are returned. This parameter MUST be one of the supported values specified in Printer Notification Values (section 2.2.3.8).
++ **fdwOptions**: The category of printers for which change notifications are returned. This parameter MUST be one of the supported values specified in Printer Notification Values (section 2.2.3.8).
 
 
- - **pszLocalMachine**: A pointer to a string that represents the name of the client computer. The rules governing server names are specified in section 2.2.4.16.
++ **pszLocalMachine**: A pointer to a string that represents the name of the client computer. The rules governing server names are specified in section 2.2.4.16.
 
 
- - **dwPrinterLocal**: An implementation-specific unique value that MUST be sufficient for the client to determine whether a call to RpcReplyOpenPrinter (section 3.2.4.1.1) by the server is associated with the hPrinter parameter in this call.<369>
++ **dwPrinterLocal**: An implementation-specific unique value that MUST be sufficient for the client to determine whether a call to RpcReplyOpenPrinter (section 3.2.4.1.1) by the server is associated with the hPrinter parameter in this call.<369>
 
 
- - **pOptions**: A pointer to an RPC_V2_NOTIFY_OPTIONS (section 2.2.1.13.1) structure that specifies printer or job members that the client listens to for notifications. For lists of members that can be monitored, see Printer Notification Values (section 2.2.3.8) and Job Notification Values (section 2.2.3.3).
++ **pOptions**: A pointer to an RPC_V2_NOTIFY_OPTIONS (section 2.2.1.13.1) structure that specifies printer or job members that the client listens to for notifications. For lists of members that can be monitored, see Printer Notification Values (section 2.2.3.8) and Job Notification Values (section 2.2.3.3).
 
     The value of this parameter can be NULL if the value of fdwFlags is nonzero.
 
 
 ## References
 
- - Documentation of protocol [MS-RPRN]: Print System Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/d42db7d5-f141-4466-8f47-0a4be14e2fc1
++ Documentation of protocol [MS-RPRN]: Print System Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/d42db7d5-f141-4466-8f47-0a4be14e2fc1
 
 
- - Documentation of function `RpcRemoteFindFirstPrinterChangeNotificationEx`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/eb66b221-1c1f-4249-b8bc-c5befec2314d
++ Documentation of function `RpcRemoteFindFirstPrinterChangeNotificationEx`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rprn/eb66b221-1c1f-4249-b8bc-c5befec2314d

@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31)
++ **Protocol**: [[MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31)
 
- - **Protocol UUID**: c681d488-d850-11d0-8c52-00c04fd90f7e
++ **Protocol UUID**: c681d488-d850-11d0-8c52-00c04fd90f7e
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: `\pipe\efsrpc`
++ **SMB Named pipe**: `\pipe\efsrpc`
 
- - **Function name**: [`EfsRpcEncryptFileExSrv`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/366bb217-dad6-407d-9205-88e798713494)
++ **Function name**: [`EfsRpcEncryptFileExSrv`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/366bb217-dad6-407d-9205-88e798713494)
 
- - **Function operation number**: `21`
++ **Function operation number**: `21`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -55,6 +55,6 @@ long EfsRpcEncryptFileExSrv(
 
 ## References
 
- - Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31
++ Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31
 
- - Documentation of function `EfsRpcEncryptFileExSrv`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/366bb217-dad6-407d-9205-88e798713494
++ Documentation of function `EfsRpcEncryptFileExSrv`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/366bb217-dad6-407d-9205-88e798713494

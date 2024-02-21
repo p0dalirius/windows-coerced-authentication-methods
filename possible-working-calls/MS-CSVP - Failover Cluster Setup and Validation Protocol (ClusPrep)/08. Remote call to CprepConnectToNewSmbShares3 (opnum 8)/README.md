@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-CSVP]: Failover Cluster: Setup and Validation Protocol (ClusPrep)](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/600931f0-739b-4c09-8ddf-05555438c279)
++ **Protocol**: [[MS-CSVP]: Failover Cluster: Setup and Validation Protocol (ClusPrep)](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/600931f0-739b-4c09-8ddf-05555438c279)
 
- - **Protocol UUID**: 12108a88-6858-4467-b92f-e6cf4568dfb6
++ **Protocol UUID**: 12108a88-6858-4467-b92f-e6cf4568dfb6
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`CprepConnectToNewSmbShares3`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/aa2f7339-c1f7-473b-a2b7-94838b6657d4)
++ **Function name**: [`CprepConnectToNewSmbShares3`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/aa2f7339-c1f7-473b-a2b7-94838b6657d4)
 
- - **Function operation number**: `8`
++ **Function operation number**: `8`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,6 +54,6 @@ HRESULT CprepConnectToNewSmbShares3(
 
 ## References
 
- - Documentation of protocol [MS-CSVP]: Failover Cluster: Setup and Validation Protocol (ClusPrep): https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/600931f0-739b-4c09-8ddf-05555438c279
++ Documentation of protocol [MS-CSVP]: Failover Cluster: Setup and Validation Protocol (ClusPrep): https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/600931f0-739b-4c09-8ddf-05555438c279
 
- - Documentation of function `CprepConnectToNewSmbShares3`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/aa2f7339-c1f7-473b-a2b7-94838b6657d4
++ Documentation of function `CprepConnectToNewSmbShares3`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/aa2f7339-c1f7-473b-a2b7-94838b6657d4

@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-CSVP]: Failover Cluster: Setup and Validation Protocol (ClusPrep)](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/600931f0-739b-4c09-8ddf-05555438c279)
++ **Protocol**: [[MS-CSVP]: Failover Cluster: Setup and Validation Protocol (ClusPrep)](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/600931f0-739b-4c09-8ddf-05555438c279)
 
- - **Protocol UUID**: 12108a88-6858-4467-b92f-e6cf4568dfb6
++ **Protocol UUID**: 12108a88-6858-4467-b92f-e6cf4568dfb6
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`CprepDiskWriteFileData`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/50f09d78-a191-44ac-8e59-62b9fe7c005e)
++ **Function name**: [`CprepDiskWriteFileData`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/50f09d78-a191-44ac-8e59-62b9fe7c005e)
 
- - **Function operation number**: `17`
++ **Function operation number**: `17`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -56,6 +56,6 @@ HRESULT CprepDiskWriteFileData(
 
 ## References
 
- - Documentation of protocol [MS-CSVP]: Failover Cluster: Setup and Validation Protocol (ClusPrep): https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/600931f0-739b-4c09-8ddf-05555438c279
++ Documentation of protocol [MS-CSVP]: Failover Cluster: Setup and Validation Protocol (ClusPrep): https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/600931f0-739b-4c09-8ddf-05555438c279
 
- - Documentation of function `CprepDiskWriteFileData`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/50f09d78-a191-44ac-8e59-62b9fe7c005e
++ Documentation of function `CprepDiskWriteFileData`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-csvp/50f09d78-a191-44ac-8e59-62b9fe7c005e

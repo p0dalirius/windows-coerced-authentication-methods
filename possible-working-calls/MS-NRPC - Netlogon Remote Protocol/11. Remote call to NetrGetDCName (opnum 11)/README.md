@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-NRPC]: Netlogon Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)
++ **Protocol**: [[MS-NRPC]: Netlogon Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)
 
- - **Protocol UUID**: 12345678-1234-abcd-ef00-01234567cffb
++ **Protocol UUID**: 12345678-1234-abcd-ef00-01234567cffb
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: `\PIPE\NETLOGON`
++ **SMB Named pipe**: `\PIPE\NETLOGON`
 
- - **Function name**: [`NetrGetDCName`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ddd7452f-4b7d-47e6-895b-5b23d9dd2120)
++ **Function name**: [`NetrGetDCName`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ddd7452f-4b7d-47e6-895b-5b23d9dd2120)
 
- - **Function operation number**: `11`
++ **Function operation number**: `11`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,6 +54,6 @@ NET_API_STATUS NetrGetDCName(
 
 ## References
 
- - Documentation of protocol [MS-NRPC]: Netlogon Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f
++ Documentation of protocol [MS-NRPC]: Netlogon Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f
 
- - Documentation of function `NetrGetDCName`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ddd7452f-4b7d-47e6-895b-5b23d9dd2120
++ Documentation of function `NetrGetDCName`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ddd7452f-4b7d-47e6-895b-5b23d9dd2120

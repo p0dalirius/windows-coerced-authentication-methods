@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-VDS]: Virtual Disk Service (VDS) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-vds/90977af2-515e-4fbd-809c-fdb280ab48db)
++ **Protocol**: [[MS-VDS]: Virtual Disk Service (VDS) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-vds/90977af2-515e-4fbd-809c-fdb280ab48db)
 
- - **Protocol UUID**: 118610b7-8d94-4030-b5b8-500889788e4e
++ **Protocol UUID**: 118610b7-8d94-4030-b5b8-500889788e4e
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`IVdsVdProvider::AddVDisk`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-vds/d700e1fb-ff7e-4822-9e73-487d3f0fd6f0)
++ **Function name**: [`IVdsVdProvider::AddVDisk`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-vds/d700e1fb-ff7e-4822-9e73-487d3f0fd6f0)
 
- - **Function operation number**: `5`
++ **Function operation number**: `5`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,6 +54,6 @@ HRESULT AddVDisk(
 
 ## References
 
- - Documentation of protocol [MS-VDS]: Virtual Disk Service (VDS) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-vds/90977af2-515e-4fbd-809c-fdb280ab48db
++ Documentation of protocol [MS-VDS]: Virtual Disk Service (VDS) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-vds/90977af2-515e-4fbd-809c-fdb280ab48db
 
- - Documentation of function `IVdsVdProvider::AddVDisk`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-vds/d700e1fb-ff7e-4822-9e73-487d3f0fd6f0
++ Documentation of function `IVdsVdProvider::AddVDisk`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-vds/d700e1fb-ff7e-4822-9e73-487d3f0fd6f0

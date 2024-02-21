@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-FAX]: Fax Server and Client Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fax/dabce486-05b1-4ea4-95fe-f2c3d5315ff4)
++ **Protocol**: [[MS-FAX]: Fax Server and Client Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fax/dabce486-05b1-4ea4-95fe-f2c3d5315ff4)
 
- - **Protocol UUID**: 6099fc12-3eff-11d0-abd0-00c04fd91a4e
++ **Protocol UUID**: 6099fc12-3eff-11d0-abd0-00c04fd91a4e
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: `\PIPE\SHAREDFAX`
++ **SMB Named pipe**: `\PIPE\SHAREDFAX`
 
- - **Function name**: [`FaxObs_SendDocument`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fax/21b87199-d4e7-472c-9190-90c6bb16d947)
++ **Function name**: [`FaxObs_SendDocument`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fax/21b87199-d4e7-472c-9190-90c6bb16d947)
 
- - **Function operation number**: `5`
++ **Function operation number**: `5`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -55,6 +55,6 @@ error_status_t FaxObs_SendDocument(
 
 ## References
 
- - Documentation of protocol [MS-FAX]: Fax Server and Client Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fax/dabce486-05b1-4ea4-95fe-f2c3d5315ff4
++ Documentation of protocol [MS-FAX]: Fax Server and Client Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fax/dabce486-05b1-4ea4-95fe-f2c3d5315ff4
 
- - Documentation of function `FaxObs_SendDocument`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fax/21b87199-d4e7-472c-9190-90c6bb16d947
++ Documentation of function `FaxObs_SendDocument`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fax/21b87199-d4e7-472c-9190-90c6bb16d947

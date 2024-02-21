@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-SRVS]: Server Service Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9)
++ **Protocol**: [[MS-SRVS]: Server Service Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9)
 
- - **Protocol UUID**: 4b324fc8-1670-01d3-1278-5a47bf6ee188
++ **Protocol UUID**: 4b324fc8-1670-01d3-1278-5a47bf6ee188
 
- - **Protocol version**: 3.0
++ **Protocol version**: 3.0
 
- - **SMB Named pipe**: `\PIPE\srvsvc`
++ **SMB Named pipe**: `\PIPE\srvsvc`
 
- - **Function name**: [`NetrShareDelSticky`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/ea9d8e07-d2b4-4b78-84f3-c27caf9de6c2)
++ **Function name**: [`NetrShareDelSticky`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/ea9d8e07-d2b4-4b78-84f3-c27caf9de6c2)
 
- - **Function operation number**: `19`
++ **Function operation number**: `19`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,6 +54,6 @@ NET_API_STATUS NetrShareDelSticky(
 
 ## References
 
- - Documentation of protocol [MS-SRVS]: Server Service Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9
++ Documentation of protocol [MS-SRVS]: Server Service Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9
 
- - Documentation of function `NetrShareDelSticky`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/ea9d8e07-d2b4-4b78-84f3-c27caf9de6c2
++ Documentation of function `NetrShareDelSticky`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/ea9d8e07-d2b4-4b78-84f3-c27caf9de6c2

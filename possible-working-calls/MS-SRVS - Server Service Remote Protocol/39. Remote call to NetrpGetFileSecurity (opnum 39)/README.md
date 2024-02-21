@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-SRVS]: Server Service Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9)
++ **Protocol**: [[MS-SRVS]: Server Service Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9)
 
- - **Protocol UUID**: 4b324fc8-1670-01d3-1278-5a47bf6ee188
++ **Protocol UUID**: 4b324fc8-1670-01d3-1278-5a47bf6ee188
 
- - **Protocol version**: 3.0
++ **Protocol version**: 3.0
 
- - **SMB Named pipe**: `\PIPE\srvsvc`
++ **SMB Named pipe**: `\PIPE\srvsvc`
 
- - **Function name**: [`NetrpGetFileSecurity`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/753f7ac0-3bf3-4f9f-a479-2834aac7096e)
++ **Function name**: [`NetrpGetFileSecurity`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/753f7ac0-3bf3-4f9f-a479-2834aac7096e)
 
- - **Function operation number**: `39`
++ **Function operation number**: `39`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -56,6 +56,6 @@ DWORD NetrpGetFileSecurity(
 
 ## References
 
- - Documentation of protocol [MS-SRVS]: Server Service Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9
++ Documentation of protocol [MS-SRVS]: Server Service Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9
 
- - Documentation of function `NetrpGetFileSecurity`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/753f7ac0-3bf3-4f9f-a479-2834aac7096e
++ Documentation of function `NetrpGetFileSecurity`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/753f7ac0-3bf3-4f9f-a479-2834aac7096e

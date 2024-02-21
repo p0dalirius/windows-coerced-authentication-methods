@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-FSRVP]: File Server Remote VSS Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/dae107ec-8198-4778-a950-faa7edad125b)
++ **Protocol**: [[MS-FSRVP]: File Server Remote VSS Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/dae107ec-8198-4778-a950-faa7edad125b)
 
- - **Protocol UUID**: a8e0653c-2744-4389-a61d-7373df8b2292
++ **Protocol UUID**: a8e0653c-2744-4389-a61d-7373df8b2292
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: `\\pipe\FssagentRpc`
++ **SMB Named pipe**: `\\pipe\FssagentRpc`
 
- - **Function name**: [`AddToShadowCopySet`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/07c2bef1-0471-4a82-8254-a91a7b4a33b8)
++ **Function name**: [`AddToShadowCopySet`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/07c2bef1-0471-4a82-8254-a91a7b4a33b8)
 
- - **Function operation number**: `3`
++ **Function operation number**: `3`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -55,6 +55,6 @@ DWORD AddToShadowCopySet(
 
 ## References
 
- - Documentation of protocol [MS-FSRVP]: File Server Remote VSS Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/dae107ec-8198-4778-a950-faa7edad125b
++ Documentation of protocol [MS-FSRVP]: File Server Remote VSS Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/dae107ec-8198-4778-a950-faa7edad125b
 
- - Documentation of function `AddToShadowCopySet`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/07c2bef1-0471-4a82-8254-a91a7b4a33b8
++ Documentation of function `AddToShadowCopySet`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/07c2bef1-0471-4a82-8254-a91a7b4a33b8

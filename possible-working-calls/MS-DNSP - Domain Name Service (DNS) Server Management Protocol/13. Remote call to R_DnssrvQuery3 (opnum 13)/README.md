@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-DNSP]: Domain Name Service (DNS) Server Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dnsp/f97756c9-3783-428b-9451-b376f877319a)
++ **Protocol**: [[MS-DNSP]: Domain Name Service (DNS) Server Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dnsp/f97756c9-3783-428b-9451-b376f877319a)
 
- - **Protocol UUID**: 50abc2a4-574d-40b3-9d66-ee4fd5fba076
++ **Protocol UUID**: 50abc2a4-574d-40b3-9d66-ee4fd5fba076
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: `\PIPE\DNSSERVER`
++ **SMB Named pipe**: `\PIPE\DNSSERVER`
 
- - **Function name**: [`R_DnssrvQuery3`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dnsp/0cb4d9ce-e08c-40e6-b4d5-5603b3fbc880)
++ **Function name**: [`R_DnssrvQuery3`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dnsp/0cb4d9ce-e08c-40e6-b4d5-5603b3fbc880)
 
- - **Function operation number**: `13`
++ **Function operation number**: `13`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -59,6 +59,6 @@ LONG R_DnssrvQuery3(
 
 ## References
 
- - Documentation of protocol [MS-DNSP]: Domain Name Service (DNS) Server Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dnsp/f97756c9-3783-428b-9451-b376f877319a
++ Documentation of protocol [MS-DNSP]: Domain Name Service (DNS) Server Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dnsp/f97756c9-3783-428b-9451-b376f877319a
 
- - Documentation of function `R_DnssrvQuery3`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dnsp/0cb4d9ce-e08c-40e6-b4d5-5603b3fbc880
++ Documentation of function `R_DnssrvQuery3`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dnsp/0cb4d9ce-e08c-40e6-b4d5-5603b3fbc880

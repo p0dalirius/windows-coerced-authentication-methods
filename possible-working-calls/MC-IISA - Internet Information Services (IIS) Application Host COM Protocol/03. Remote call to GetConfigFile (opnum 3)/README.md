@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MC-IISA]: Internet Information Services (IIS) Application Host COM Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-iisa/488de90f-9710-45fb-b71a-6938733fafb6)
++ **Protocol**: [[MC-IISA]: Internet Information Services (IIS) Application Host COM Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-iisa/488de90f-9710-45fb-b71a-6938733fafb6)
 
- - **Protocol UUID**: 31a83ea0-c0e4-4a2c-8a01-353cc2a4c60a
++ **Protocol UUID**: 31a83ea0-c0e4-4a2c-8a01-353cc2a4c60a
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`GetConfigFile`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-iisa/f97ca13f-3e34-402b-a0fb-053d676a064e)
++ **Function name**: [`GetConfigFile`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-iisa/f97ca13f-3e34-402b-a0fb-053d676a064e)
 
- - **Function operation number**: `3`
++ **Function operation number**: `3`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -53,6 +53,6 @@ HRESULT GetConfigFile(
 
 ## References
 
- - Documentation of protocol [MC-IISA]: Internet Information Services (IIS) Application Host COM Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-iisa/488de90f-9710-45fb-b71a-6938733fafb6
++ Documentation of protocol [MC-IISA]: Internet Information Services (IIS) Application Host COM Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-iisa/488de90f-9710-45fb-b71a-6938733fafb6
 
- - Documentation of function `GetConfigFile`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-iisa/f97ca13f-3e34-402b-a0fb-053d676a064e
++ Documentation of function `GetConfigFile`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/mc-iisa/f97ca13f-3e34-402b-a0fb-053d676a064e

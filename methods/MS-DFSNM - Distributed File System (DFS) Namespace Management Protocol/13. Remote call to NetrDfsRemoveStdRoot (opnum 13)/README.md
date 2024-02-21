@@ -2,17 +2,17 @@
 
 ## Summary
 
- - **Protocol**: [[MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979)
++ **Protocol**: [[MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979)
 
- - **Function name**: [`NetrDfsRemoveStdRoot`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/e9da023d-554a-49bc-837a-69f22d59fd18)
++ **Function name**: [`NetrDfsRemoveStdRoot`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/e9da023d-554a-49bc-837a-69f22d59fd18)
 
- - **Function operation number**: `13`
++ **Function operation number**: `13`
 
- - **RPC Interfaces**:
++ **RPC Interfaces**:
    + Interface 1:
      - uuid=`4fc742e0-4a10-11cf-8273-00aa004ae673`
      - version=`3.0`
-     - Accessible from:
+     - Accessible through:
        + SMB Named pipe: `\PIPE\netdfs`
 
 
@@ -52,20 +52,20 @@ NET_API_STATUS NetrDfsRemoveStdRoot(
 );
 ```
 
- - **ServerName**: The pointer to a null-terminated Unicode string. This is the host name of the DFS root target to be removed.
++ **ServerName**: The pointer to a null-terminated Unicode string. This is the host name of the DFS root target to be removed.
 
 
- - **RootShare**: The pointer to a null-terminated Unicode DFS root target share name string. This is also the DFS namespace name. The share is not removed automatically when the method is successful; it MUST be removed explicitly, as needed.
++ **RootShare**: The pointer to a null-terminated Unicode DFS root target share name string. This is also the DFS namespace name. The share is not removed automatically when the method is successful; it MUST be removed explicitly, as needed.
 
 
- - **ApiFlags**: This parameter is reserved for future use and is ignored by the server.
++ **ApiFlags**: This parameter is reserved for future use and is ignored by the server.
 
 ## References
 
- - Documentation of protocol [MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979
++ Documentation of protocol [MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/95a506a8-cae6-4c42-b19d-9c1ed1223979
 
 
- - Documentation of function `NetrDfsRemoveStdRoot`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/e9da023d-554a-49bc-837a-69f22d59fd18
++ Documentation of function `NetrDfsRemoveStdRoot`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsnm/e9da023d-554a-49bc-837a-69f22d59fd18
 
 
- - This call was pointed out by [@filip_dragovic](https://twitter.com/filip_dragovic/) on Jul 18, 2021: https://twitter.com/filip_dragovic/status/1538154721655103488
++ This call was pointed out by [@filip_dragovic](https://twitter.com/filip_dragovic/) on Jul 18, 2021: https://twitter.com/filip_dragovic/status/1538154721655103488

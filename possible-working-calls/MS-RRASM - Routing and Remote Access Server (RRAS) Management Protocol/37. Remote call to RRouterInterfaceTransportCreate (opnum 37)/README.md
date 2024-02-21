@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-RRASM]: Routing and Remote Access Server (RRAS) Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrasm/a1e2840d-c9ff-4407-abf4-17aa6af34112)
++ **Protocol**: [[MS-RRASM]: Routing and Remote Access Server (RRAS) Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrasm/a1e2840d-c9ff-4407-abf4-17aa6af34112)
 
- - **Protocol UUID**: 8f09f000-b7ed-11ce-bbd2-00001a181cad
++ **Protocol UUID**: 8f09f000-b7ed-11ce-bbd2-00001a181cad
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: `\PIPE\ROUTER`
++ **SMB Named pipe**: `\PIPE\ROUTER`
 
- - **Function name**: [`RRouterInterfaceTransportCreate`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrasm/9829344c-f22b-4d53-946b-20542ec43be4)
++ **Function name**: [`RRouterInterfaceTransportCreate`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrasm/9829344c-f22b-4d53-946b-20542ec43be4)
 
- - **Function operation number**: `37`
++ **Function operation number**: `37`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -56,6 +56,6 @@ DWORD RRouterInterfaceTransportCreate(
 
 ## References
 
- - Documentation of protocol [MS-RRASM]: Routing and Remote Access Server (RRAS) Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrasm/a1e2840d-c9ff-4407-abf4-17aa6af34112
++ Documentation of protocol [MS-RRASM]: Routing and Remote Access Server (RRAS) Management Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrasm/a1e2840d-c9ff-4407-abf4-17aa6af34112
 
- - Documentation of function `RRouterInterfaceTransportCreate`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrasm/9829344c-f22b-4d53-946b-20542ec43be4
++ Documentation of function `RRouterInterfaceTransportCreate`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrasm/9829344c-f22b-4d53-946b-20542ec43be4

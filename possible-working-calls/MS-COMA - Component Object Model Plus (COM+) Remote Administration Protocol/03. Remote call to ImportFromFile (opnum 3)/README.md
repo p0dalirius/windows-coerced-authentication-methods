@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-COMA]: Component Object Model Plus (COM+) Remote Administration Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-coma/c5b1ef02-e8f6-4195-9efe-9667928d1bdd)
++ **Protocol**: [[MS-COMA]: Component Object Model Plus (COM+) Remote Administration Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-coma/c5b1ef02-e8f6-4195-9efe-9667928d1bdd)
 
- - **Protocol UUID**: 182c40fa-32e4-11d0-818b-00a0c9231c29
++ **Protocol UUID**: 182c40fa-32e4-11d0-818b-00a0c9231c29
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`ImportFromFile`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-coma/c81e49b8-6ffa-4872-a3ad-ef423fd58bdc)
++ **Function name**: [`ImportFromFile`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-coma/c81e49b8-6ffa-4872-a3ad-ef423fd58bdc)
 
- - **Function operation number**: `3`
++ **Function operation number**: `3`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -69,6 +69,6 @@ HRESULT ImportFromFile(
 
 ## References
 
- - Documentation of protocol [MS-COMA]: Component Object Model Plus (COM+) Remote Administration Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-coma/c5b1ef02-e8f6-4195-9efe-9667928d1bdd
++ Documentation of protocol [MS-COMA]: Component Object Model Plus (COM+) Remote Administration Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-coma/c5b1ef02-e8f6-4195-9efe-9667928d1bdd
 
- - Documentation of function `ImportFromFile`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-coma/c81e49b8-6ffa-4872-a3ad-ef423fd58bdc
++ Documentation of function `ImportFromFile`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-coma/c81e49b8-6ffa-4872-a3ad-ef423fd58bdc

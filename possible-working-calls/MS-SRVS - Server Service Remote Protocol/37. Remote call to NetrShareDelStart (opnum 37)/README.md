@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-SRVS]: Server Service Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9)
++ **Protocol**: [[MS-SRVS]: Server Service Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9)
 
- - **Protocol UUID**: 4b324fc8-1670-01d3-1278-5a47bf6ee188
++ **Protocol UUID**: 4b324fc8-1670-01d3-1278-5a47bf6ee188
 
- - **Protocol version**: 3.0
++ **Protocol version**: 3.0
 
- - **SMB Named pipe**: `\PIPE\srvsvc`
++ **SMB Named pipe**: `\PIPE\srvsvc`
 
- - **Function name**: [`NetrShareDelStart`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/34819f8d-08c6-4635-a8ce-af527d945dc9)
++ **Function name**: [`NetrShareDelStart`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/34819f8d-08c6-4635-a8ce-af527d945dc9)
 
- - **Function operation number**: `37`
++ **Function operation number**: `37`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -55,6 +55,6 @@ NET_API_STATUS NetrShareDelStart(
 
 ## References
 
- - Documentation of protocol [MS-SRVS]: Server Service Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9
++ Documentation of protocol [MS-SRVS]: Server Service Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9
 
- - Documentation of function `NetrShareDelStart`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/34819f8d-08c6-4635-a8ce-af527d945dc9
++ Documentation of function `NetrShareDelStart`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/34819f8d-08c6-4635-a8ce-af527d945dc9

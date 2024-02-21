@@ -2,17 +2,17 @@
 
 ## Summary
 
- - **Protocol**: [[MS-FSRVP]: File Server Remote VSS Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/dae107ec-8198-4778-a950-faa7edad125b)
++ **Protocol**: [[MS-FSRVP]: File Server Remote VSS Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/dae107ec-8198-4778-a950-faa7edad125b)
 
- - **Protocol UUID**: a8e0653c-2744-4389-a61d-7373df8b2292
++ **Protocol UUID**: a8e0653c-2744-4389-a61d-7373df8b2292
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **Function name**: [`IsPathSupported`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/f0f0166f-0795-4b2f-8567-ff6a6cfb71cb)
++ **Function name**: [`IsPathSupported`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/f0f0166f-0795-4b2f-8567-ff6a6cfb71cb)
 
- - **Function operation number**: `8`
++ **Function operation number**: `8`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,22 +54,22 @@ DWORD IsPathSupported(
 );
 ```
 
- - **hBinding**:  An RPC binding handle (as defined in [C706]).
++ **hBinding**:  An RPC binding handle (as defined in [C706]).
 
 
- - **ShareName**: The full path of the share in UNC format.
++ **ShareName**: The full path of the share in UNC format.
 
 
- - **SupportedByThisProvider**:  A Boolean, when set to TRUE, that indicates that shadow copies of this share are supported by the server.
++ **SupportedByThisProvider**:  A Boolean, when set to TRUE, that indicates that shadow copies of this share are supported by the server.
 
 
- - **OwnerMachineName**:  The name of the server machine to which the client MUST connect to create shadow copies of the specified ShareName. 
++ **OwnerMachineName**:  The name of the server machine to which the client MUST connect to create shadow copies of the specified ShareName. 
 
 ## References
 
- - Documentation of protocol [MS-FSRVP]: File Server Remote VSS Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/dae107ec-8198-4778-a950-faa7edad125b
++ Documentation of protocol [MS-FSRVP]: File Server Remote VSS Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/dae107ec-8198-4778-a950-faa7edad125b
 
 
- - Documentation of function `IsPathSupported`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/f0f0166f-0795-4b2f-8567-ff6a6cfb71cb
++ Documentation of function `IsPathSupported`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/f0f0166f-0795-4b2f-8567-ff6a6cfb71cb
 
- - This call was pointed out by [@topotam77](https://twitter.com/topotam77/) on Dec 28, 2021: https://twitter.com/topotam77/status/1475701014204461056
++ This call was pointed out by [@topotam77](https://twitter.com/topotam77/) on Dec 28, 2021: https://twitter.com/topotam77/status/1475701014204461056

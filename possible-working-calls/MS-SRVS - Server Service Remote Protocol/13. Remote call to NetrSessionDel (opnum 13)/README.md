@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-SRVS]: Server Service Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9)
++ **Protocol**: [[MS-SRVS]: Server Service Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9)
 
- - **Protocol UUID**: 4b324fc8-1670-01d3-1278-5a47bf6ee188
++ **Protocol UUID**: 4b324fc8-1670-01d3-1278-5a47bf6ee188
 
- - **Protocol version**: 3.0
++ **Protocol version**: 3.0
 
- - **SMB Named pipe**: `\PIPE\srvsvc`
++ **SMB Named pipe**: `\PIPE\srvsvc`
 
- - **Function name**: [`NetrSessionDel`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/5f4cd5c5-ffa0-4f7e-9b6c-63149d20dfec)
++ **Function name**: [`NetrSessionDel`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/5f4cd5c5-ffa0-4f7e-9b6c-63149d20dfec)
 
- - **Function operation number**: `13`
++ **Function operation number**: `13`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,6 +54,6 @@ NET_API_STATUS NetrSessionDel(
 
 ## References
 
- - Documentation of protocol [MS-SRVS]: Server Service Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9
++ Documentation of protocol [MS-SRVS]: Server Service Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9
 
- - Documentation of function `NetrSessionDel`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/5f4cd5c5-ffa0-4f7e-9b6c-63149d20dfec
++ Documentation of function `NetrSessionDel`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/5f4cd5c5-ffa0-4f7e-9b6c-63149d20dfec

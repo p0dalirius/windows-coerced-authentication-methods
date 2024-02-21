@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-DMRP]: Disk Management Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dmrp/19a16e20-072f-4d74-a245-ce4df2f1ecdd)
++ **Protocol**: [[MS-DMRP]: Disk Management Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dmrp/19a16e20-072f-4d74-a245-ce4df2f1ecdd)
 
- - **Protocol UUID**: d2d79df5-3400-11d0-b40b-00aa005ff586
++ **Protocol UUID**: d2d79df5-3400-11d0-b40b-00aa005ff586
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`IVolumeClient3::CreatePartitionAssignAndFormatEx`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dmrp/ca3fa60c-01f5-452e-a7d6-704d1f40bab6)
++ **Function name**: [`IVolumeClient3::CreatePartitionAssignAndFormatEx`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dmrp/ca3fa60c-01f5-452e-a7d6-704d1f40bab6)
 
- - **Function operation number**: `7`
++ **Function operation number**: `7`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -60,6 +60,6 @@ HRESULT CreatePartitionAssignAndFormatEx(
 
 ## References
 
- - Documentation of protocol [MS-DMRP]: Disk Management Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dmrp/19a16e20-072f-4d74-a245-ce4df2f1ecdd
++ Documentation of protocol [MS-DMRP]: Disk Management Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dmrp/19a16e20-072f-4d74-a245-ce4df2f1ecdd
 
- - Documentation of function `IVolumeClient3::CreatePartitionAssignAndFormatEx`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dmrp/ca3fa60c-01f5-452e-a7d6-704d1f40bab6
++ Documentation of function `IVolumeClient3::CreatePartitionAssignAndFormatEx`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dmrp/ca3fa60c-01f5-452e-a7d6-704d1f40bab6

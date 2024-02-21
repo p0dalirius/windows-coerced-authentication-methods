@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-RRP]: Windows Remote Registry Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/0fa3191d-bb79-490a-81bd-54c2601b7a78)
++ **Protocol**: [[MS-RRP]: Windows Remote Registry Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/0fa3191d-bb79-490a-81bd-54c2601b7a78)
 
- - **Protocol UUID**: 338cd001-2244-31f1-aaaa-900038001003
++ **Protocol UUID**: 338cd001-2244-31f1-aaaa-900038001003
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: `\PIPE\winreg`
++ **SMB Named pipe**: `\PIPE\winreg`
 
- - **Function name**: [`OpenCurrentConfig`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/160767d7-83cf-4718-a4f3-d864faee3bb1)
++ **Function name**: [`OpenCurrentConfig`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/160767d7-83cf-4718-a4f3-d864faee3bb1)
 
- - **Function operation number**: `27`
++ **Function operation number**: `27`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,6 +54,6 @@ error_status_t OpenCurrentConfig(
 
 ## References
 
- - Documentation of protocol [MS-RRP]: Windows Remote Registry Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/0fa3191d-bb79-490a-81bd-54c2601b7a78
++ Documentation of protocol [MS-RRP]: Windows Remote Registry Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/0fa3191d-bb79-490a-81bd-54c2601b7a78
 
- - Documentation of function `OpenCurrentConfig`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/160767d7-83cf-4718-a4f3-d864faee3bb1
++ Documentation of function `OpenCurrentConfig`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/160767d7-83cf-4718-a4f3-d864faee3bb1

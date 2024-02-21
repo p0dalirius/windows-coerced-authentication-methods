@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-CMRP]: Failover Cluster: Management API (ClusAPI) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cmrp/ba4117c0-530e-4e70-a085-4b4cf5bbf193)
++ **Protocol**: [[MS-CMRP]: Failover Cluster: Management API (ClusAPI) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cmrp/ba4117c0-530e-4e70-a085-4b4cf5bbf193)
 
- - **Protocol UUID**: b97db8b2-4c63-11cf-bff6-08002be23f2f
++ **Protocol UUID**: b97db8b2-4c63-11cf-bff6-08002be23f2f
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`ApiBackupClusterDatabase`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cmrp/99990857-f857-402e-8018-b7eaca1fc6c1)
++ **Function name**: [`ApiBackupClusterDatabase`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cmrp/99990857-f857-402e-8018-b7eaca1fc6c1)
 
- - **Function operation number**: `104`
++ **Function operation number**: `104`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -53,6 +53,6 @@ error_status_t ApiBackupClusterDatabase(
 
 ## References
 
- - Documentation of protocol [MS-CMRP]: Failover Cluster: Management API (ClusAPI) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cmrp/ba4117c0-530e-4e70-a085-4b4cf5bbf193
++ Documentation of protocol [MS-CMRP]: Failover Cluster: Management API (ClusAPI) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cmrp/ba4117c0-530e-4e70-a085-4b4cf5bbf193
 
- - Documentation of function `ApiBackupClusterDatabase`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cmrp/99990857-f857-402e-8018-b7eaca1fc6c1
++ Documentation of function `ApiBackupClusterDatabase`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cmrp/99990857-f857-402e-8018-b7eaca1fc6c1

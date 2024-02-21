@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-NRPC]: Netlogon Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)
++ **Protocol**: [[MS-NRPC]: Netlogon Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)
 
- - **Protocol UUID**: 12345678-1234-abcd-ef00-01234567cffb
++ **Protocol UUID**: 12345678-1234-abcd-ef00-01234567cffb
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: `\PIPE\NETLOGON`
++ **SMB Named pipe**: `\PIPE\NETLOGON`
 
- - **Function name**: [`DsrGetForestTrustInformation`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/8bff4d0b-e06c-4c3a-8bd9-b0e2a7f2b06b)
++ **Function name**: [`DsrGetForestTrustInformation`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/8bff4d0b-e06c-4c3a-8bd9-b0e2a7f2b06b)
 
- - **Function operation number**: `43`
++ **Function operation number**: `43`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -55,6 +55,6 @@ NET_API_STATUS DsrGetForestTrustInformation(
 
 ## References
 
- - Documentation of protocol [MS-NRPC]: Netlogon Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f
++ Documentation of protocol [MS-NRPC]: Netlogon Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f
 
- - Documentation of function `DsrGetForestTrustInformation`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/8bff4d0b-e06c-4c3a-8bd9-b0e2a7f2b06b
++ Documentation of function `DsrGetForestTrustInformation`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/8bff4d0b-e06c-4c3a-8bd9-b0e2a7f2b06b

@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-IMSA]: Internet Information Services (IIS) IMSAdminBaseW Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/9cd07fff-2cb6-44fb-be98-6f292ae2a457)
++ **Protocol**: [[MS-IMSA]: Internet Information Services (IIS) IMSAdminBaseW Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/9cd07fff-2cb6-44fb-be98-6f292ae2a457)
 
- - **Protocol UUID**: 70b51430-b6ca-11d0-b9b9-00a0c922e750
++ **Protocol UUID**: 70b51430-b6ca-11d0-b9b9-00a0c922e750
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`SetLastChangeTime`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/f41926cb-49a8-415b-a902-914f02462fb1)
++ **Function name**: [`SetLastChangeTime`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/f41926cb-49a8-415b-a902-914f02462fb1)
 
- - **Function operation number**: `24`
++ **Function operation number**: `24`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -55,6 +55,6 @@ HRESULT SetLastChangeTime(
 
 ## References
 
- - Documentation of protocol [MS-IMSA]: Internet Information Services (IIS) IMSAdminBaseW Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/9cd07fff-2cb6-44fb-be98-6f292ae2a457
++ Documentation of protocol [MS-IMSA]: Internet Information Services (IIS) IMSAdminBaseW Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/9cd07fff-2cb6-44fb-be98-6f292ae2a457
 
- - Documentation of function `SetLastChangeTime`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/f41926cb-49a8-415b-a902-914f02462fb1
++ Documentation of function `SetLastChangeTime`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-imsa/f41926cb-49a8-415b-a902-914f02462fb1

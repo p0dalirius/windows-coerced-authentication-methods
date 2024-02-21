@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-SRVS]: Server Service Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9)
++ **Protocol**: [[MS-SRVS]: Server Service Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9)
 
- - **Protocol UUID**: 4b324fc8-1670-01d3-1278-5a47bf6ee188
++ **Protocol UUID**: 4b324fc8-1670-01d3-1278-5a47bf6ee188
 
- - **Protocol version**: 3.0
++ **Protocol version**: 3.0
 
- - **SMB Named pipe**: `\PIPE\srvsvc`
++ **SMB Named pipe**: `\PIPE\srvsvc`
 
- - **Function name**: [`NetrDfsSetLocalVolumeState`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/9d660e19-0432-4563-9f87-1974efc4177a)
++ **Function name**: [`NetrDfsSetLocalVolumeState`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/9d660e19-0432-4563-9f87-1974efc4177a)
 
- - **Function operation number**: `46`
++ **Function operation number**: `46`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -55,6 +55,6 @@ NET_API_STATUS NetrDfsSetLocalVolumeState(
 
 ## References
 
- - Documentation of protocol [MS-SRVS]: Server Service Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9
++ Documentation of protocol [MS-SRVS]: Server Service Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9
 
- - Documentation of function `NetrDfsSetLocalVolumeState`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/9d660e19-0432-4563-9f87-1974efc4177a
++ Documentation of function `NetrDfsSetLocalVolumeState`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/9d660e19-0432-4563-9f87-1974efc4177a

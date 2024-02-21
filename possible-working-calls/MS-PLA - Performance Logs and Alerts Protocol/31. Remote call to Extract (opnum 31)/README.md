@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-PLA]: Performance Logs and Alerts Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-pla/d752a77f-442f-4e38-8a40-4b5258e83700)
++ **Protocol**: [[MS-PLA]: Performance Logs and Alerts Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-pla/d752a77f-442f-4e38-8a40-4b5258e83700)
 
- - **Protocol UUID**: 03837520-098b-11d8-9414-505054503030
++ **Protocol UUID**: 03837520-098b-11d8-9414-505054503030
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`Extract`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-pla/e0fbbb46-286e-4d68-bd3b-a84238f80e1a)
++ **Function name**: [`Extract`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-pla/e0fbbb46-286e-4d68-bd3b-a84238f80e1a)
 
- - **Function operation number**: `31`
++ **Function operation number**: `31`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -53,6 +53,6 @@ HRESULT Extract(
 
 ## References
 
- - Documentation of protocol [MS-PLA]: Performance Logs and Alerts Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-pla/d752a77f-442f-4e38-8a40-4b5258e83700
++ Documentation of protocol [MS-PLA]: Performance Logs and Alerts Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-pla/d752a77f-442f-4e38-8a40-4b5258e83700
 
- - Documentation of function `Extract`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-pla/e0fbbb46-286e-4d68-bd3b-a84238f80e1a
++ Documentation of function `Extract`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-pla/e0fbbb46-286e-4d68-bd3b-a84238f80e1a

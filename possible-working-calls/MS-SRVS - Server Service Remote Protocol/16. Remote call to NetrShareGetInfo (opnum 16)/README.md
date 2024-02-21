@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-SRVS]: Server Service Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9)
++ **Protocol**: [[MS-SRVS]: Server Service Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9)
 
- - **Protocol UUID**: 4b324fc8-1670-01d3-1278-5a47bf6ee188
++ **Protocol UUID**: 4b324fc8-1670-01d3-1278-5a47bf6ee188
 
- - **Protocol version**: 3.0
++ **Protocol version**: 3.0
 
- - **SMB Named pipe**: `\PIPE\srvsvc`
++ **SMB Named pipe**: `\PIPE\srvsvc`
 
- - **Function name**: [`NetrShareGetInfo`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/b2c2b995-8c42-4502-b7d7-646d1b295c5b)
++ **Function name**: [`NetrShareGetInfo`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/b2c2b995-8c42-4502-b7d7-646d1b295c5b)
 
- - **Function operation number**: `16`
++ **Function operation number**: `16`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -55,6 +55,6 @@ NET_API_STATUS NetrShareGetInfo(
 
 ## References
 
- - Documentation of protocol [MS-SRVS]: Server Service Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9
++ Documentation of protocol [MS-SRVS]: Server Service Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9
 
- - Documentation of function `NetrShareGetInfo`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/b2c2b995-8c42-4502-b7d7-646d1b295c5b
++ Documentation of function `NetrShareGetInfo`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/b2c2b995-8c42-4502-b7d7-646d1b295c5b

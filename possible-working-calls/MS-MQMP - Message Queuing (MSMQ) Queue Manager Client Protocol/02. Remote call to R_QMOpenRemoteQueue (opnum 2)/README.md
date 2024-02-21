@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-MQMP]: Message Queuing (MSMQ): Queue Manager Client Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqmp/8e379aa2-802d-4fcc-b6a6-6203e4606fa9)
++ **Protocol**: [[MS-MQMP]: Message Queuing (MSMQ): Queue Manager Client Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqmp/8e379aa2-802d-4fcc-b6a6-6203e4606fa9)
 
- - **Protocol UUID**: fdb3a030-065f-11d1-bb9b-00a024ea5525
++ **Protocol UUID**: fdb3a030-065f-11d1-bb9b-00a024ea5525
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`R_QMOpenRemoteQueue`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqmp/47482511-3c4a-4d7e-8edb-46715e89e4af)
++ **Function name**: [`R_QMOpenRemoteQueue`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqmp/47482511-3c4a-4d7e-8edb-46715e89e4af)
 
- - **Function operation number**: `2`
++ **Function operation number**: `2`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -62,6 +62,6 @@ HRESULT R_QMOpenRemoteQueue(
 
 ## References
 
- - Documentation of protocol [MS-MQMP]: Message Queuing (MSMQ): Queue Manager Client Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqmp/8e379aa2-802d-4fcc-b6a6-6203e4606fa9
++ Documentation of protocol [MS-MQMP]: Message Queuing (MSMQ): Queue Manager Client Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqmp/8e379aa2-802d-4fcc-b6a6-6203e4606fa9
 
- - Documentation of function `R_QMOpenRemoteQueue`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqmp/47482511-3c4a-4d7e-8edb-46715e89e4af
++ Documentation of function `R_QMOpenRemoteQueue`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-mqmp/47482511-3c4a-4d7e-8edb-46715e89e4af

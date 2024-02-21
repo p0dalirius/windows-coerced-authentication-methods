@@ -2,17 +2,17 @@
 
 ## Summary
 
- - **Protocol**: [[MS-FSRVP]: File Server Remote VSS Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/dae107ec-8198-4778-a950-faa7edad125b)
++ **Protocol**: [[MS-FSRVP]: File Server Remote VSS Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/dae107ec-8198-4778-a950-faa7edad125b)
 
- - **Protocol UUID**: a8e0653c-2744-4389-a61d-7373df8b2292
++ **Protocol UUID**: a8e0653c-2744-4389-a61d-7373df8b2292
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **Function name**: [`IsPathShadowCopied`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/a42d8439-0ef8-4c88-905d-dc781a69753e)
++ **Function name**: [`IsPathShadowCopied`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/a42d8439-0ef8-4c88-905d-dc781a69753e)
 
- - **Function operation number**: `9`
++ **Function operation number**: `9`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,22 +54,22 @@ DWORD IsPathShadowCopied(
 );
 ```
 
- - **hBinding**:  An RPC binding handle (as defined in [C706]).
++ **hBinding**:  An RPC binding handle (as defined in [C706]).
 
 
- - **ShareName**: The full path of the share in UNC format.
++ **ShareName**: The full path of the share in UNC format.
 
 
- - **ShadowCopyPresent**: This value is set to TRUE if the ShareName specified has a shadow copy; otherwise set to FALSE.
++ **ShadowCopyPresent**: This value is set to TRUE if the ShareName specified has a shadow copy; otherwise set to FALSE.
 
 
- - **ShadowCopyCompatibility**: This value indicates whether certain I/O operations on the file store containing the shadow copy are disabled. This MUST be zero or a combination of the values as specified in section 2.2.2.3.
++ **ShadowCopyCompatibility**: This value indicates whether certain I/O operations on the file store containing the shadow copy are disabled. This MUST be zero or a combination of the values as specified in section 2.2.2.3.
 
 ## References
 
- - Documentation of protocol [MS-FSRVP]: File Server Remote VSS Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/dae107ec-8198-4778-a950-faa7edad125b
++ Documentation of protocol [MS-FSRVP]: File Server Remote VSS Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/dae107ec-8198-4778-a950-faa7edad125b
 
 
- - Documentation of function `IsPathShadowCopied`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/a42d8439-0ef8-4c88-905d-dc781a69753e
++ Documentation of function `IsPathShadowCopied`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/a42d8439-0ef8-4c88-905d-dc781a69753e
 
- - This call was pointed out by [@topotam77](https://twitter.com/topotam77/) on Dec 28, 2021: https://twitter.com/topotam77/status/1475701014204461056
++ This call was pointed out by [@topotam77](https://twitter.com/topotam77/) on Dec 28, 2021: https://twitter.com/topotam77/status/1475701014204461056

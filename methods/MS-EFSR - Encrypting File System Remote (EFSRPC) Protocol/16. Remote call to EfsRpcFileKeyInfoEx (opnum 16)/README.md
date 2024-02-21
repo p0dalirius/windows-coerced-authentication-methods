@@ -2,17 +2,17 @@
 
 ## Summary
 
- - **Protocol**: [[MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31)
++ **Protocol**: [[MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31)
 
- - **Function name**: [`EfsRpcFileKeyInfoEx`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/d0da10ab-3139-4d67-a66c-ea6eb497118d)
++ **Function name**: [`EfsRpcFileKeyInfoEx`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/d0da10ab-3139-4d67-a66c-ea6eb497118d)
 
- - **Function operation number**: `16`
++ **Function operation number**: `16`
 
- - **RPC Interfaces**:
++ **RPC Interfaces**:
    + Interface 1:
      - uuid=`c681d488-d850-11d0-8c52-00c04fd90f7e`
      - version=`1.0`
-     - Accessible from:
+     - Accessible through:
        + SMB named pipe: `\PIPE\lsarpc`
        + SMB named pipe: `\PIPE\lsass`
        + SMB named pipe: `\PIPE\netlogon`
@@ -20,7 +20,7 @@
    + Interface 2:
      - uuid=`df1941c5-fe89-4e79-bf10-463657acf44d`
      - version=`1.0`
-     - Accessible from:
+     - Accessible through:
        + SMB named pipe: `\PIPE\efsrpc`
 
 
@@ -62,15 +62,15 @@ DWORD EfsRpcFileKeyInfoEx(
  );
 ```
 
- - **binding_h**: This is an RPC binding handle parameter, as specified in [C706] and [MS-RPCE] section 2.
++ **binding_h**: This is an RPC binding handle parameter, as specified in [C706] and [MS-RPCE] section 2.
 
- - **dwFileKeyInfoFlags**: This parameter is reserved. It MUST be set to zero by the client and ignored by the server.
++ **dwFileKeyInfoFlags**: This parameter is reserved. It MUST be set to zero by the client and ignored by the server.
 
- - **Reserved**: This parameter is reserved. It MUST be set to NULL by the client and ignored by the server.
++ **Reserved**: This parameter is reserved. It MUST be set to NULL by the client and ignored by the server.
 
- - **FileName**: An EFSRPC identifier, as specified in section 2.2.1.
++ **FileName**: An EFSRPC identifier, as specified in section 2.2.1.
 
- - **InfoClass**: One of the values specified for the InfoClass parameter of the EfsRpcFileKeyInfo method. One of the values in the following table. With the exception of UPDATE_KEY_USED (0x00000100), a server SHOULD support all of these values. A server MAY choose to support UPDATE_KEY_USED.<45>
++ **InfoClass**: One of the values specified for the InfoClass parameter of the EfsRpcFileKeyInfo method. One of the values in the following table. With the exception of UPDATE_KEY_USED (0x00000100), a server SHOULD support all of these values. A server MAY choose to support UPDATE_KEY_USED.<45>
 
 | Name | Value | Description |
 |---|---|---|
@@ -81,12 +81,12 @@ DWORD EfsRpcFileKeyInfoEx(
 | `CHECK_ENCRYPTION_STATUS` | `0x00000400` | Request a hint from the server as to whether the given object could be successfully encrypted without further user intervention or higher-level events. The server will return this information in an `EFS_ENCRYPTION_STATUS_INFO` structure in the `KeyInfo` parameter. |
 
 
- - **KeyInfo**: The server SHOULD ignore this parameter.
++ **KeyInfo**: The server SHOULD ignore this parameter.
 
- - **Return Values**: The server SHOULD return a nonzero value.
++ **Return Values**: The server SHOULD return a nonzero value.
 
 ## References
 
- - Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31
++ Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31
 
- - Documentation of function `EfsRpcFileKeyInfoEx`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/d0da10ab-3139-4d67-a66c-ea6eb497118d
++ Documentation of function `EfsRpcFileKeyInfoEx`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/d0da10ab-3139-4d67-a66c-ea6eb497118d

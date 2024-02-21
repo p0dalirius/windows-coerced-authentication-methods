@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-DFSRH]: DFS Replication Helper Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsrh/c3170e6b-e195-4aef-a286-8e6f4923a8ae)
++ **Protocol**: [[MS-DFSRH]: DFS Replication Helper Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsrh/c3170e6b-e195-4aef-a286-8e6f4923a8ae)
 
- - **Protocol UUID**: 9009d654-250b-4e0d-9ab0-acb63134f69f
++ **Protocol UUID**: 9009d654-250b-4e0d-9ab0-acb63134f69f
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`GetCompressedReport`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsrh/e44138ae-c67d-4524-a724-3cf77afca244)
++ **Function name**: [`GetCompressedReport`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsrh/e44138ae-c67d-4524-a724-3cf77afca244)
 
- - **Function operation number**: `10`
++ **Function operation number**: `10`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -59,6 +59,6 @@ HRESULT GetCompressedReport(
 
 ## References
 
- - Documentation of protocol [MS-DFSRH]: DFS Replication Helper Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsrh/c3170e6b-e195-4aef-a286-8e6f4923a8ae
++ Documentation of protocol [MS-DFSRH]: DFS Replication Helper Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsrh/c3170e6b-e195-4aef-a286-8e6f4923a8ae
 
- - Documentation of function `GetCompressedReport`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsrh/e44138ae-c67d-4524-a724-3cf77afca244
++ Documentation of function `GetCompressedReport`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dfsrh/e44138ae-c67d-4524-a724-3cf77afca244

@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-NRPC]: Netlogon Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)
++ **Protocol**: [[MS-NRPC]: Netlogon Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)
 
- - **Protocol UUID**: 12345678-1234-abcd-ef00-01234567cffb
++ **Protocol UUID**: 12345678-1234-abcd-ef00-01234567cffb
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: `\PIPE\NETLOGON`
++ **SMB Named pipe**: `\PIPE\NETLOGON`
 
- - **Function name**: [`NetrLogonControl`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/d62ebadc-9967-49ef-a48d-b4059a7176c5)
++ **Function name**: [`NetrLogonControl`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/d62ebadc-9967-49ef-a48d-b4059a7176c5)
 
- - **Function operation number**: `12`
++ **Function operation number**: `12`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -55,6 +55,6 @@ NET_API_STATUS NetrLogonControl(
 
 ## References
 
- - Documentation of protocol [MS-NRPC]: Netlogon Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f
++ Documentation of protocol [MS-NRPC]: Netlogon Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f
 
- - Documentation of function `NetrLogonControl`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/d62ebadc-9967-49ef-a48d-b4059a7176c5
++ Documentation of function `NetrLogonControl`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/d62ebadc-9967-49ef-a48d-b4059a7176c5

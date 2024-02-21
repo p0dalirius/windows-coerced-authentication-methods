@@ -2,17 +2,17 @@
 
 ## Summary
 
- - **Protocol**: [[MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31)
++ **Protocol**: [[MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31)
 
- - **Function name**: [`EfsRpcDuplicateEncryptionInfoFile`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/b39ec3e2-d3f0-4934-925e-74032365f9d2)
++ **Function name**: [`EfsRpcDuplicateEncryptionInfoFile`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/b39ec3e2-d3f0-4934-925e-74032365f9d2)
 
- - **Function operation number**: `13`
++ **Function operation number**: `13`
 
- - **RPC Interfaces**:
++ **RPC Interfaces**:
    + Interface 1:
      - uuid=`c681d488-d850-11d0-8c52-00c04fd90f7e`
      - version=`1.0`
-     - Accessible from:
+     - Accessible through:
        + SMB named pipe: `\PIPE\lsarpc`
        + SMB named pipe: `\PIPE\lsass`
        + SMB named pipe: `\PIPE\netlogon`
@@ -20,7 +20,7 @@
    + Interface 2:
      - uuid=`df1941c5-fe89-4e79-bf10-463657acf44d`
      - version=`1.0`
-     - Accessible from:
+     - Accessible through:
        + SMB named pipe: `\PIPE\efsrpc`
 
 
@@ -65,6 +65,6 @@ DWORD EfsRpcDuplicateEncryptionInfoFile(
 
 ## References
 
- - Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31
++ Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31
 
- - Documentation of function `EfsRpcDuplicateEncryptionInfoFile`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/b39ec3e2-d3f0-4934-925e-74032365f9d2
++ Documentation of function `EfsRpcDuplicateEncryptionInfoFile`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/b39ec3e2-d3f0-4934-925e-74032365f9d2

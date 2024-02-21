@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-EVEN]: EventLog Remoting Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-even/55b13664-f739-4e4e-bd8d-04eeda59d09f)
++ **Protocol**: [[MS-EVEN]: EventLog Remoting Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-even/55b13664-f739-4e4e-bd8d-04eeda59d09f)
 
- - **Protocol UUID**: 82273fdc-e32a-18c3-3f78-827929dc23ea
++ **Protocol UUID**: 82273fdc-e32a-18c3-3f78-827929dc23ea
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: `\PIPE\eventlog`
++ **SMB Named pipe**: `\PIPE\eventlog`
 
- - **Function name**: [`ElfrClearELFA`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-even/a982c2f3-66c5-49e2-90a8-c7665470b77b)
++ **Function name**: [`ElfrClearELFA`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-even/a982c2f3-66c5-49e2-90a8-c7665470b77b)
 
- - **Function operation number**: `12`
++ **Function operation number**: `12`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -53,6 +53,6 @@ NTSTATUS ElfrClearELFA(
 
 ## References
 
- - Documentation of protocol [MS-EVEN]: EventLog Remoting Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-even/55b13664-f739-4e4e-bd8d-04eeda59d09f
++ Documentation of protocol [MS-EVEN]: EventLog Remoting Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-even/55b13664-f739-4e4e-bd8d-04eeda59d09f
 
- - Documentation of function `ElfrClearELFA`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-even/a982c2f3-66c5-49e2-90a8-c7665470b77b
++ Documentation of function `ElfrClearELFA`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-even/a982c2f3-66c5-49e2-90a8-c7665470b77b

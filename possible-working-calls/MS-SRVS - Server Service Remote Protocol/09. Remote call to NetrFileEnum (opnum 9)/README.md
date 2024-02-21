@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-SRVS]: Server Service Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9)
++ **Protocol**: [[MS-SRVS]: Server Service Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9)
 
- - **Protocol UUID**: 4b324fc8-1670-01d3-1278-5a47bf6ee188
++ **Protocol UUID**: 4b324fc8-1670-01d3-1278-5a47bf6ee188
 
- - **Protocol version**: 3.0
++ **Protocol version**: 3.0
 
- - **SMB Named pipe**: `\PIPE\srvsvc`
++ **SMB Named pipe**: `\PIPE\srvsvc`
 
- - **Function name**: [`NetrFileEnum`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/c5433da3-e2a5-4cdb-850b-0f9ce0795b8b)
++ **Function name**: [`NetrFileEnum`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/c5433da3-e2a5-4cdb-850b-0f9ce0795b8b)
 
- - **Function operation number**: `9`
++ **Function operation number**: `9`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -58,6 +58,6 @@ NET_API_STATUS NetrFileEnum(
 
 ## References
 
- - Documentation of protocol [MS-SRVS]: Server Service Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9
++ Documentation of protocol [MS-SRVS]: Server Service Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/accf23b0-0f57-441c-9185-43041f1b0ee9
 
- - Documentation of function `NetrFileEnum`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/c5433da3-e2a5-4cdb-850b-0f9ce0795b8b
++ Documentation of function `NetrFileEnum`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/c5433da3-e2a5-4cdb-850b-0f9ce0795b8b

@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-RRP]: Windows Remote Registry Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/0fa3191d-bb79-490a-81bd-54c2601b7a78)
++ **Protocol**: [[MS-RRP]: Windows Remote Registry Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/0fa3191d-bb79-490a-81bd-54c2601b7a78)
 
- - **Protocol UUID**: 338cd001-2244-31f1-aaaa-900038001003
++ **Protocol UUID**: 338cd001-2244-31f1-aaaa-900038001003
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: `\PIPE\winreg`
++ **SMB Named pipe**: `\PIPE\winreg`
 
- - **Function name**: [`OpenLocalMachine`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/6cef29ae-21ba-423f-9158-05145ac80a5b)
++ **Function name**: [`OpenLocalMachine`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/6cef29ae-21ba-423f-9158-05145ac80a5b)
 
- - **Function operation number**: `2`
++ **Function operation number**: `2`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,6 +54,6 @@ error_status_t OpenLocalMachine(
 
 ## References
 
- - Documentation of protocol [MS-RRP]: Windows Remote Registry Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/0fa3191d-bb79-490a-81bd-54c2601b7a78
++ Documentation of protocol [MS-RRP]: Windows Remote Registry Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/0fa3191d-bb79-490a-81bd-54c2601b7a78
 
- - Documentation of function `OpenLocalMachine`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/6cef29ae-21ba-423f-9158-05145ac80a5b
++ Documentation of function `OpenLocalMachine`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/6cef29ae-21ba-423f-9158-05145ac80a5b

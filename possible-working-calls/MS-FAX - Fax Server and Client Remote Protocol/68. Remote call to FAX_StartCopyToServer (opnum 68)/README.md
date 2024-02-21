@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-FAX]: Fax Server and Client Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fax/dabce486-05b1-4ea4-95fe-f2c3d5315ff4)
++ **Protocol**: [[MS-FAX]: Fax Server and Client Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fax/dabce486-05b1-4ea4-95fe-f2c3d5315ff4)
 
- - **Protocol UUID**: 6099fc12-3eff-11d0-abd0-00c04fd91a4e
++ **Protocol UUID**: 6099fc12-3eff-11d0-abd0-00c04fd91a4e
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: `\PIPE\SHAREDFAX`
++ **SMB Named pipe**: `\PIPE\SHAREDFAX`
 
- - **Function name**: [`FAX_StartCopyToServer`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fax/d4fdc04e-6594-4563-9700-d4cc645b4335)
++ **Function name**: [`FAX_StartCopyToServer`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fax/d4fdc04e-6594-4563-9700-d4cc645b4335)
 
- - **Function operation number**: `68`
++ **Function operation number**: `68`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -55,6 +55,6 @@ error_status_t FAX_StartCopyToServer(
 
 ## References
 
- - Documentation of protocol [MS-FAX]: Fax Server and Client Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fax/dabce486-05b1-4ea4-95fe-f2c3d5315ff4
++ Documentation of protocol [MS-FAX]: Fax Server and Client Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fax/dabce486-05b1-4ea4-95fe-f2c3d5315ff4
 
- - Documentation of function `FAX_StartCopyToServer`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fax/d4fdc04e-6594-4563-9700-d4cc645b4335
++ Documentation of function `FAX_StartCopyToServer`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fax/d4fdc04e-6594-4563-9700-d4cc645b4335

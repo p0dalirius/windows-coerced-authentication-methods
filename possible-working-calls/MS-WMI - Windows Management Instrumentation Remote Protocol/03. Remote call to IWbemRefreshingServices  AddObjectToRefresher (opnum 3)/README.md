@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-WMI]: Windows Management Instrumentation Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wmi/c476597d-4c76-47e7-a2a4-a564fe4bf814)
++ **Protocol**: [[MS-WMI]: Windows Management Instrumentation Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wmi/c476597d-4c76-47e7-a2a4-a564fe4bf814)
 
- - **Protocol UUID**: 8bc3f05e-d86b-11d0-a075-00c04fb68820
++ **Protocol UUID**: 8bc3f05e-d86b-11d0-a075-00c04fb68820
 
- - **Protocol version**: 0.0
++ **Protocol version**: 0.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`IWbemRefreshingServices::AddObjectToRefresher`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wmi/cf79fb85-e0cb-4778-86de-03da6de4d5d8)
++ **Function name**: [`IWbemRefreshingServices::AddObjectToRefresher`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wmi/cf79fb85-e0cb-4778-86de-03da6de4d5d8)
 
- - **Function operation number**: `3`
++ **Function operation number**: `3`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -58,6 +58,6 @@ HRESULT AddObjectToRefresher(
 
 ## References
 
- - Documentation of protocol [MS-WMI]: Windows Management Instrumentation Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wmi/c476597d-4c76-47e7-a2a4-a564fe4bf814
++ Documentation of protocol [MS-WMI]: Windows Management Instrumentation Remote Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wmi/c476597d-4c76-47e7-a2a4-a564fe4bf814
 
- - Documentation of function `IWbemRefreshingServices::AddObjectToRefresher`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wmi/cf79fb85-e0cb-4778-86de-03da6de4d5d8
++ Documentation of function `IWbemRefreshingServices::AddObjectToRefresher`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wmi/cf79fb85-e0cb-4778-86de-03da6de4d5d8

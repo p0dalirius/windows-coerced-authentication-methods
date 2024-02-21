@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-SAMR]: Security Account Manager (SAM) Remote Protocol (Client-to-Server)](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/4df07fab-1bbc-452f-8e92-7853a3c7e380)
++ **Protocol**: [[MS-SAMR]: Security Account Manager (SAM) Remote Protocol (Client-to-Server)](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/4df07fab-1bbc-452f-8e92-7853a3c7e380)
 
- - **Protocol UUID**: 12345778-1234-abcd-ef00-0123456789ac
++ **Protocol UUID**: 12345778-1234-abcd-ef00-0123456789ac
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: ``
++ **SMB Named pipe**: ``
 
- - **Function name**: [`SamrConnect2`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/1076eb2a-4f51-4c5a-a7c7-a78323b06198)
++ **Function name**: [`SamrConnect2`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/1076eb2a-4f51-4c5a-a7c7-a78323b06198)
 
- - **Function operation number**: `57`
++ **Function operation number**: `57`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,6 +54,6 @@ long SamrConnect2(
 
 ## References
 
- - Documentation of protocol [MS-SAMR]: Security Account Manager (SAM) Remote Protocol (Client-to-Server): https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/4df07fab-1bbc-452f-8e92-7853a3c7e380
++ Documentation of protocol [MS-SAMR]: Security Account Manager (SAM) Remote Protocol (Client-to-Server): https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/4df07fab-1bbc-452f-8e92-7853a3c7e380
 
- - Documentation of function `SamrConnect2`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/1076eb2a-4f51-4c5a-a7c7-a78323b06198
++ Documentation of function `SamrConnect2`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/1076eb2a-4f51-4c5a-a7c7-a78323b06198

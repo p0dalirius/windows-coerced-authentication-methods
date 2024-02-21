@@ -2,19 +2,19 @@
 
 ## Summary
 
- - **Protocol**: [[MS-FSRVP]: File Server Remote VSS Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/dae107ec-8198-4778-a950-faa7edad125b)
++ **Protocol**: [[MS-FSRVP]: File Server Remote VSS Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/dae107ec-8198-4778-a950-faa7edad125b)
 
- - **Protocol UUID**: a8e0653c-2744-4389-a61d-7373df8b2292
++ **Protocol UUID**: a8e0653c-2744-4389-a61d-7373df8b2292
 
- - **Protocol version**: 1.0
++ **Protocol version**: 1.0
 
- - **SMB Named pipe**: `\\pipe\FssagentRpc`
++ **SMB Named pipe**: `\\pipe\FssagentRpc`
 
- - **Function name**: [`IsPathShadowCopied`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/a42d8439-0ef8-4c88-905d-dc781a69753e)
++ **Function name**: [`IsPathShadowCopied`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/a42d8439-0ef8-4c88-905d-dc781a69753e)
 
- - **Function operation number**: `9`
++ **Function operation number**: `9`
 
- - **Authenticated**: Yes
++ **Authenticated**: Yes
 
 
 ## Description
@@ -54,6 +54,6 @@ DWORD IsPathShadowCopied(
 
 ## References
 
- - Documentation of protocol [MS-FSRVP]: File Server Remote VSS Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/dae107ec-8198-4778-a950-faa7edad125b
++ Documentation of protocol [MS-FSRVP]: File Server Remote VSS Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/dae107ec-8198-4778-a950-faa7edad125b
 
- - Documentation of function `IsPathShadowCopied`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/a42d8439-0ef8-4c88-905d-dc781a69753e
++ Documentation of function `IsPathShadowCopied`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fsrvp/a42d8439-0ef8-4c88-905d-dc781a69753e
