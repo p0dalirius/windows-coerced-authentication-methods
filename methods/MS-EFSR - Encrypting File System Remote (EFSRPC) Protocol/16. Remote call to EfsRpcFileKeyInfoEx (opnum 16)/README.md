@@ -9,20 +9,19 @@
 + **Function operation number**: `16`
 
 + **RPC Interfaces**:
-   + Interface 1:
-     - uuid=`c681d488-d850-11d0-8c52-00c04fd90f7e`
-     - version=`1.0`
-     - Accessible through:
-       + SMB named pipe: `\PIPE\lsarpc`
-       + SMB named pipe: `\PIPE\lsass`
-       + SMB named pipe: `\PIPE\netlogon`
-       + SMB named pipe: `\PIPE\samr`
-   + Interface 2:
-     - uuid=`df1941c5-fe89-4e79-bf10-463657acf44d`
-     - version=`1.0`
-     - Accessible through:
-       + SMB named pipe: `\PIPE\efsrpc`
-
+  + Interface 1:
+    + uuid=`c681d488-d850-11d0-8c52-00c04fd90f7e`
+    + version=`1.0`
+    + Accessible through:
+      + SMB named pipe: `\PIPE\lsarpc`
+      + SMB named pipe: `\PIPE\lsass`
+      + SMB named pipe: `\PIPE\netlogon`
+      + SMB named pipe: `\PIPE\samr`
+  + Interface 2:
+    + uuid=`df1941c5-fe89-4e79-bf10-463657acf44d`
+    + version=`1.0`
+    + Accessible through:
+      + SMB named pipe: `\PIPE\efsrpc`
 
 ## Description
 
@@ -47,7 +46,6 @@ This will force the Windows Server (192.168.2.1) to authenticate to the SMB shar
 ![](./imgs/hash.png)
 
 After this step, we relay the authentication to other services in order to elevate our privileges, or try to downgrade it to NTLMv1 and crack it in order to get the NT hash of the domain controller's machine account. This kind of vulnerabilities allows to quickly get from user to domain administrator in unprotected domains!
-
 
 ## Function technical detail
 
@@ -74,12 +72,11 @@ DWORD EfsRpcFileKeyInfoEx(
 
 | Name | Value | Description |
 |---|---|---|
-| `BASIC_KEY_INFO` | `0x00000001` |  Request information about the keys used to encrypt the object's contents. On success, the server will return the information in an `EFS_KEY_INFO` (2.2.14) structure in the `KeyInfo` parameter. | 
-| `CHECK_COMPATIBILITY_INFO` | `0x00000002` | Requests the EfsVersion for the encrypted file. On success, the server will return the information in an `EFS_COMPATIBILITY_INFO` structure in the KeyInfo parameter. | 
-| `UPDATE_KEY_USED` | `0x00000100` | Update the user certificates used to give a specific user access to an object. The server will populate the `KeyInfo` parameter with a zero-terminated, wide character Unicode string that contains a newline-separated list of names of objects successfully updated. | 
+| `BASIC_KEY_INFO` | `0x00000001` |  Request information about the keys used to encrypt the object's contents. On success, the server will return the information in an `EFS_KEY_INFO` (2.2.14) structure in the `KeyInfo` parameter. |
+| `CHECK_COMPATIBILITY_INFO` | `0x00000002` | Requests the EfsVersion for the encrypted file. On success, the server will return the information in an `EFS_COMPATIBILITY_INFO` structure in the KeyInfo parameter. |
+| `UPDATE_KEY_USED` | `0x00000100` | Update the user certificates used to give a specific user access to an object. The server will populate the `KeyInfo` parameter with a zero-terminated, wide character Unicode string that contains a newline-separated list of names of objects successfully updated. |
 | `CHECK_DECRYPTION_STATUS` | `0x00000200` | Request a hint from the server as to whether the given object could be successfully decrypted without further user intervention or higher-level events. The server will return this information in an `EFS_DECRYPTION_STATUS_INFO` structure in the `KeyInfo` parameter. |
 | `CHECK_ENCRYPTION_STATUS` | `0x00000400` | Request a hint from the server as to whether the given object could be successfully encrypted without further user intervention or higher-level events. The server will return this information in an `EFS_ENCRYPTION_STATUS_INFO` structure in the `KeyInfo` parameter. |
-
 
 + **KeyInfo**: The server SHOULD ignore this parameter.
 
@@ -87,6 +84,6 @@ DWORD EfsRpcFileKeyInfoEx(
 
 ## References
 
-+ Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31
++ Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: [https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31)
 
-+ Documentation of function `EfsRpcFileKeyInfoEx`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/d0da10ab-3139-4d67-a66c-ea6eb497118d
++ Documentation of function `EfsRpcFileKeyInfoEx`: [https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/d0da10ab-3139-4d67-a66c-ea6eb497118d](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/d0da10ab-3139-4d67-a66c-ea6eb497118d)

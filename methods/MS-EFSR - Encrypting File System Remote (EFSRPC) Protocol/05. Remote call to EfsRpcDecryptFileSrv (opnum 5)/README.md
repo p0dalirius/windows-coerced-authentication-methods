@@ -9,19 +9,19 @@
 + **Function operation number**: `5`
 
 + **RPC Interfaces**:
-   + Interface 1:
-     - uuid=`c681d488-d850-11d0-8c52-00c04fd90f7e`
-     - version=`1.0`
-     - Accessible through:
-       + SMB named pipe: `\PIPE\lsarpc`
-       + SMB named pipe: `\PIPE\lsass`
-       + SMB named pipe: `\PIPE\netlogon`
-       + SMB named pipe: `\PIPE\samr`
-   + Interface 2:
-     - uuid=`df1941c5-fe89-4e79-bf10-463657acf44d`
-     - version=`1.0`
-     - Accessible through:
-       + SMB named pipe: `\PIPE\efsrpc`
+  + Interface 1:
+    + uuid=`c681d488-d850-11d0-8c52-00c04fd90f7e`
+    + version=`1.0`
+    + Accessible through:
+      + SMB named pipe: `\PIPE\lsarpc`
+      + SMB named pipe: `\PIPE\lsass`
+      + SMB named pipe: `\PIPE\netlogon`
+      + SMB named pipe: `\PIPE\samr`
+  + Interface 2:
+    + uuid=`df1941c5-fe89-4e79-bf10-463657acf44d`
+    + version=`1.0`
+    + Accessible through:
+      + SMB named pipe: `\PIPE\efsrpc`
 
 ## Description
 
@@ -67,17 +67,16 @@ long EfsRpcDecryptFileSrv(
 
 ---
 
-## Accepted path types
+## Accepted path formats
 
- + :heavy_check_mark: UNC ressource: `\\192.168.2.51\share\file.txt` authenticates to target.
- + :x: UNC ressource: `\??\UNC\192.168.2.51\share\file.txt` does not work, returns a `rpc_s_access_denied` error.
- + :heavy_check_mark: WebDAV ressource: `\\MACHINENAME@80/raj\share\file.txt` authenticates to target.
++ :heavy_check_mark: UNC ressource: `\\192.168.2.51\share\file.txt` authenticates to target.
++ :x: UNC ressource: `\??\UNC\192.168.2.51\share\file.txt` does not work, returns a `rpc_s_access_denied` error.
++ :heavy_check_mark: WebDAV ressource: `\\MACHINENAME@80/raj\share\file.txt` authenticates to target.
 
 ---
 
 ## References
 
-+ Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31
++ Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: [https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31)
 
-
-+ Documentation of function `EfsRpcDecryptFileSrv`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/043715de-caee-402a-a61b-921743337e78
++ Documentation of function `EfsRpcDecryptFileSrv`: [https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/043715de-caee-402a-a61b-921743337e78](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/043715de-caee-402a-a61b-921743337e78)

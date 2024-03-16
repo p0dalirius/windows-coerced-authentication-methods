@@ -62,15 +62,12 @@ long EfsRpcOpenFileRaw(
 
 + **binding_h**: An explicit binding handle created by the client. This is an RPC binding handle parameter, as specified in [C706] and [MS-RPCE] section 2.
 
-
 + **hContext**: An implementation-specific context handle that is used in subsequent calls by the client to the EfsRpcReadFileRaw method, EfsRpcWriteFileRaw method, or EfsRpcCloseRaw method.
-
 
 + **FileName**: An EFSRPC identifier, as specified in section 2.2.1.
 
-
 + **Flags**: This MUST be set to some combination of the following values. All servers and clients MUST support the CREATE_FOR_IMPORT flag. Servers that implement a hierarchical encrypted store, such as the NTFS file system, SHOULD also support the CREATE_FOR_DIR flag. Servers SHOULD support the OVERWRITE_HIDDEN flag, and MAY interpret it in implementation-specific ways. A client MUST ensure that all the flags it does not support are set to zero. A server MUST ignore all flags it does not support. Flag values are specified in the following table.
- 
+
 | Name | Value | Description |
 |---|---|---|
 | `CREATE_FOR_IMPORT` | `0x00000001` | Open the object for writing (that is, restore). If this flag is not set, open the object for reading (that is, backup). |
@@ -78,16 +75,12 @@ long EfsRpcOpenFileRaw(
 | `OVERWRITE_HIDDEN` | `0x00000004` | This flag is only intended for use in conjunction with the CREATE_FOR_IMPORT flag. This flag indicates a request from the client for the server to overwrite an existing object even if the existing object is "hidden". The meaning of "hidden" is specific to the implementation of the data store, and this meaning does not affect protocol behavior. |
 | `EFS_DROP_ALTERNATE_STREAMS` | `0x00000010` | This flag indicates that content from any alternate data streams, if present and implemented by the storage system, will be ignored. |
 
-
 ## References
 
-+ Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31
++ Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: [https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31)
 
++ Documentation of function `EfsRpcOpenFileRaw`: [https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/ccc4fb75-1c86-41d7-bbc4-b278ec13bfb8](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/ccc4fb75-1c86-41d7-bbc4-b278ec13bfb8)
 
-+ Documentation of function `EfsRpcOpenFileRaw`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/ccc4fb75-1c86-41d7-bbc4-b278ec13bfb8
++ CVE-2021-36942 Windows LSA Spoofing Vulnerability: [https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36942](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36942)
 
-
-+ CVE-2021-36942 Windows LSA Spoofing Vulnerability: https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36942
-
-
-+ This call was pointed out by [@topotam77](https://twitter.com/topotam77/) on Jul 18, 2021: https://twitter.com/topotam77/status/1416833996923809793
++ This call was pointed out by [@topotam77](https://twitter.com/topotam77/) on Jul 18, 2021: [https://twitter.com/topotam77/status/1416833996923809793](https://twitter.com/topotam77/status/1416833996923809793)

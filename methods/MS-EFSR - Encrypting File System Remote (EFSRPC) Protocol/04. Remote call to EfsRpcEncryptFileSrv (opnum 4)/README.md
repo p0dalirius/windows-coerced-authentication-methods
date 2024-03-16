@@ -9,19 +9,19 @@
 + **Function operation number**: `4`
 
 + **RPC Interfaces**:
-   + Interface 1:
-     - uuid=`c681d488-d850-11d0-8c52-00c04fd90f7e`
-     - version=`1.0`
-     - Accessible through:
-       + SMB named pipe: `\PIPE\lsarpc`
-       + SMB named pipe: `\PIPE\lsass`
-       + SMB named pipe: `\PIPE\netlogon`
-       + SMB named pipe: `\PIPE\samr`
-   + Interface 2:
-     - uuid=`df1941c5-fe89-4e79-bf10-463657acf44d`
-     - version=`1.0`
-     - Accessible through:
-       + SMB named pipe: `\PIPE\efsrpc`
+  + Interface 1:
+    + uuid=`c681d488-d850-11d0-8c52-00c04fd90f7e`
+    + version=`1.0`
+    + Accessible through:
+      + SMB named pipe: `\PIPE\lsarpc`
+      + SMB named pipe: `\PIPE\lsass`
+      + SMB named pipe: `\PIPE\netlogon`
+      + SMB named pipe: `\PIPE\samr`
+  + Interface 2:
+    + uuid=`df1941c5-fe89-4e79-bf10-463657acf44d`
+    + version=`1.0`
+    + Accessible through:
+      + SMB named pipe: `\PIPE\efsrpc`
 
 
 ## Description
@@ -70,12 +70,10 @@ long EfsRpcEncryptFileSrv(
 
 + **binding_h**: This is an RPC binding handle parameter, as specified in [C706] and [MS-RPCE] section 2.
 
-
 + **FileName**: An EFSRPC identifier as specified in section 2.2.1. 
 
 ## References
 
-+ Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31
++ Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: [https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31)
 
-
-+ Documentation of function `EfsRpcEncryptFileSrv`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/0d599976-758c-4dbd-ac8c-c9db2a922d76
++ Documentation of function `EfsRpcEncryptFileSrv`: [https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/0d599976-758c-4dbd-ac8c-c9db2a922d76](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/0d599976-758c-4dbd-ac8c-c9db2a922d76)

