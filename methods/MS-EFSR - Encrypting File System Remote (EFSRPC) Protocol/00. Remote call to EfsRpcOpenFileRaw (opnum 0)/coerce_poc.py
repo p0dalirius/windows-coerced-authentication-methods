@@ -142,7 +142,7 @@ class MS_EFSR(RPCProtocol):
 
 
 if __name__ == '__main__':
-    print("Windows auth coerce using MS-EFSR::EfsRpcFileKeyInfoEx() - by @podalirius_\n")
+    print("Windows auth coerce using MS-EFSR::EfsRpcFileKeyInfoEx() - by Remi GASCOU (Podalirius)\n")
     parser = argparse.ArgumentParser(add_help=True, description="Proof of concept for coercing authentication with MS-EFSR::EfsRpcFileKeyInfoEx()")
 
     parser.add_argument("-u", "--username", default="", help="Username to authenticate to the endpoint.")
