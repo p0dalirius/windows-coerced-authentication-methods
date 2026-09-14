@@ -14,7 +14,7 @@
 
 All of these methods are callable by a standard user in the domain to force the machine account of the target Windows machine (usually a domain controller) to authenticate to an arbitrary target. The root cause of this "vulnerability/feature" in each of these methods is that Windows machines automatically authenticate to other machines when trying to access UNC paths (like `\\192.168.2.1\SYSVOL\file.txt`).
 
-There are currently **15** working functions in **5** protocols.
+There are currently **29** working functions in **12** protocols.
 
 ---
 
@@ -26,10 +26,22 @@ There are currently **15** working functions in **5** protocols.
 
 ## Protocols & Methods
 
-+ **[MS-DFSNM]: Distributed File System (DFS): Namespace Management Protocol**
++ **[MS-COMA]: Component Object Model Plus (COM+) Remote Administration Protocol**
+  + [Remote call to ImportFromFile (opnum 3)](./methods/MS-COMA%20-%20Component%20Object%20Model%20Plus%20%28COM+%29%20Remote%20Administration%20Protocol/03.%20Remote%20call%20to%20ImportFromFile%20(opnum%203)/README.md)
+
++ **[MS-DFSNM]: Distributed File System (DFS) Namespace Management Protocol**
+  + [Remote call to NetrDfsAdd (opnum 1)](./methods/MS-DFSNM%20-%20Distributed%20File%20System%20%28DFS%29%20Namespace%20Management%20Protocol/01.%20Remote%20call%20to%20NetrDfsAdd%20(opnum%201)/README.md)
   + [Remote call to NetrDfsAddStdRoot (opnum 12)](./methods/MS-DFSNM%20-%20Distributed%20File%20System%20%28DFS%29%20Namespace%20Management%20Protocol/12.%20Remote%20call%20to%20NetrDfsAddStdRoot%20(opnum%2012)/README.md)
   + [Remote call to NetrDfsRemoveStdRoot (opnum 13)](./methods/MS-DFSNM%20-%20Distributed%20File%20System%20%28DFS%29%20Namespace%20Management%20Protocol/13.%20Remote%20call%20to%20NetrDfsRemoveStdRoot%20(opnum%2013)/README.md)
+  + [Remote call to NetrDfsAddRootTarget (opnum 23)](./methods/MS-DFSNM%20-%20Distributed%20File%20System%20%28DFS%29%20Namespace%20Management%20Protocol/23.%20Remote%20call%20to%20NetrDfsAddRootTarget%20(opnum%2023)/README.md)
+  + [Remote call to NetrDfsRemoveRootTarget (opnum 24)](./methods/MS-DFSNM%20-%20Distributed%20File%20System%20%28DFS%29%20Namespace%20Management%20Protocol/24.%20Remote%20call%20to%20NetrDfsRemoveRootTarget%20(opnum%2024)/README.md)
 
++ **[MS-DHCPM]: Microsoft Dynamic Host Configuration Protocol (DHCP) Server Management Protocol**
+  + [Remote call to R_DhcpBackupDatabase (opnum 44)](./methods/MS-DHCPM%20-%20Microsoft%20Dynamic%20Host%20Configuration%20Protocol%20%28DHCP%29%20Server%20Management%20Protocol/44.%20Remote%20call%20to%20R_DhcpBackupDatabase%20(opnum%2044)/README.md)
+  + [Remote call to R_DhcpRestoreDatabase (opnum 45)](./methods/MS-DHCPM%20-%20Microsoft%20Dynamic%20Host%20Configuration%20Protocol%20%28DHCP%29%20Server%20Management%20Protocol/45.%20Remote%20call%20to%20R_DhcpRestoreDatabase%20(opnum%2045)/README.md)
+
++ **[MS-DNSP]: Domain Name Service (DNS) Server Management Protocol**
+  + [Remote call to R_DnssrvOperation — LogFilePath (opnum 0)](./methods/MS-DNSP%20-%20Domain%20Name%20Service%20%28DNS%29%20Server%20Management%20Protocol/00.%20Remote%20call%20to%20R_DnssrvOperation%20(opnum%200)/README.md)
 
 + **[MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol**
   + [Remote call to EfsRpcOpenFileRaw (opnum 0)](./methods/MS-EFSR%20-%20Encrypting%20File%20System%20Remote%20%28EFSRPC%29%20Protocol/00.%20Remote%20call%20to%20EfsRpcOpenFileRaw%20(opnum%200)/README.md)
@@ -40,18 +52,32 @@ There are currently **15** working functions in **5** protocols.
   + [Remote call to EfsRpcFileKeyInfo (opnum 12)](./methods/MS-EFSR%20-%20Encrypting%20File%20System%20Remote%20%28EFSRPC%29%20Protocol/12.%20Remote%20call%20to%20EfsRpcFileKeyInfo%20(opnum%2012)/README.md)
   + [Remote call to EfsRpcDuplicateEncryptionInfoFile (opnum 13)](./methods/MS-EFSR%20-%20Encrypting%20File%20System%20Remote%20%28EFSRPC%29%20Protocol/13.%20Remote%20call%20to%20EfsRpcDuplicateEncryptionInfoFile%20(opnum%2013)/README.md)
   + [Remote call to EfsRpcAddUsersToFileEx (opnum 15)](./methods/MS-EFSR%20-%20Encrypting%20File%20System%20Remote%20%28EFSRPC%29%20Protocol/15.%20Remote%20call%20to%20EfsRpcAddUsersToFileEx%20(opnum%2015)/README.md)
-
+  + [Remote call to EfsRpcFileKeyInfoEx (opnum 16)](./methods/MS-EFSR%20-%20Encrypting%20File%20System%20Remote%20%28EFSRPC%29%20Protocol/16.%20Remote%20call%20to%20EfsRpcFileKeyInfoEx%20(opnum%2016)/README.md)
+  + [Remote call to EfsRpcEncryptFileExSrv (opnum 21)](./methods/MS-EFSR%20-%20Encrypting%20File%20System%20Remote%20%28EFSRPC%29%20Protocol/21.%20Remote%20call%20to%20EfsRpcEncryptFileExSrv%20(opnum%2021)/README.md)
 
 + **[MS-FSRVP]: File Server Remote VSS Protocol**
   + [Remote call to IsPathSupported (opnum 8)](./methods/MS-FSRVP%20-%20File%20Server%20Remote%20VSS%20Protocol/08.%20Remote%20call%20to%20IsPathSupported%20(opnum%208)/README.md)
-  + [Remote call to IsPathShadowCopied (opnum 9)](./methods/MS-FSRVP%20-%20File%20Server%20Remote%20VSS%20Protocol/09.%20Remote%20call%20to%20IsPathShadowCopied%20(opnum%209)/README.md) 
+  + [Remote call to IsPathShadowCopied (opnum 9)](./methods/MS-FSRVP%20-%20File%20Server%20Remote%20VSS%20Protocol/09.%20Remote%20call%20to%20IsPathShadowCopied%20(opnum%209)/README.md)
 
-+ **[MS-PAR]: Print System Asynchronous Remote Protocol** 
++ **[MS-PAR]: Print System Asynchronous Remote Protocol**
   + [Remote call to RpcAsyncOpenPrinter (opnum 0)](./methods/MS-PAR%20-%20Print%20System%20Asynchronous%20Remote%20Protocol/00.%20Remote%20call%20to%20RpcAsyncOpenPrinter%20(opnum%200)/README.md)
 
++ **[MS-PLA]: Performance Logs and Alerts Protocol**
+  + [Remote call to Extract (opnum 31)](./methods/MS-PLA%20-%20Performance%20Logs%20and%20Alerts%20Protocol/31.%20Remote%20call%20to%20Extract%20(opnum%2031)/README.md)
 
-+ **[MS-RPRN]: Print System Remote Protocol** 
++ **[MS-RAIW]: Remote Administrative Interface WINS**
+  + [Remote call to R_WinsDoStaticInit (opnum 3)](./methods/MS-RAIW%20-%20Remote%20Administrative%20Interface%20WINS/03.%20Remote%20call%20to%20R_WinsDoStaticInit%20(opnum%203)/README.md)
+  + [Remote call to R_WinsBackup (opnum 7)](./methods/MS-RAIW%20-%20Remote%20Administrative%20Interface%20WINS/07.%20Remote%20call%20to%20R_WinsBackup%20(opnum%207)/README.md)
+
++ **[MS-RPRN]: Print System Remote Protocol**
+  + [Remote call to RpcRemoteFindFirstPrinterChangeNotification (opnum 62)](./methods/MS-RPRN%20-%20Print%20System%20Remote%20Protocol/62.%20Remote%20call%20to%20RpcRemoteFindFirstPrinterChangeNotification%20(opnum%2062)/README.md)
   + [Remote call to RpcRemoteFindFirstPrinterChangeNotificationEx (opnum 65)](./methods/MS-RPRN%20-%20Print%20System%20Remote%20Protocol/65.%20Remote%20call%20to%20RpcRemoteFindFirstPrinterChangeNotificationEx%20(opnum%2065)/README.md)
+
++ **[MS-UAMG]: Update Agent Management Protocol**
+  + [Remote call to IUpdateServiceManager2 AddScanPackageService (opnum 13)](./methods/MS-UAMG%20-%20Update%20Agent%20Management%20Protocol/13.%20Remote%20call%20to%20IUpdateServiceManager2%20AddScanPackageService%20(opnum%2013)/README.md)
+
++ **[MS-VDS]: Virtual Disk Service (VDS) Protocol**
+  + [Remote call to IVdsVdProvider CreateVDisk (opnum 4)](./methods/MS-VDS%20-%20Virtual%20Disk%20Service%20%28VDS%29%20Protocol/04.%20Remote%20call%20to%20IVdsVdProvider%20CreateVDisk%20(opnum%204)/README.md)
 
 ## Protecting against coerced authentications
 
