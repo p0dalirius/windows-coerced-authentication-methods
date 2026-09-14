@@ -52,6 +52,16 @@ DWORD EfsRpcQueryProtectors(
  );
 ```
 
+
+
+## Testing status — reachable but did NOT coerce on Windows Server 2025
+
+Bound EFSR `df1941c5-...` v1.0 over `\PIPE\efsrpc` (NTLM packet privacy) as an authenticated user;
+the call executes (returns an HRESULT) but with a UNC `FileName` the server returned an error
+**without** opening the path (listener recorded no connection) — it short-circuits before the
+outbound file access. The coercing member of this family confirmed on 2025 is
+`EfsRpcEncryptFileExSrv` (opnum 21); the classic set is in `methods/`.
+
 ## References
 
 + Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31
