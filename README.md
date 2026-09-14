@@ -14,7 +14,7 @@
 
 All of these methods are callable by a standard user in the domain to force the machine account of the target Windows machine (usually a domain controller) to authenticate to an arbitrary target. The root cause of this "vulnerability/feature" in each of these methods is that Windows machines automatically authenticate to other machines when trying to access UNC paths (like `\\192.168.2.1\SYSVOL\file.txt`).
 
-There are currently **29** working functions in **12** protocols.
+There are currently **30** working functions in **13** protocols.
 
 ---
 
@@ -72,6 +72,9 @@ There are currently **29** working functions in **12** protocols.
 
 + **[MS-VDS]: Virtual Disk Service (VDS) Protocol**
   + [Remote call to IVdsVdProvider CreateVDisk (opnum 4)](./methods/MS-VDS%20-%20Virtual%20Disk%20Service%20%28VDS%29%20Protocol/04.%20Remote%20call%20to%20IVdsVdProvider%20CreateVDisk%20(opnum%204)/README.md)
+
++ **[MS-WSP]: Windows Search Protocol**
+  + [Remote query with a UNC scope (CPMCreateQueryIn)](./methods/MS-WSP%20-%20Windows%20Search%20Protocol/00.%20Remote%20query%20with%20UNC%20scope%20(CPMCreateQueryIn)/README.md)
 
 ## Protecting against coerced authentications
 
