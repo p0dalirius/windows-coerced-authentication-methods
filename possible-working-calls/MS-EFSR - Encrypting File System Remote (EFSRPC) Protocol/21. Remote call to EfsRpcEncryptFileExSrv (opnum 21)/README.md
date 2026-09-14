@@ -53,6 +53,23 @@ long EfsRpcEncryptFileExSrv(
  );
 ```
 
+
+## Testing status — CONFIRMED (authenticated user)
+
+**Confirmed coercion on Windows Server 2025** (domain controller), 2026-09-14. This is an additional
+member of the EFSRPC (PetitPotam) family: `FileName` is a path the EFS server opens, so a UNC coerces
+the machine account. Reachable over the EFSRPC interface by an authenticated user — no admin required.
+
+- Bound the EFSR interface **`df1941c5-fe89-4e79-bf10-463657acf44d` v1.0 over `\PIPE\efsrpc`**
+  (equivalently `\PIPE\lsarpc`), NTLM + `RPC_C_AUTHN_LEVEL_PKT_PRIVACY`. The legacy `c681d488-...`
+  interface is **not** exposed on this build (bind `provider_rejection`), consistent with the
+  Server 2022 23H2+/2025 EFSR interface change.
+- `EfsRpcEncryptFileExSrv(FileName=\\<listener>\share\x, ProtectorDescriptor=NULL, Flags=0)` returned
+  an HRESULT and the DC authenticated to the listener as `TMP-W-2025-DC1$` (NTLMv2 captured).
+
+Privilege: any authenticated user (EFSRPC authorization model). Same NTLM-packet-privacy requirement
+as the rest of the family since [MSFT-CVE-2021-43893].
+
 ## References
 
 + Documentation of protocol [MS-EFSR]: Encrypting File System Remote (EFSRPC) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-efsr/08796ba8-01c8-4872-9221-1000ec2eff31

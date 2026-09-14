@@ -51,6 +51,16 @@ NTSTATUS ElfrBackupELFW(
  );
 ```
 
+
+
+## Testing status — NOT a coercion vector on Windows Server 2025
+
+`BackupFileName` here is only reached after obtaining a log handle from `ElfrOpenELW`, which on
+Windows Server 2025 returns `0xC000000D` STATUS_INVALID_PARAMETER for the canonical open (the legacy
+MS-EVEN open interface is non-functional on this build; the live service is the modern MS-EVEN6
+`wevtsvc`). See the detailed analysis in the sibling call
+`09. Remote call to ElfrOpenBELW (opnum 9)`. No outbound connection was produced.
+
 ## References
 
 + Documentation of protocol [MS-EVEN]: EventLog Remoting Protocol: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-even/55b13664-f739-4e4e-bd8d-04eeda59d09f
