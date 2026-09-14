@@ -39,6 +39,27 @@ input forms tried (both a NULL input and an `LPSTR` input), consistent with the 
 client-controlled path argument. The fixed-path behavior documented in the specification is what
 rules it out regardless of the exact input form.
 
+
+### Can a UNC path ending in `DnsSettings.txt` be used? No.
+
+There is **no client-supplied path component anywhere in the call**, so a UNC cannot be attached in
+any form. Per [MS-DNSP], both halves of the destination are hardcoded by the server:
+
+- **Directory**: `%systemroot%\system32\dns` — a fixed constant, *not* the configurable zone
+  `DatabaseDirectory`, so relocating the DNS database directory does not move this file either.
+- **Filename**: `DnsSettings.txt`.
+
+`ExportSettings` accepts only the operation name; it has no directory, filename, or prefix argument,
+and the server never concatenates client input into the path (this is why passing a path via `pDataIn`
+returns `ERROR_INVALID_PARAMETER`). Consequently there is no way to produce
+`\\<listener>\share\...\DnsSettings.txt` — nothing exists to point at a listener.
+
+For comparison, the DNSP coercion that *does* work — `LogFilePath` via `R_DnssrvOperation` (opnum 0)
+— takes the **entire path** as client input (a UNC is honored), but it is a **write** operation
+requiring **DnsAdmins**. None of the DNSP read-privilege operations
+(`ZoneCreate`, `CreateZoneScope`, `DeleteZone`, `DeleteZoneScope`, `EnlistDirectoryPartition`,
+`ExportSettings`) takes a filesystem path, so there is no read-privilege DNSP path-coercion vector.
+
 ## Function technical detail
 
 ```cpp
