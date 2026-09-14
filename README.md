@@ -14,7 +14,7 @@
 
 All of these methods are callable by a standard user in the domain to force the machine account of the target Windows machine (usually a domain controller) to authenticate to an arbitrary target. The root cause of this "vulnerability/feature" in each of these methods is that Windows machines automatically authenticate to other machines when trying to access UNC paths (like `\\192.168.2.1\SYSVOL\file.txt`).
 
-There are currently **15** working functions in **5** protocols.
+There are currently **29** working functions in **12** protocols.
 
 ---
 
