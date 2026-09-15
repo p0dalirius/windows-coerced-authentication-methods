@@ -43,6 +43,21 @@ The call returned success and the DHCP server authenticated to the listener as t
 account (`TMP-W-2025-DC1$` captured). As with opnum 44, the interface is **`dhcpsrv2`**
 (`5b821720`), not `dhcpsrv` (`6bffd098`).
 
+## Related work
+
+**Not the same calls or protocol, but related work:**
+
+The **DHCP Administrators** group as a privilege-escalation surface was researched by **Ori David
+(Akamai Security)**: "Abusing the DHCP Administrators Group for Privilege Escalation in Windows
+Domains" (2024) and the [DDSpoof](https://github.com/akamai/DDSpoof) tool. That work coerces the
+DHCP server's machine account through **DHCP DNS dynamic updates** (Kerberos-over-DNS / TKEY),
+typically relayed to AD CS (ESC8) — a different protocol surface from the one used here.
+
+`R_DhcpRestoreDatabase` is a **distinct primitive within the same abused group**: it drives the
+MS-DHCPM management RPC directly, reading the restore source at a caller-supplied `Path` with no
+UNC validation, which coerces an **SMB/NTLM** authentication from the same machine account. Same
+group and same target account, different call and different channel (SMB vs Kerberos-over-DNS).
+
 ## References
 
 + Documentation of protocol [MS-DHCPM]: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dhcpm/d117857c-1491-46a2-a68e-c844be3627d4
