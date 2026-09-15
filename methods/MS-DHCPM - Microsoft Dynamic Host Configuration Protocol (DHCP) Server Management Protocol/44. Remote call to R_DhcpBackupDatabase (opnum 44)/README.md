@@ -79,6 +79,8 @@ is no UNC validation on `Path`.
 
 ## Related work
 
+**Not the same calls or protocol, but related work:**
+
 The **DHCP Administrators** group as a privilege-escalation surface was researched by **Ori David
 (Akamai Security)**: "Abusing the DHCP Administrators Group for Privilege Escalation in Windows
 Domains" (2024) and the [DDSpoof](https://github.com/akamai/DDSpoof) tool. That work coerces the
